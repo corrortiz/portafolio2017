@@ -94,3 +94,5 @@ describe('PROJECT', () => {
    });
 
 });
+
+module.exports = {projectAssertions};

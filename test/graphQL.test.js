@@ -8,6 +8,22 @@ chai.use(chaiHttp);
 const {app} = require('./../server.js');
 const {testProject, projectId, populateProject} = require('./index');
 
+const projectAssertions = (res) => {
+   const project = res.body.data.project;
+
+   project.should.be.a('object');
+   project.should.have.property('name');
+   project.name.should.be.a('object');
+   project.should.have.property('url');
+   project.url.should.be.a('string');
+   project.should.have.property('imageUrl');
+   project.imageUrl.should.be.a('string');
+   project.should.have.property('description');
+   project.description.should.be.a('object');
+   project.should.have.property('technologies');
+   project.technologies.should.be.a('array');
+};
+
 
 describe('GQL', () => {
    it('should return json of projects', (done) => {
@@ -39,5 +55,37 @@ describe('GQL', () => {
                done();
             });
          });
+
+         it('should return json with one project', (done) => {
+            chai.request(app)
+               .get(/graphql/)
+               .set('Authorization', process.env.API_KEY)
+               .send({'query': `
+                  {
+                     project(id:"${projectId}"){
+                     _id
+                     name {
+                        en
+                        es
+                     }
+                     description {
+                        en
+                        es
+                     }
+                     imageUrl
+                     technologies
+                     url
+                  }
+                  
+                  }
+               `})
+                  .end((err, res) => {
+                     res.should.have.status(200);
+                     res.should.be.json;
+                     res.body.should.be.a('object');
+                     projectAssertions(res)
+                     done();
+                  });
+               });
          
 });

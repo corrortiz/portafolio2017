@@ -2,7 +2,10 @@ const graphql = require('graphql');
 const { 
   GraphQLObjectType, 
   GraphQLList,
-  GraphQLID } = graphql;
+  GraphQLID,
+  GraphQLNonNull,
+  GraphQLString
+ } = graphql;
 
 const axios = require('axios');
 
@@ -18,6 +21,14 @@ const RootQueryType = new GraphQLObjectType({
       type: new GraphQLList(ProjectType),
       resolve(parentValue, args, req) {
           return axios.get(`${API_URL}`, {headers: {'Authorization': process.env.API_KEY}})
+                      .then(res=> res.data);  
+      }
+    },
+    project: {
+      type: ProjectType,
+      args: {id: { type: new GraphQLNonNull(GraphQLString) } },
+      resolve(parentValue, {id}, req) {
+          return axios.get(`${API_URL}/${id}`, {headers: {'Authorization': process.env.API_KEY}})
                       .then(res=> res.data);  
       }
     }
