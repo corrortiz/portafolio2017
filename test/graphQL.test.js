@@ -58,7 +58,7 @@ describe('GQL', () => {
 
          it('should return json with one project', (done) => {
             chai.request(app)
-               .get(/graphql/)
+               .get('/graphql')
                .set('Authorization', process.env.API_KEY)
                .send({'query': `
                   {
