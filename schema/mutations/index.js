@@ -25,7 +25,17 @@ const mutation = new GraphQLObjectType({
         return axios.post(`${API_URL}`, {headers: {'Authorization': process.env.API_KEY}})
                   .then(res=> res.data);  
       }
-    }
+    },
+    deleteProject: {
+      type: ProjectType,
+      args: {
+         _id: { type: GraphQLID }
+      },
+      resolve(parentValue, { title }) {
+        return axios.post(`${API_URL}`, {headers: {'Authorization': process.env.API_KEY}})
+                  .then(res=> res.data);  
+      }
+    },
    }
 });
 
