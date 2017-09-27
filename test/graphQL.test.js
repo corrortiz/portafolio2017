@@ -87,5 +87,35 @@ describe('GQL', () => {
                      done();
                   });
                });
+
+         it.skip('should delete one project', (done) => {
+            chai.request(app)
+               .post('/graphql')
+               .set('Authorization', process.env.API_KEY)
+               .send({'query': `
+                     mutation deleteProject($ID: ID){
+                        deleteProject(ID: $ID){
+                        name {
+                           en
+                           es
+                        }
+                        description {
+                           en
+                           es
+                        }
+                        technologies
+                        imageUrl
+                        url
+                        }
+                     }
+               `, 'variables':{"ID": projectId}})
+                  .end((err, res) => {
+                     res.should.have.status(200);
+                     res.should.be.json;
+                     res.body.should.be.a('object');
+                     projectAssertions(res)
+                     done();
+                  });
+               });
          
 });

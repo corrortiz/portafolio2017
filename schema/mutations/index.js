@@ -16,26 +16,17 @@ const API_URL = 'http://localhost:3001/api/projects';
 const mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
-    addProject: {
-      type: ProjectType,
-      args: {
-         _id: { type: GraphQLID }
-      },
-      resolve(parentValue, { title }) {
-        return axios.post(`${API_URL}`, {headers: {'Authorization': process.env.API_KEY}})
-                  .then(res=> res.data);  
-      }
-    },
     deleteProject: {
       type: ProjectType,
       args: {
-         _id: { type: GraphQLID }
+         ID: { type: GraphQLID }
       },
-      resolve(parentValue, { title }) {
-        return axios.post(`${API_URL}`, {headers: {'Authorization': process.env.API_KEY}})
-                  .then(res=> res.data);  
+      resolve(parentValue, { ID }) {
+        return axios.delete(`${API_URL}/${ID}`, 
+                    {headers: {'Authorization': process.env.API_KEY}})
+                    .then(res=> res.data);  
       }
-    },
+    }
    }
 });
 

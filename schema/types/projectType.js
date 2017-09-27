@@ -4,7 +4,6 @@ const Project = require('../../models/Project');
 const axios = require('axios');
 const API_URL = 'http://localhost:3001/api/projects';
 
-
 const {
   GraphQLObjectType,
   GraphQLList,
@@ -27,7 +26,6 @@ const DescriptionType = new GraphQLObjectType({
     es: { type: GraphQLString }
   })
 });
-
 
 const ProjectType = new GraphQLObjectType({
   name:  'Project',
