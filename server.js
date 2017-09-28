@@ -6,23 +6,22 @@ const bodyParser = require('body-parser');
 const {mongoose} = require('./db/mongoose');
 const routes = require('./routes/routes');
 //GraphQL
-const expressGraphQL = require('express-graphql');
-const schema = require('./schema/schema');
+const {graphqlExpress, graphiqlExpress} = require('apollo-server-express');
 
-
+const schema = require('./schema');
 const app = express();
 const port = process.env.PORT;
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+
+
+app.use('/graphql', bodyParser.json(), graphqlExpress({schema}));
+
+app.use('/graphiql', graphiqlExpress({
+    endpointURL: '/graphql',
+}));
 
 routes(app);
-
-app.use('/graphql', expressGraphQL({
-    schema,
-    graphiql: true
-}));
-  
-
 
 app.listen(port, () => {
     console.log(`Started up at port ${port}`);

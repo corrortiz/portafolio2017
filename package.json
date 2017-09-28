@@ -12,12 +12,13 @@
     "test": "nodemon --exec \"mocha\" -R nyan"
   },
   "dependencies": {
+    "apollo-server-express": "^1.1.2",
     "axios": "^0.16.2",
-    "body-parser": "^1.18.1",
-    "express": "^4.15.4",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
     "express-graphql": "^0.6.11",
-    "graphql": "^0.11.3",
-    "graphql-tools": "^1.2.2",
+    "graphql": "^0.11.4",
+    "graphql-tools": "^1.2.3",
     "jsonwebtoken": "^8.0.1",
     "mongodb": "^2.2.31",
     "mongoose": "^4.11.11"

@@ -25,7 +25,7 @@ const projectAssertions = (res) => {
 };
 
 
-describe('GQL', () => {
+describe.skip('GQL', () => {
    it('should return json of projects', (done) => {
       chai.request(app)
          .get('/graphql')
@@ -88,7 +88,7 @@ describe('GQL', () => {
                   });
                });
 
-         it.skip('should delete one project', (done) => {
+         it('should delete one project', (done) => {
             chai.request(app)
                .post('/graphql')
                .set('Authorization', process.env.API_KEY)
