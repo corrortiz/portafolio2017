@@ -25,7 +25,7 @@ const projectAssertions = (res) => {
 };
 
 
-describe.skip('GQL', () => {
+describe('GQL', () => {
    it('should return json of projects', (done) => {
       chai.request(app)
          .get('/graphql')
@@ -56,66 +56,36 @@ describe.skip('GQL', () => {
             });
          });
 
-         it('should return json with one project', (done) => {
-            chai.request(app)
-               .get('/graphql')
-               .set('Authorization', process.env.API_KEY)
-               .send({'query': `
-                  {
-                     project(id:"${projectId}"){
-                     _id
-                     name {
-                        en
-                        es
-                     }
-                     description {
-                        en
-                        es
-                     }
-                     imageUrl
-                     technologies
-                     url
-                  }
+         // it('should return json with one project', (done) => {
+         //    chai.request(app)
+         //       .get('/graphql')
+         //       .set('Authorization', process.env.API_KEY)
+         //       .send({'query': `
+         //          {
+         //             project(id:"${projectId}"){
+         //             _id
+         //             name {
+         //                en
+         //                es
+         //             }
+         //             description {
+         //                en
+         //                es
+         //             }
+         //             imageUrl
+         //             technologies
+         //             url
+         //          }
                   
-                  }
-               `})
-                  .end((err, res) => {
-                     res.should.have.status(200);
-                     res.should.be.json;
-                     res.body.should.be.a('object');
-                     projectAssertions(res)
-                     done();
-                  });
-               });
+         //          }
+         //       `})
+         //          .end((err, res) => {
+         //             res.should.have.status(200);
+         //             res.should.be.json;
+         //             res.body.should.be.a('object');
+         //             projectAssertions(res)
+         //             done();
+         //          });
+         //       });
 
-         it('should delete one project', (done) => {
-            chai.request(app)
-               .post('/graphql')
-               .set('Authorization', process.env.API_KEY)
-               .send({'query': `
-                     mutation deleteProject($ID: ID){
-                        deleteProject(ID: $ID){
-                        name {
-                           en
-                           es
-                        }
-                        description {
-                           en
-                           es
-                        }
-                        technologies
-                        imageUrl
-                        url
-                        }
-                     }
-               `, 'variables':{"ID": projectId}})
-                  .end((err, res) => {
-                     res.should.have.status(200);
-                     res.should.be.json;
-                     res.body.should.be.a('object');
-                     projectAssertions(res)
-                     done();
-                  });
-               });
-         
 });
