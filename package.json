@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "nodemon --exec \"mocha\" -R nyan"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "graphql": "^0.11.4",
     "graphql-tools": "^1.2.3",
     "jsonwebtoken": "^8.0.1",
+    "lodash": "^4.17.4",
     "mongodb": "^2.2.31",
     "mongoose": "^4.11.11"
   },
