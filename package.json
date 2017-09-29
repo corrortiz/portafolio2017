@@ -2,6 +2,9 @@
   "name": "ApiPortafolio2017",
   "version": "0.0.1",
   "description": "La parte tracera y entregadora del portafolio de AO HyS 2017",
+  "engines": {
+    "node": "8.4.0"
+  },
   "main": "server.js",
   "repository": "www.aohys.net",
   "author": "Alejandro Ortiz Corro",
