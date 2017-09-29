@@ -4,6 +4,7 @@ const resolvers = require('./resolvers');
 const typeDefs = `
    type Query {
       allProjects: [Project]
+      aProject(id: ID!): Project 
    }
 
    type ProjectName{
@@ -45,6 +46,8 @@ const typeDefs = `
 
    type Mutation {
       addProject(data: ProjectInput): Project
+      modifyProject(data: ProjectInput, id: ID!): Project
+      deleteProject(id: ID!): Project
    }
 `;
 

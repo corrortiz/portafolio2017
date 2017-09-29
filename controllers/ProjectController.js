@@ -3,6 +3,7 @@ const Project = require('../models/Project');
 module.exports = {
     create(req, res, next){
         const recibeData = req.body;
+        console.log(req);
         Project.create(recibeData)
             .then(project => res.send(project))
             .catch((err) => res.status(400).send(err));

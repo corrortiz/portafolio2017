@@ -3,8 +3,6 @@ var Project = require('../controllers/ProjectController');
 var {authenticate} = require('../middleware/authenticate');
 
 module.exports = (app) => {
-  app.post('/api/projects', Project.create);
-
   app.delete('/api/projects/:id', authenticate, Project.delete);
   
   app.patch('/api/projects/:id', authenticate, Project.modify);

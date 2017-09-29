@@ -41,7 +41,7 @@ describe('PROJECT', () => {
             });
        });
 
-      it('should return JSON array of a project', (done) => {
+      it('GET id/ should return JSON array of a project', (done) => {
          chai.request(app)
             .get(`/api/projects/${projectId.toHexString()}`)
             .set('Authorization', process.env.API_KEY)
@@ -52,24 +52,6 @@ describe('PROJECT', () => {
                done();
             });
       }); 
-   });
-
-   describe('POST /api/projects', () => {
-      it('should add a project', (done) => {
-         let data = testProject.body; 
-         data._id = new ObjectID();
-
-         chai.request(app)
-            .post('/api/projects')
-            .set('Authorization', process.env.API_KEY)
-            .send(data)
-            .end((err, res) => {
-               res.should.have.status(200);
-               res.should.be.json;
-               projectAssertions(res);
-               done();
-            });
-       });
    });
 
    describe('DELETE /api/projects/ID', () => {
