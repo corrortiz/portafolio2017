@@ -7,7 +7,7 @@ const testProject = {
     body:{
         _id: projectId,
         name:{
-            es: "Projecto numero uno",
+            es: "Pero hay que barbaridad y yo sin moverme del mismo lugar",
             en: "Poject number one"
         },
         url: "www.algo.com",
