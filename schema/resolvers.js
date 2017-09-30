@@ -1,7 +1,7 @@
 const axios = require('axios');
 const Project = require('../models/Project');
 
-const API_URL = 'http://localhost:3001/api/projects';
+const API_URL = 'https://api-portafolio-2017.herokuapp.com/api/projects';
 
 module.exports = {
    Query: {
