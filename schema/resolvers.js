@@ -6,7 +6,7 @@ const API_URL = 'http://localhost:3001/api/projects';
 module.exports = {
    Query: {
       allProjects: () => {
-         return axios.get(`${API_URL}`, {headers: {'Authorization': process.env.API_KEY}})
+         return axios.get(`${API_URL}`, {headers: {"Authorization": process.env.API_KEY}})
                         .then(res=> res.data);  
       },
       aProject: (_, {id}) => {
