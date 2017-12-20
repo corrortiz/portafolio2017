@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  //One rem size
+  font-size: 62.5%;
+  
+  @include respond(tab-land){
+    font-size: 56.25%;
+  }
+  @include respond(tab-port){
+    font-size: 50%;
+  }
+  
+  @include respond(big-desk){
+    font-size: 90%;
+  }
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

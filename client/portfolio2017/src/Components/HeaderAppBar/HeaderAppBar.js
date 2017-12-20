@@ -6,9 +6,9 @@ import Typography from 'material-ui/Typography';
 
 const HeaderAppBar = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" className="header">
       <Toolbar>
-        <Typography type="title" color="inherit">
+        <Typography type="title" color="inherit" className="header__title">
           AO HyS
         </Typography>
       </Toolbar>

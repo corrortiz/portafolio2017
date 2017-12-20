@@ -1,0 +1,14 @@
+.footer{
+  padding: 2rem;
+  font-size: 2.6rem;
+  background-color: $color-black;
+  text-align: center;
+  color: $color-white;
+
+  &__icon{
+    height: auto !important;
+    width: 3rem !important;
+    margin-top: 2rem;
+  }
+
+}

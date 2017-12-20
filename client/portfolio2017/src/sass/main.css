@@ -1,0 +1,70 @@
+/*
+$breakpoint argument choices:
+  -phone
+  -tab-port
+  -tab-land
+  -big-desk
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 90%;
+  }
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+  padding: 2rem;
+  font-size: 2.6rem;
+  background-color: #000023;
+  text-align: center;
+  color: #fafafa;
+}
+.footer__icon {
+  height: auto !important;
+  width: 3rem !important;
+  margin-top: 2rem;
+}
+
+.header {
+  padding: 1rem;
+}
+.header__title {
+  font-size: 3rem !important;
+}
+
+.section-main {
+  flex: 1;
+  background-image: linear-gradient(to right bottom, #4caf50, #9c27b0);
+  text-align: center;
+}

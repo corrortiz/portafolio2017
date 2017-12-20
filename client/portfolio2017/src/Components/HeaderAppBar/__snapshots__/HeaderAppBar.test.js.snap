@@ -15,23 +15,51 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": <withStyles(AppBar)
-        position="static"
->
-        <withStyles(Toolbar)>
-                <withStyles(Typography)
-                        color="inherit"
-                        type="title"
-                >
-                        AO HyS
-                </withStyles(Typography)>
-        </withStyles(Toolbar)>
-</withStyles(AppBar)>,
+      "children": <withStyles(Toolbar)>
+        <withStyles(Typography)
+                color="inherit"
+                type="title"
+        >
+                AO HyS
+        </withStyles(Typography)>
+</withStyles(Toolbar)>,
+      "position": "static",
     },
     "ref": null,
     "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <withStyles(Typography)
+          color="inherit"
+          type="title"
+>
+          AO HyS
+</withStyles(Typography)>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "AO HyS",
+          "color": "inherit",
+          "type": "title",
+        },
+        "ref": null,
+        "rendered": "AO HyS",
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "class",
@@ -76,76 +104,6 @@ ShallowWrapper {
         "type": [Function],
       },
       "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <withStyles(AppBar)
-          position="static"
->
-          <withStyles(Toolbar)>
-                    <withStyles(Typography)
-                              color="inherit"
-                              type="title"
-                    >
-                              AO HyS
-                    </withStyles(Typography)>
-          </withStyles(Toolbar)>
-</withStyles(AppBar)>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <withStyles(Toolbar)>
-            <withStyles(Typography)
-                        color="inherit"
-                        type="title"
-            >
-                        AO HyS
-            </withStyles(Typography)>
-</withStyles(Toolbar)>,
-          "position": "static",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <withStyles(Typography)
-              color="inherit"
-              type="title"
->
-              AO HyS
-</withStyles(Typography)>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "AO HyS",
-              "color": "inherit",
-              "type": "title",
-            },
-            "ref": null,
-            "rendered": "AO HyS",
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
