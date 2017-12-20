@@ -1,7 +1,13 @@
 .header{
-  padding: 1rem;
- 
+  display: flex;
+
   &__title{
-    font-size: 3rem !important;
+    margin-right: auto !important;
+  }
+
+  &__toolbar{
+  }
+
+  &__bottonNavigation{
   }
 }

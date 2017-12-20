@@ -1,5 +1,6 @@
 .section-main{
-  flex: 1;
-  background-image: linear-gradient(to right bottom, $secondary-color, $primary-color);
+  flex: 1 1 100%;
+  padding-top: 8rem;
+  background-image: linear-gradient(to right bottom, $color-white 60%, rgba($primary-color-dark, 0.3));
   text-align: center;
 }

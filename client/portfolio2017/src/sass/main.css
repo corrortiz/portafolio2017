@@ -36,7 +36,6 @@ html {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 body {
@@ -44,27 +43,32 @@ body {
 }
 
 .footer {
-  padding: 2rem;
+  padding: 3rem;
   font-size: 2.6rem;
   background-color: #000023;
   text-align: center;
-  color: #fafafa;
+  color: #ffffff;
 }
 .footer__icon {
   height: auto !important;
-  width: 3rem !important;
-  margin-top: 2rem;
+  width: 2rem !important;
+  margin-top: 1rem;
 }
 
 .header {
-  padding: 1rem;
+  display: flex;
 }
 .header__title {
-  font-size: 3rem !important;
+  margin-right: auto !important;
 }
 
 .section-main {
-  flex: 1;
-  background-image: linear-gradient(to right bottom, #4caf50, #9c27b0);
+  flex: 1 1 100%;
+  padding-top: 8rem;
+  background-image: linear-gradient(
+    to right bottom,
+    #fafafa 60%,
+    rgba(0, 60, 143, 0.3)
+  );
   text-align: center;
 }
