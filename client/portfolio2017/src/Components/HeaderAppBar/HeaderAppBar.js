@@ -3,7 +3,7 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import SimpleBottomNavigation from '../BottonNavigation/SimpleBottomNavigation';
+import TabMenu from '../TabMenu/TabMenu';
 
 const HeaderAppBar = () => {
   return (
@@ -12,8 +12,8 @@ const HeaderAppBar = () => {
         <Typography type="title" color="inherit" className="header__title">
           AO HyS
         </Typography>
-        <SimpleBottomNavigation />
       </Toolbar>
+      <TabMenu />
     </AppBar>
   );
 };

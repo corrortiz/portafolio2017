@@ -1,13 +1,21 @@
 .header{
   display: flex;
+  flex-wrap: wrap;
 
   &__title{
+    flex: 0 0 100%;
     margin-right: auto !important;
   }
 
   &__toolbar{
   }
 
+  &__placeholder{
+  }
+
   &__bottonNavigation{
+    flex: 0 0 100%;
+    background-color: $color-white !important;
+    color: $color-black;
   }
 }

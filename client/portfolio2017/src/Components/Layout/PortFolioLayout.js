@@ -1,12 +1,15 @@
 // @flow
 import React from 'react';
 
+import { BrowserRouter } from 'react-router-dom';
+
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import purple from 'material-ui/colors/purple';
 import green from 'material-ui/colors/green';
 
 import HeaderAppBar from '../HeaderAppBar/HeaderAppBar';
 import FooterApp from '../FooterApp/FooterApp';
+import Routs from '../Routs/Routs';
 
 const theme = createMuiTheme({
   palette: {
@@ -21,15 +24,30 @@ const theme = createMuiTheme({
   }
 });
 
-const PortfolioLayout = () => {
+/**
+ * Material UI Theme Wrap
+ */
+const Layout = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <div className="container">
         <HeaderAppBar />
-        <section className="section-main" />
+        <section className="section-main">
+          <Routs />
+        </section>
         <FooterApp />
       </div>
     </MuiThemeProvider>
+  );
+};
+
+/*React Router Wrap*/
+
+const PortfolioLayout = () => {
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   );
 };
 
