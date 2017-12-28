@@ -8,7 +8,9 @@ import { CircularProgress } from 'material-ui/Progress';
 import TabMenu from '../TabMenu/TabMenu';
 import TranslateMenu from '../TranslateMenu/TranslateMenu';
 
-const HeaderAppBar = () => {
+import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
+
+const HeaderAppBar = props => {
   return (
     <AppBar position="fixed" className="header">
       <Toolbar className="header__toolbar">
@@ -20,11 +22,13 @@ const HeaderAppBar = () => {
           >
             AO HyS
           </Typography>
-          <CircularProgress
-            size={24}
-            className="header__title__progress"
-            thickness={7}
-          />
+          {props.globals.showLoading && (
+            <CircularProgress
+              size={24}
+              className="header__title__progress"
+              thickness={7}
+            />
+          )}
         </div>
         <TranslateMenu />
       </Toolbar>
@@ -33,4 +37,4 @@ const HeaderAppBar = () => {
   );
 };
 
-export default HeaderAppBar;
+export default GlobalsConnect(HeaderAppBar);

@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { setLenguaje } from '../../Store/Actions/globals';
+import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 
 import Button from 'material-ui/Button';
 import Menu, { MenuItem } from 'material-ui/Menu';
@@ -20,12 +19,18 @@ class TranslateMenu extends Component {
   };
 
   handleClose = event => {
+    this.props.showLoading();
     const lenguaje = event.currentTarget.id;
-    //Action Redux Store
-    lenguaje === 'ESPAÑOL'
-      ? this.props.setLenguaje('es')
-      : this.props.setLenguaje('en');
     this.setState(() => ({ open: false, lenguaje }));
+    this.kiri = setTimeout(() => {
+      //Action Redux Store
+      lenguaje === 'ESPAÑOL'
+        ? this.props.setLenguaje('es')
+        : this.props.setLenguaje('en');
+      this.props.messageSnackBar('The Language Of The Page Has Changed');
+      this.props.showSnackBar();
+      this.props.showLoading();
+    }, 1000);
   };
 
   render() {
@@ -50,11 +55,11 @@ class TranslateMenu extends Component {
           open={open}
           onClose={this.handleClose}
         >
-          <MenuItem onClick={this.handleClose} id="ESPAÑOL">
-            Español
-          </MenuItem>
           <MenuItem onClick={this.handleClose} id="ENGLISH">
             English
+          </MenuItem>
+          <MenuItem onClick={this.handleClose} id="ESPAÑOL">
+            Español
           </MenuItem>
         </Menu>
       </div>
@@ -62,8 +67,4 @@ class TranslateMenu extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  setLenguaje: lenguaje => dispatch(setLenguaje(lenguaje))
-});
-
-export default connect(undefined, mapDispatchToProps)(TranslateMenu);
+export default GlobalsConnect(TranslateMenu);

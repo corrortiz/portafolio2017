@@ -81,6 +81,9 @@ body {
   fill: #ffffff;
   cursor: pointer;
 }
+.footer__appSnackBar button {
+  display: none;
+}
 
 .header {
   display: flex;
@@ -117,11 +120,11 @@ body {
   color: #ffffff;
 }
 
-.MuiTabs-flexContainer-97 {
+.MuiTabs-flexContainer-90 {
   justify-content: center;
 }
 @media only screen and (max-width: 37.5em) {
-  .MuiTabs-flexContainer-97 {
+  .MuiTabs-flexContainer-90 {
     justify-content: space-between;
   }
 }

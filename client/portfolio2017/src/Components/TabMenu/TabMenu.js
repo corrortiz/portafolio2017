@@ -12,6 +12,9 @@ import ThumbUp from 'material-ui-icons/ThumbUp';
 
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 
+import { lenguajeSelector } from '../../Store/Actions/globals';
+import { Home, Services, Projects, Contact } from '../../Assets/diccionary';
+
 class TabMenu extends Component {
   state = {
     value: 0
@@ -23,6 +26,7 @@ class TabMenu extends Component {
 
   render() {
     const { value } = this.state;
+    const { lenguaje } = this.props.globals;
 
     return (
       <div className="header__bottonNavigation">
@@ -36,21 +40,26 @@ class TabMenu extends Component {
           className="header__bottonNavigation__tabs"
           centered
         >
-          <Tab label="Home" icon={<FavoriteIcon />} component={Link} to={'/'} />
           <Tab
-            label="Services"
+            label={lenguajeSelector(lenguaje, Home)}
+            icon={<FavoriteIcon />}
+            component={Link}
+            to={'/'}
+          />
+          <Tab
+            label={lenguajeSelector(lenguaje, Services)}
             icon={<PersonPinIcon />}
             component={Link}
             to={'/services'}
           />
           <Tab
-            label="Projects"
+            label={lenguajeSelector(lenguaje, Projects)}
             icon={<HelpIcon />}
             component={Link}
             to={'/projects'}
           />
           <Tab
-            label="Contact"
+            label={lenguajeSelector(lenguaje, Contact)}
             icon={<ThumbUp />}
             component={Link}
             to={'/contact'}

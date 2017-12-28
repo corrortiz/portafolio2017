@@ -1,6 +1,12 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {
+  showSnackBar,
+  messageSnackBar,
+  showLoading,
+  setLenguaje
+} from '../../Store/Actions/globals';
 
 /**
  * This is a HOC for the globals redux state
@@ -29,9 +35,19 @@ const GlobalsConnect = WrappedComponent => {
     };
   };
   /**
+   * Actions dispachers
+   * @param {*} dispatch
+   */
+  const mapDispatchToProps = dispatch => ({
+    showSnackBar: () => dispatch(showSnackBar()),
+    setLenguaje: lenguaje => dispatch(setLenguaje(lenguaje)),
+    showLoading: () => dispatch(showLoading()),
+    messageSnackBar: message => dispatch(messageSnackBar(message))
+  });
+  /**
    * Here we connect the react-redux HOC and the new class
    */
-  return connect(mapStateToProps, undefined)(NameWrappedComponent);
+  return connect(mapStateToProps, mapDispatchToProps)(NameWrappedComponent);
 };
 
 export default GlobalsConnect;

@@ -5,40 +5,42 @@ import Slide from 'material-ui/transitions/Slide';
 import IconButton from 'material-ui/IconButton';
 import CloseIcon from 'material-ui-icons/Close';
 
+import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
+
 function TransitionDown(props) {
   return <Slide direction="down" {...props} />;
 }
 
 class AppSnackBar extends Component {
   state = {
-    open: false,
-    transition: null
+    transition: TransitionDown
   };
 
   handleClick = transition => () => {
-    this.setState({ open: true, transition });
+    this.props.showSnackBar();
+    this.setState({ transition });
   };
 
   handleClose = () => {
-    this.setState(() => ({ open: false }));
+    this.props.showSnackBar();
   };
 
   render() {
-    const { open, transition } = this.state;
-    const { message } = this.props;
+    const { transition } = this.state;
+    const { openSnackBar, messageSnackBar } = this.props.globals;
 
     return (
-      <div>
+      <div className="footer__appSnackBar">
         <Button onClick={this.handleClick(TransitionDown)}>Down</Button>
         <Snackbar
-          open={open}
+          open={openSnackBar}
           onClose={this.handleClose}
           onRequestClose={this.handleClose}
           transition={transition}
           SnackbarContentProps={{
             'aria-describedby': 'message-id'
           }}
-          message={<span id="message-id">{message}</span>}
+          message={<span id="message-id">{messageSnackBar}</span>}
           action={[
             <IconButton
               key="close"
@@ -55,4 +57,4 @@ class AppSnackBar extends Component {
   }
 }
 
-export default AppSnackBar;
+export default GlobalsConnect(AppSnackBar);
