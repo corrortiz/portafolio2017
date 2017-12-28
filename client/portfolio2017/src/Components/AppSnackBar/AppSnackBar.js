@@ -36,6 +36,7 @@ class AppSnackBar extends Component {
           open={openSnackBar}
           onClose={this.handleClose}
           onRequestClose={this.handleClose}
+          autoHideDuration={1000}
           transition={transition}
           SnackbarContentProps={{
             'aria-describedby': 'message-id'

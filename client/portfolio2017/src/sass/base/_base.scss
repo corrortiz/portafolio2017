@@ -16,7 +16,6 @@ html{
   @include respond(tab-port){
     font-size: 50%;
   }
-  
   @include respond(big-desk){
     font-size: 65%;
   }
