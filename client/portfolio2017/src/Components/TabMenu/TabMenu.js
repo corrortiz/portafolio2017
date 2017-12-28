@@ -10,6 +10,8 @@ import PersonPinIcon from 'material-ui-icons/PersonPin';
 import HelpIcon from 'material-ui-icons/Help';
 import ThumbUp from 'material-ui-icons/ThumbUp';
 
+import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
+
 class TabMenu extends Component {
   state = {
     value: 0
@@ -59,4 +61,4 @@ class TabMenu extends Component {
   }
 }
 
-export default TabMenu;
+export default GlobalsConnect(TabMenu);

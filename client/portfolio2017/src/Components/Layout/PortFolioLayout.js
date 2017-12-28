@@ -1,7 +1,8 @@
 // @flow
 import React from 'react';
-
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import storeConfig from '../../Store/storeConfig';
 
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import purple from 'material-ui/colors/purple';
@@ -42,13 +43,23 @@ const Layout = () => {
 };
 
 /*React Router Wrap*/
-
-const PortfolioLayout = () => {
+const RouterWraper = () => {
   return (
     <BrowserRouter>
       <Layout />
     </BrowserRouter>
   );
 };
+
+/**
+ * Redux Store Wrap
+ */
+const store = storeConfig();
+
+const PortfolioLayout = (
+  <Provider store={store}>
+    <RouterWraper />
+  </Provider>
+);
 
 export default PortfolioLayout;

@@ -1,5 +1,8 @@
 // @flow
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setLenguaje } from '../../Store/Actions/globals';
+
 import Button from 'material-ui/Button';
 import Menu, { MenuItem } from 'material-ui/Menu';
 import Translate from 'material-ui-icons/Translate';
@@ -8,7 +11,7 @@ class TranslateMenu extends Component {
   state = {
     anchorEl: null,
     open: false,
-    lenguaje: 'Español'
+    lenguaje: 'ENGLISH'
   };
 
   handleClick = event => {
@@ -18,6 +21,10 @@ class TranslateMenu extends Component {
 
   handleClose = event => {
     const lenguaje = event.currentTarget.id;
+    //Action Redux Store
+    lenguaje === 'ESPAÑOL'
+      ? this.props.setLenguaje('es')
+      : this.props.setLenguaje('en');
     this.setState(() => ({ open: false, lenguaje }));
   };
 
@@ -55,4 +62,8 @@ class TranslateMenu extends Component {
   }
 }
 
-export default TranslateMenu;
+const mapDispatchToProps = dispatch => ({
+  setLenguaje: lenguaje => dispatch(setLenguaje(lenguaje))
+});
+
+export default connect(undefined, mapDispatchToProps)(TranslateMenu);
