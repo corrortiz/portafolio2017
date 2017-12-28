@@ -1,0 +1,56 @@
+.header{
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title{
+    flex: 0 0 70%;
+    margin-right: auto !important;
+    display: flex;
+    align-items: center;
+    &__progress{
+      color: $primary-text-color !important;
+    }
+
+    &__message{
+      margin-right: 2rem !important;
+    }
+  }
+
+  &__toolbar{
+  }
+
+  &__placeholder{
+  }
+
+  &__bottonNavigation{
+    flex: 0 0 100%;
+    background-color: $color-white !important;
+    color: $color-black;
+    
+    &__tabs{
+      flex: 0 0 100%;
+    }
+  }
+
+  &__translate-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__icon{
+      cursor: pointer;
+    }
+
+    button{
+      color: $primary-text-color;
+    }
+  }
+}
+
+.MuiTabs-flexContainer-90{
+  justify-content: center;
+
+  @include respond(phone){
+    justify-content: space-between;
+  }
+}

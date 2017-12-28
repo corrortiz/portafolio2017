@@ -1,0 +1,32 @@
+.footer{
+  padding: 2rem;
+  font-size: 1.9rem;
+  background-color: $color-black;
+  text-align: center;
+  color: $primary-text-color;
+
+  &__hyperlink{
+
+  }
+
+  &__icon{
+    height: auto;
+    width: 4rem;
+    margin-top: .5rem;
+    fill: $primary-text-color;
+    cursor: pointer;
+  }
+
+  &__divider{
+  }
+
+  &__title{
+  }
+
+  &__appSnackBar{
+    button{
+      display: none;
+    }
+  }
+
+}

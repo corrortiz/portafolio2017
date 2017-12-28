@@ -1,0 +1,19 @@
+.section-main{
+  flex: 1 1 100%;
+  padding-top: 15rem;
+  background-image: linear-gradient(to right bottom, $color-white 60%, rgba($primary-color-dark, 0.3));
+  text-align: center;
+
+  @include respond(phone){
+    padding-top: 17rem;
+  }
+  @include respond(tab-port){
+    padding-top: 16.5rem;
+  }
+  @include respond(tab-land){
+    padding-top: 18rem;
+  }
+  @include respond(big-desk){
+    padding-top: 14.5rem;
+  }
+}
