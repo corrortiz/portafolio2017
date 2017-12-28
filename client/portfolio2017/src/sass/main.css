@@ -28,7 +28,7 @@ html {
 }
 @media only screen and (min-width: 112.5em) {
   html {
-    font-size: 90%;
+    font-size: 65%;
   }
 }
 
@@ -102,6 +102,9 @@ body {
   background-color: #fafafa !important;
   color: #000023;
 }
+.header__bottonNavigation__tabs {
+  flex: 0 0 100%;
+}
 .header__translate-menu {
   display: flex;
   justify-content: space-around;
@@ -114,6 +117,15 @@ body {
   color: #ffffff;
 }
 
+.MuiTabs-flexContainer-97 {
+  justify-content: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .MuiTabs-flexContainer-97 {
+    justify-content: space-between;
+  }
+}
+
 .section-main {
   flex: 1 1 100%;
   padding-top: 15rem;
@@ -123,4 +135,14 @@ body {
     rgba(0, 60, 143, 0.3)
   );
   text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .section-main {
+    padding-top: 17rem;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  .section-main {
+    padding-top: 14.5rem;
+  }
 }

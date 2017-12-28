@@ -26,6 +26,10 @@
     flex: 0 0 100%;
     background-color: $color-white !important;
     color: $color-black;
+    
+    &__tabs{
+      flex: 0 0 100%;
+    }
   }
 
   &__translate-menu{
@@ -40,5 +44,13 @@
     button{
       color: $primary-text-color;
     }
+  }
+}
+
+.MuiTabs-flexContainer-97{
+  justify-content: center;
+
+  @include respond(phone){
+    justify-content: space-between;
   }
 }

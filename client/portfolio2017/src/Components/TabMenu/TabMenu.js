@@ -16,7 +16,7 @@ class TabMenu extends Component {
   };
 
   handleChange = (event, value) => {
-    this.setState({ value });
+    this.setState(() => ({ value }));
   };
 
   render() {
@@ -31,6 +31,7 @@ class TabMenu extends Component {
           scrollButtons="on"
           indicatorColor="primary"
           textColor="primary"
+          className="header__bottonNavigation__tabs"
           centered
         >
           <Tab label="Home" icon={<FavoriteIcon />} component={Link} to={'/'} />

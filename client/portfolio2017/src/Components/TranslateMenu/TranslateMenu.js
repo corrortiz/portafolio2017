@@ -12,22 +12,26 @@ class TranslateMenu extends Component {
   };
 
   handleClick = event => {
-    this.setState({ open: true, anchorEl: event.currentTarget });
+    const anchorEl = event.currentTarget;
+    this.setState(() => ({ open: true, anchorEl }));
   };
 
   handleClose = event => {
-    this.setState({ open: false, lenguaje: event.currentTarget.id });
+    const lenguaje = event.currentTarget.id;
+    this.setState(() => ({ open: false, lenguaje }));
   };
 
   render() {
+    const { open, anchorEl, lenguaje } = this.state;
+
     return (
       <div className="header__translate-menu">
         <Button
-          aria-owns={this.state.open ? 'simple-menu' : null}
+          aria-owns={open ? 'simple-menu' : null}
           aria-haspopup="true"
           onClick={this.handleClick}
         >
-          {this.state.lenguaje}
+          {lenguaje}
         </Button>
         <Translate
           onClick={this.handleClick}
@@ -35,8 +39,8 @@ class TranslateMenu extends Component {
         />
         <Menu
           id="simple-menu"
-          anchorEl={this.state.anchorEl}
-          open={this.state.open}
+          anchorEl={anchorEl}
+          open={open}
           onClose={this.handleClose}
         >
           <MenuItem onClick={this.handleClose} id="ESPAÑOL">
