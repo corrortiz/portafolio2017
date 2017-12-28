@@ -3,8 +3,17 @@
   flex-wrap: wrap;
 
   &__title{
-    flex: 0 0 100%;
+    flex: 0 0 70%;
     margin-right: auto !important;
+    display: flex;
+
+    &__progress{
+      color: $primary-text-color !important;
+    }
+
+    &__message{
+      margin-right: 2rem !important;
+    }
   }
 
   &__toolbar{
@@ -17,5 +26,19 @@
     flex: 0 0 100%;
     background-color: $color-white !important;
     color: $color-black;
+  }
+
+  &__translate-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__icon{
+      cursor: pointer;
+    }
+
+    button{
+      color: $primary-text-color;
+    }
   }
 }

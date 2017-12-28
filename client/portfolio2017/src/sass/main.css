@@ -68,16 +68,18 @@ body {
 }
 
 .footer {
-  padding: 3rem;
-  font-size: 2.6rem;
+  padding: 2rem;
+  font-size: 1.9rem;
   background-color: #000023;
   text-align: center;
   color: #ffffff;
 }
 .footer__icon {
-  height: auto !important;
-  width: 2.5rem !important;
-  margin-top: 1rem;
+  height: auto;
+  width: 4rem;
+  margin-top: 0.5rem;
+  fill: #ffffff;
+  cursor: pointer;
 }
 
 .header {
@@ -85,13 +87,31 @@ body {
   flex-wrap: wrap;
 }
 .header__title {
-  flex: 0 0 100%;
+  flex: 0 0 70%;
   margin-right: auto !important;
+  display: flex;
+}
+.header__title__progress {
+  color: #ffffff !important;
+}
+.header__title__message {
+  margin-right: 2rem !important;
 }
 .header__bottonNavigation {
   flex: 0 0 100%;
   background-color: #fafafa !important;
   color: #000023;
+}
+.header__translate-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__translate-menu__icon {
+  cursor: pointer;
+}
+.header__translate-menu button {
+  color: #ffffff;
 }
 
 .section-main {
