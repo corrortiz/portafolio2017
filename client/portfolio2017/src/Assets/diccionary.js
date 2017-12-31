@@ -17,3 +17,13 @@ export const Contact = {
   es: 'Contacto',
   en: 'Contact'
 };
+
+export const Contratanos = {
+  es: 'Contratanos',
+  en: 'Hire us'
+};
+
+export const AoDesarrollo = {
+  es: 'AO HyS desarrollo de software',
+  en: 'software development AO HyS'
+};

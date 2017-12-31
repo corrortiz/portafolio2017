@@ -67,6 +67,136 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 35, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 35, 0.2);
+}
+
+.btn--white {
+  background-color: #fafafa;
+  color: #1565c0;
+}
+.btn--white::after {
+  background-color: #fafafa;
+}
+
+.btn--green {
+  background-color: #1565c0;
+  color: #fafafa;
+}
+.btn--green::after {
+  background-color: #1565c0;
+}
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.btn-text:link,
+.btn-text:visited {
+  color: #1565c0;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #1565c0;
+  padding: 3px;
+  transition: all 0.2s;
+}
+
+.btn-text:hover {
+  background-color: #1565c0;
+  color: #000023;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 35, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 35, 0.15);
+  transform: translateY(0);
+}
+
+.ImageContainer {
+  height: 65vh;
+  margin-top: -10vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(77, 44, 145, 0.8),
+      rgba(176, 133, 245, 0.8)
+    ),
+    url(../images/mac.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+  .ImageContainer {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+    height: 75vh;
+  }
+}
+.ImageContainer__main-text {
+  color: #ffffff;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  font-size: 6rem;
+  font-weight: 400;
+}
+.ImageContainer__secondary-text {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: 4rem;
+}
+.ImageContainer__btn {
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
 .footer {
   padding: 2rem;
   font-size: 1.9rem;
@@ -133,12 +263,6 @@ body {
 .section-main {
   flex: 1 1 100%;
   padding-top: 15rem;
-  background-image: linear-gradient(
-    to right bottom,
-    #fafafa 60%,
-    rgba(0, 60, 143, 0.3)
-  );
-  text-align: center;
 }
 @media only screen and (max-width: 37.5em) {
   .section-main {

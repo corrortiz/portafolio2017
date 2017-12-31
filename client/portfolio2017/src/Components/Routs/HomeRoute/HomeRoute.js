@@ -1,9 +1,12 @@
 import React from 'react';
 
+import ImageContainer from '../../ImageContainer/ImageContainer';
+
 const HomeRoute = () => {
   return (
     <div>
-      <h1>Home Rout, Papa</h1>
+      <ImageContainer />
+      <h1 className="min">Kirir</h1>
     </div>
   );
 };
