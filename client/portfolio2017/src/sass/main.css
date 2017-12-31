@@ -105,11 +105,11 @@ body {
   background-color: #fafafa;
 }
 
-.btn--green {
+.btn--prymary {
   background-color: #1565c0;
   color: #fafafa;
 }
-.btn--green::after {
+.btn--prymary::after {
   background-color: #1565c0;
 }
 
@@ -151,6 +151,30 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 35, 0.15);
   transform: translateY(0);
+}
+
+.box {
+  padding: 0 7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .box {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .box {
+    padding-top: 0 4rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .box {
+    padding-top: 0 6rem;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  .box {
+    padding-top: 0 12rem;
+  }
 }
 
 .ImageContainer {
@@ -195,6 +219,39 @@ body {
   letter-spacing: 0.5rem;
   font-size: 3rem;
   font-weight: 600;
+}
+
+.TwoColumPresentation {
+  height: 75vh;
+  display: flex;
+  align-items: stretch;
+}
+.TwoColumPresentation__one {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.TwoColumPresentation__one__title {
+  color: #1565c0;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  font-size: 6rem;
+  font-weight: 400;
+}
+.TwoColumPresentation__one__text {
+  color: #7e57c2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: 4rem;
+}
+.TwoColumPresentation__two {
+  flex: 1 0 50%;
+  background-color: blue;
 }
 
 .footer {

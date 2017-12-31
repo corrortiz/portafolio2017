@@ -41,7 +41,7 @@
       }
   }
 
-  &--green {
+  &--prymary {
       background-color: $primary-color;
       color: $color-white;
 
@@ -91,4 +91,21 @@
       box-shadow: 0 .5rem 1rem rgba($color-black, .15);
       transform: translateY(0);
   }
+}
+
+.box {
+    padding: 0 7rem;
+
+    @include respond(phone){
+        padding: 0;
+    }
+    @include respond(tab-port){
+        padding-top: 0 4rem;
+    }
+    @include respond(tab-land){
+        padding-top: 0 6rem;
+    }
+    @include respond(big-desk){
+        padding-top: 0 12rem;
+    }
 }
