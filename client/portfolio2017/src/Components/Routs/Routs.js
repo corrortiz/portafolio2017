@@ -17,7 +17,7 @@ const Routs = withRouter(({ location }) => (
           <Route exact path="/" component={Home} />
           <Route exact path="/services" component={Services} />
           <Route exact path="/projects" component={Projects} />
-          <Route exact path="/contact" component={Contact} />
+          <Route exact={true} path="/contact" component={Contact} />
         </Switch>
       </CSSTransition>
     </TransitionGroup>

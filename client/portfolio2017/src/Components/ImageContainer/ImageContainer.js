@@ -6,6 +6,10 @@ import { Contratanos, AoDesarrollo } from '../../Assets/diccionary';
 import { lenguajeSelector } from '../../Store/Actions/globals';
 
 class ImageContainer extends Component {
+  handleClick = () => {
+    this.props.setTabValue(3);
+  };
+
   render() {
     const { lenguaje } = this.props.globals;
     return (
@@ -16,10 +20,13 @@ class ImageContainer extends Component {
         <span className="ImageContainer__secondary-text">
           The sky's the limit
         </span>
-        <Link to={'/contact'}>
-          <a className="btn btn--white btn--animated ImageContainer__btn">
+        <Link to="/contact">
+          <button
+            className="btn btn--white btn--animated ImageContainer__btn"
+            onClick={this.handleClick}
+          >
             {lenguajeSelector(lenguaje, Contratanos)}
-          </a>
+          </button>
         </Link>
       </div>
     );

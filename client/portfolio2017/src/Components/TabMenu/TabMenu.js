@@ -16,22 +16,17 @@ import { lenguajeSelector } from '../../Store/Actions/globals';
 import { Home, Services, Projects, Contact } from '../../Assets/diccionary';
 
 class TabMenu extends Component {
-  state = {
-    value: 0
-  };
-
   handleChange = (event, value) => {
-    this.setState(() => ({ value }));
+    this.props.setTabValue(value);
   };
 
   render() {
-    const { value } = this.state;
-    const { lenguaje } = this.props.globals;
+    const { lenguaje, tabValue } = this.props.globals;
 
     return (
       <div className="header__bottonNavigation">
         <Tabs
-          value={value}
+          value={tabValue}
           onChange={this.handleChange}
           scrollable
           scrollButtons="on"

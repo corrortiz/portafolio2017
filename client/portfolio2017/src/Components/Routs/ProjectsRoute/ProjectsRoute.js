@@ -6,15 +6,6 @@ const ProjectsRoute = () => {
   return (
     <div>
       <TwoColumPresentation />
-      <TwoColumPresentation />
-      <TwoColumPresentation />
-      <TwoColumPresentation />
-      <TwoColumPresentation />
-      <TwoColumPresentation />
-      <TwoColumPresentation />
-      <TwoColumPresentation />
-      <TwoColumPresentation />
-      <TwoColumPresentation />
     </div>
   );
 };
