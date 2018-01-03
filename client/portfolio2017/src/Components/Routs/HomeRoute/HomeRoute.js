@@ -8,6 +8,11 @@ const HomeRoute = () => {
     <div>
       <ImageContainer />
       <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
       <h1 className="min">Kirir</h1>
     </div>
   );

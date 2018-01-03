@@ -1,10 +1,10 @@
 .TwoColumPresentation{
-  height: 75vh;
+  height: 45vh;
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-around;
 
   &__one{
-    flex: 1 0 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,24 +13,28 @@
     &__title{
       color: $primary-color;
       text-transform: capitalize;
-      letter-spacing: .5rem;
-      font-size: 6rem;
+      text-align: center;
+      letter-spacing: .3rem;
+      font-size: 4rem;
       font-weight: 400;
+      margin-bottom: 4rem;
     }
     
     &__text{
-      color: $secondary-color;
+      color: $secondary-color-dark;
       text-align: center;
-      text-transform: uppercase;
       letter-spacing: .5rem;
-      font-size: 3rem;
-      font-weight: 200;
-      margin-bottom: 4rem;
+      font-size: 2rem;
+      font-weight: 300;
     }
   }
 
   &__two{
-    flex: 1 0 50%;
-    background-color: blue;
+    flex: 1 0 40%;
+    align-self: stretch;
+    background-image: url(../images/rok.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
   }
 }

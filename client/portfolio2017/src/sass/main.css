@@ -182,8 +182,8 @@ body {
   margin-top: -10vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(77, 44, 145, 0.8),
-      rgba(176, 133, 245, 0.8)
+      rgba(77, 44, 145, 0.5),
+      rgba(176, 133, 245, 0.5)
     ),
     url(../images/mac.jpg);
   background-size: cover;
@@ -212,7 +212,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 300;
   margin-bottom: 4rem;
 }
 .ImageContainer__btn {
@@ -222,12 +222,12 @@ body {
 }
 
 .TwoColumPresentation {
-  height: 75vh;
+  height: 45vh;
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-around;
 }
 .TwoColumPresentation__one {
-  flex: 1 0 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -236,22 +236,26 @@ body {
 .TwoColumPresentation__one__title {
   color: #1565c0;
   text-transform: capitalize;
-  letter-spacing: 0.5rem;
-  font-size: 6rem;
-  font-weight: 400;
-}
-.TwoColumPresentation__one__text {
-  color: #7e57c2;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  font-size: 3rem;
-  font-weight: 200;
+  letter-spacing: 0.3rem;
+  font-size: 4rem;
+  font-weight: 400;
   margin-bottom: 4rem;
 }
+.TwoColumPresentation__one__text {
+  color: #4d2c91;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
 .TwoColumPresentation__two {
-  flex: 1 0 50%;
-  background-color: blue;
+  flex: 1 0 40%;
+  align-self: stretch;
+  background-image: url(../images/rok.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
 }
 
 .footer {

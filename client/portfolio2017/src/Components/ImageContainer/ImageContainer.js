@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 import { Contratanos, AoDesarrollo } from '../../Assets/diccionary';
@@ -15,9 +16,11 @@ class ImageContainer extends Component {
         <span className="ImageContainer__secondary-text">
           The sky's the limit
         </span>
-        <a className="btn btn--white btn--animated ImageContainer__btn">
-          {lenguajeSelector(lenguaje, Contratanos)}
-        </a>
+        <Link to={'/contact'}>
+          <a className="btn btn--white btn--animated ImageContainer__btn">
+            {lenguajeSelector(lenguaje, Contratanos)}
+          </a>
+        </Link>
       </div>
     );
   }

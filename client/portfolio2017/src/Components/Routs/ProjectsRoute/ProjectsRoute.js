@@ -1,9 +1,20 @@
 import React from 'react';
 
+import TwoColumPresentation from '../../TwoColumPresentation/TwoColumPresentation';
+
 const ProjectsRoute = () => {
   return (
     <div>
-      <h1>Project Rout, Chikititia</h1>
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
+      <TwoColumPresentation />
     </div>
   );
 };
