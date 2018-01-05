@@ -7,7 +7,7 @@
         to right bottom,
         rgba($secondary-color-dark, 0.5),
         rgba($secondary-color-light, 0.5)),
-  url(../images/mac.jpg);
+  url(../images/mac-min.jpg);
   background-size: cover;
   background-position: center;
 
@@ -29,6 +29,7 @@
     color: $primary-text-color;
     text-transform: capitalize;
     letter-spacing: .5rem;
+    text-align: center;
     font-size: 6rem;
     font-weight: 400;
   }

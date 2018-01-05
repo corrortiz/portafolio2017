@@ -63,6 +63,22 @@ html {
   height: 0px;
 }
 
+.AnimationBorder {
+  animation: 6s 1s blurrBorder ease infinite alternate;
+}
+
+@keyframes blurrBorder {
+  0% {
+    border-radius: 0.5rem 18rem 0.5rem;
+  }
+  50% {
+    border-radius: 18rem 0.5rem 18rem;
+  }
+  100% {
+    border-radius: 35%;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -154,26 +170,26 @@ body {
 }
 
 .box {
-  padding: 0 7rem;
+  padding: 0 10rem;
 }
 @media only screen and (max-width: 37.5em) {
   .box {
-    padding: 0;
+    padding: 0 2rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
   .box {
-    padding-top: 0 4rem;
+    padding-top: 0 8rem;
   }
 }
 @media only screen and (max-width: 75em) {
   .box {
-    padding-top: 0 6rem;
+    padding-top: 0 12rem;
   }
 }
 @media only screen and (min-width: 112.5em) {
   .box {
-    padding-top: 0 12rem;
+    padding-top: 0 20rem;
   }
 }
 
@@ -185,7 +201,7 @@ body {
       rgba(77, 44, 145, 0.5),
       rgba(176, 133, 245, 0.5)
     ),
-    url(../images/mac.jpg);
+    url(../images/mac-min.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -204,6 +220,7 @@ body {
   color: #ffffff;
   text-transform: capitalize;
   letter-spacing: 0.5rem;
+  text-align: center;
   font-size: 6rem;
   font-weight: 400;
 }
@@ -226,12 +243,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 5rem;
+}
+@media only screen and (max-width: 75em) {
+  .TwoColumPresentation {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoColumPresentation {
+    margin-top: 5rem;
+  }
 }
 .TwoColumPresentation__one {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 75em) {
+  .TwoColumPresentation__one {
+    align-self: stretch;
+    flex: 1 0 85%;
+  }
 }
 .TwoColumPresentation__one__title {
   color: #1565c0;
@@ -250,12 +285,16 @@ body {
   font-weight: 300;
 }
 .TwoColumPresentation__two {
-  flex: 1 0 40%;
+  flex: 1 0 35%;
   align-self: stretch;
-  background-image: url(../images/rok.jpg);
+  background-image: url(../images/AddDev-min.jpg);
   background-size: cover;
   background-position: center;
-  border-radius: 50%;
+}
+@media only screen and (max-width: 75em) {
+  .TwoColumPresentation__two {
+    background-position: top;
+  }
 }
 
 .footer {
@@ -325,9 +364,9 @@ body {
   flex: 1 1 100%;
   padding-top: 15rem;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 75em) {
   .section-main {
-    padding-top: 17rem;
+    padding-top: 18rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -335,9 +374,9 @@ body {
     padding-top: 16.5rem;
   }
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 37.5em) {
   .section-main {
-    padding-top: 18rem;
+    padding-top: 17rem;
   }
 }
 @media only screen and (min-width: 112.5em) {

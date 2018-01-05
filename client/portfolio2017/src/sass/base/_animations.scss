@@ -23,3 +23,19 @@
     top: -50px;
     height: 0px;
 }
+
+.AnimationBorder{
+    animation: 6s 1s blurrBorder ease infinite alternate;
+}
+  
+@keyframes blurrBorder {
+    0%{
+        border-radius: .5rem 18rem .5rem;
+    }
+    50%{
+        border-radius: 18rem .5rem 18rem;
+    }
+    100% {
+        border-radius: 35%;
+    }
+}

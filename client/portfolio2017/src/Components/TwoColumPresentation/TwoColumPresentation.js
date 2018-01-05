@@ -9,7 +9,7 @@ class TwoColumPresentation extends Component {
   render() {
     const { lenguaje } = this.props.globals;
     return (
-      <div className="TwoColumPresentation box">
+      <div className="TwoColumPresentation box ">
         <div className="TwoColumPresentation__one">
           <h1 className="TwoColumPresentation__one__title">
             {lenguajeSelector(lenguaje, SofwareDevelop)}
@@ -18,7 +18,7 @@ class TwoColumPresentation extends Component {
             {lenguajeSelector(lenguaje, SofwareDevelopText)}
           </p>
         </div>
-        <div className="TwoColumPresentation__two" />
+        <div className="TwoColumPresentation__two AnimationBorder" />
       </div>
     );
   }

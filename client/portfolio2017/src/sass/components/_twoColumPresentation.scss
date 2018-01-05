@@ -3,12 +3,28 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 5rem;
+  
+  @include respond(tab-land){
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+
+  @include respond(phone){
+    margin-top: 5rem;
+  }
+  
 
   &__one{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab-land){
+      align-self: stretch;
+      flex: 1 0 85%;
+    }
 
     &__title{
       color: $primary-color;
@@ -30,11 +46,16 @@
   }
 
   &__two{
-    flex: 1 0 40%;
+    flex: 1 0 35%;
     align-self: stretch;
-    background-image: url(../images/rok.jpg);
+    background-image: url(../images/AddDev-min.jpg);
     background-size: cover;
     background-position: center;
-    border-radius: 50%;
+
+    @include respond(tab-land){
+      background-position: top;
+    }
+    
   }
+  
 }
