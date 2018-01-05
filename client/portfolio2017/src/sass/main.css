@@ -248,13 +248,14 @@ body {
 @media only screen and (max-width: 75em) {
   .TwoColumPresentation {
     flex-direction: column;
-    height: 65vh;
+    height: 55vh;
     margin-bottom: 10rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .TwoColumPresentation {
     margin-top: 5rem;
+    height: 75vh;
   }
 }
 .TwoColumPresentation__one {
@@ -310,13 +311,14 @@ body {
 @media only screen and (max-width: 75em) {
   .TwoColumPresentationLeftToRight {
     flex-direction: column;
-    height: 65vh;
+    height: 55vh;
     margin-bottom: 10rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .TwoColumPresentationLeftToRight {
     margin-top: 5rem;
+    height: 75vh;
   }
 }
 .TwoColumPresentationLeftToRight__one {
@@ -360,6 +362,7 @@ body {
   .TwoColumPresentationLeftToRight__two {
     order: 99;
     flex: 1 0;
+    background-position: top;
   }
 }
 
