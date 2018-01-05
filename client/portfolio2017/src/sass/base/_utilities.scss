@@ -94,16 +94,16 @@
 }
 
 .box {
-    padding: 0 10rem;
+    padding: 0 20rem;
 
-    @include respond(phone){
-        padding: 0 2rem;
+    @include respond(tab-land){
+        padding-top: 0 12rem;
     }
     @include respond(tab-port){
         padding-top: 0 8rem;
     }
-    @include respond(tab-land){
-        padding-top: 0 12rem;
+    @include respond(phone){
+        padding: 0 2rem;
     }
     @include respond(big-desk){
         padding-top: 0 20rem;

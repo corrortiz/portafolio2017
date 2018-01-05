@@ -39,3 +39,15 @@ export const SofwareDevelopText = {
   en:
     'We make it easy for companies to transform their ideas into innovative solutions, in a sensitive, adequate and personalized way to meet the needs of each organization.'
 };
+
+export const WebDev = {
+  es: 'desarrollo de aplicaciones web',
+  en: 'Web applications development'
+};
+
+export const WebDevText = {
+  es:
+    'Generamos la presencia web de las organizaciones diseñando las interacciones que estas tienen con sus stackholders, utilizando tecnologia de punta logrando asi confiabilidad y seguridad.',
+  en:
+    'We generate the web presence of the organizations designing the interactions they have with their stackholders, using state-of-the-art technology, thus achieving reliability and security.'
+};

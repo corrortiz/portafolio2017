@@ -1,4 +1,4 @@
-.TwoColumPresentation{
+.TwoColumPresentationLeftToRight{
   height: 45vh;
   display: flex;
   align-items: center;
@@ -23,6 +23,7 @@
     align-items: center;
 
     @include respond(tab-land){
+      order: 1;
       align-self: stretch;
       flex: 2 0;
     }
@@ -50,13 +51,13 @@
   &__two{
     flex: 1 0 35%;
     align-self: stretch;
-    background-image: url(../images/AddDev-min.jpg);
+    background-image: url(../images/WebDev-min-min.jpg);
     background-size: cover;
     background-position: center;
 
     @include respond(tab-land){
+      order: 99;
       flex: 1 0;
-      background-position: top;
     }
     
   }
