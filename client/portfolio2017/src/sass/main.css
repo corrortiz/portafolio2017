@@ -14,21 +14,26 @@ $breakpoint argument choices:
 }
 
 html {
-  font-size: 52.5%;
+  font-size: 55%;
 }
 @media only screen and (max-width: 75em) {
   html {
-    font-size: 43.25%;
+    font-size: 60%;
   }
 }
 @media only screen and (max-width: 56.25em) {
   html {
-    font-size: 41%;
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 45%;
   }
 }
 @media only screen and (min-width: 112.5em) {
   html {
-    font-size: 60%;
+    font-size: 70%;
   }
 }
 
@@ -248,14 +253,18 @@ body {
 @media only screen and (max-width: 75em) {
   .TwoColumPresentation {
     flex-direction: column;
-    height: 55vh;
-    margin-bottom: 10rem;
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .TwoColumPresentation {
+    height: 65vh;
+    margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .TwoColumPresentation {
-    margin-top: 5rem;
-    height: 75vh;
+    height: 85vh;
   }
 }
 .TwoColumPresentation__one {
@@ -267,7 +276,12 @@ body {
 @media only screen and (max-width: 75em) {
   .TwoColumPresentation__one {
     align-self: stretch;
-    flex: 2 0;
+    flex: 1 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoColumPresentation__one {
+    flex: 1 0;
   }
 }
 .TwoColumPresentation__one__title {
@@ -296,7 +310,15 @@ body {
 }
 @media only screen and (max-width: 75em) {
   .TwoColumPresentation__two {
-    flex: 1 0;
+    flex: 2 0;
+    margin: 9rem;
+    background-position: top;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoColumPresentation__two {
+    flex: 3 0;
+    margin: 9rem;
     background-position: top;
   }
 }
@@ -306,19 +328,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 5rem;
 }
 @media only screen and (max-width: 75em) {
   .TwoColumPresentationLeftToRight {
     flex-direction: column;
-    height: 55vh;
-    margin-bottom: 10rem;
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .TwoColumPresentationLeftToRight {
+    height: 70vh;
+    margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .TwoColumPresentationLeftToRight {
-    margin-top: 5rem;
-    height: 75vh;
+    height: 85vh;
   }
 }
 .TwoColumPresentationLeftToRight__one {
@@ -331,7 +356,12 @@ body {
   .TwoColumPresentationLeftToRight__one {
     order: 1;
     align-self: stretch;
-    flex: 2 0;
+    flex: 1 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoColumPresentationLeftToRight__one {
+    flex: 1 0;
   }
 }
 .TwoColumPresentationLeftToRight__one__title {
@@ -361,9 +391,99 @@ body {
 @media only screen and (max-width: 75em) {
   .TwoColumPresentationLeftToRight__two {
     order: 99;
-    flex: 1 0;
-    background-position: top;
+    flex: 2 0;
+    margin: 9rem;
   }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoColumPresentationLeftToRight__two {
+    flex: 3 0;
+    margin: 9rem;
+  }
+}
+
+.TwoRowPresentation {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  flex-direction: column;
+}
+@media only screen and (max-width: 75em) {
+  .TwoRowPresentation {
+    height: 50vh;
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .TwoRowPresentation {
+    height: 80vh;
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoRowPresentation {
+    height: 75vh;
+  }
+}
+.TwoRowPresentation__one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+  width: 65rem;
+}
+@media only screen and (max-width: 75em) {
+  .TwoRowPresentation__one {
+    order: 99;
+    flex: 1 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoRowPresentation__one {
+    flex: 3 0;
+  }
+}
+.TwoRowPresentation__two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 75em) {
+  .TwoRowPresentation__two {
+    order: 1;
+    align-self: stretch;
+    flex: 2 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoRowPresentation__two {
+    flex: 1 0;
+  }
+}
+.TwoRowPresentation__two__title {
+  color: #1565c0;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+.TwoRowPresentation__two__text {
+  color: #4d2c91;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0 8rem;
+}
+.TwoRowPresentation__Logo {
+  height: 100%;
+  width: 100%;
 }
 
 .footer {

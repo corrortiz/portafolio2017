@@ -3,17 +3,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 5rem;
   
   @include respond(tab-land){
     flex-direction: column;
-    height: 55vh;
-    margin-bottom: 10rem;
+    height: 100vh;
+  }
+
+  @include respond(tab-port){
+    height: 70vh;
+    margin-bottom: 0;
   }
 
   @include respond(phone){
-    margin-top: 5rem;
-    height: 75vh;
+    height: 85vh;
   }
   
 
@@ -26,7 +28,12 @@
     @include respond(tab-land){
       order: 1;
       align-self: stretch;
-      flex: 2 0;
+      flex: 1 0;
+    }
+
+    
+    @include respond(phone){
+      flex: 1 0;
     }
 
     &__title{
@@ -58,8 +65,13 @@
 
     @include respond(tab-land){
       order: 99;
-      flex: 1 0;
-      background-position: top;
+      flex: 2 0;
+      margin: 9rem;
+    }
+    
+    @include respond(phone){
+      flex: 3 0;
+      margin: 9rem;
     }
     
   }

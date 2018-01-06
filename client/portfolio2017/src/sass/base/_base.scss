@@ -8,16 +8,19 @@
 
 html{
   //One rem size
-  font-size: 52.5%;
+  font-size: 55%;
   
   @include respond(tab-land){
-    font-size: 43.25%;
+    font-size: 60%;
   }
   @include respond(tab-port){
-    font-size: 41%;
+    font-size: 50%;
+  }
+  @include respond(phone){
+    font-size: 45%;
   }
   @include respond(big-desk){
-    font-size: 60%;
+    font-size: 70%;
   }
 }
 
