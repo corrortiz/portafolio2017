@@ -1,17 +1,19 @@
 .section-main{
-  flex: 1 1 100%;
-  padding-top: 15rem;
+  padding-top: 8rem;
 
-  @include respond(tab-land){
-    padding-top: 18rem;
+  @include respond(1200){
+    padding-top: 7rem;
   }
-  @include respond(tab-port){
-    padding-top: 17rem;
+  @include respond(900){
+    padding-top: 6rem;
   }
-  @include respond(phone){
-    padding-top: 20rem;
+  @include respond(600){
+    padding-top: 5rem;
   }
-  @include respond(big-desk){
-    padding-top: 14.5rem;
+  @include respond(300){
+    padding-top: 4rem;
+  }
+  @include respond(1800){
+    padding-top: 10rem;
   }
 }

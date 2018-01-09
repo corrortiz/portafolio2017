@@ -51,3 +51,15 @@ export const WebDevText = {
   en:
     'We generate the web presence of the organizations designing the interactions they have with their stackholders, using state-of-the-art technology, thus achieving reliability and security.'
 };
+
+export const Meta = {
+  es: 'Nuestra Meta',
+  en: 'Our Goal'
+};
+
+export const MetaText = {
+  es:
+    'Es crear experiencias únicas para nuestros clientes, para lograr esto investigamos, planificamos e imaginamos junto a ellos y juntos seleccionamos la opción que es más adecuada para implementar, siempre buscando innovación, trabajando para superar cualquier obstáculo que se interpone entre nosotros y el objetivo, después de todo, creemos que con buena música, esfuerzo y buena comunicación, el cielo es el límite.',
+  en:
+    'Is to create unique experiences for our clients, to achieve this we investigate, plan and imagine next to them and together we select the option that is most suitable for implement, always looking for innovation, working to overcome any obstacle that stand between us and the goal, after all we believe that with good music, effort and good communication the sky is the limit.'
+};

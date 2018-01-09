@@ -1,78 +1,74 @@
 .TwoColumPresentation{
-  height: 45vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 5rem;
+  height: 50vh;
+  @include flexCenter;
+  margin: 5rem 0;
   
-  @include respond(tab-land){
-    flex-direction: column;
-    height: 100vh;
+  @include respond(1200){
+    height: 55vh;
   }
-
-  @include respond(tab-port){
-    height: 65vh;
+  @include respond(900){
+    flex-direction: column;
+    height: 70vh;
     margin-bottom: 0;
   }
-
-  
-  @include respond(phone){
+  @include respond(600){
+    height: 80vh;
+  }
+  @include respond(1800){
     height: 85vh;
   }
 
 
   &__one{
-    display: flex;
+    @include flexCenter;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @include respond(tab-land){
-      align-self: stretch;
+    margin-bottom: 2rem;
+    
+    @include respond(900){
       flex: 1 0;
     }
-
-    @include respond(phone){
-      flex: 1 0;
+    @include respond(600){
+      margin-bottom: 1rem;
+    }
+    @include respond(300){
+      margin-bottom: 0;
     }
 
     &__title{
-      color: $primary-color;
-      text-transform: capitalize;
-      text-align: center;
-      letter-spacing: .3rem;
-      font-size: 4rem;
-      font-weight: 400;
-      margin-bottom: 4rem;
+       @include maintTextPrimaryColor; 
     }
     
     &__text{
-      color: $secondary-color-dark;
-      text-align: center;
-      letter-spacing: .5rem;
-      font-size: 2rem;
-      font-weight: 300;
-      padding: 0 8rem;
+      @include secondaryTextSecondaryColor;
     }
   }
 
   &__two{
     flex: 1 0 35%;
+    margin: 2rem;
     align-self: stretch;
     background-image: url(../images/AddDev-min.jpg);
     background-size: cover;
     background-position: center;
 
-    @include respond(tab-land){
-      flex: 2 0;
-      margin: 9rem;
+
+    @include respond(1200){
+      margin: 5rem;
+    }
+    @include respond(900){
+      flex: 3 0;
+      margin: 2rem 15rem;
       background-position: top;
     }
-
-    @include respond(phone){
-      flex: 3 0;
+    @include respond(600){
       margin: 9rem;
-      background-position: top;
+    }
+    @include respond(300){
+      flex: 1 0;
+      margin: 2rem .5rem;
+    }
+    @include respond(1800){
+      margin: 9rem;
     }
     
   }

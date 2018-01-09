@@ -1,77 +1,69 @@
 .TwoRowPresentation{
-  height: 65vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  height: 80vh;
+  @include flexCenter;
+  margin: 5rem 0;
   flex-direction: column;
   
-  @include respond(tab-land){
-    height: 50vh;
+  @include respond(1200){
+    height: 70vh;
+    margin-bottom: 10rem;
+  }
+  @include respond(900){
+    height: 70vh;
     margin-bottom: 5rem;
   }
-
-  @include respond(tab-port){
-    height: 80vh;
-    margin-bottom: 5rem;
+  @include respond(600){
+    height: 60vh;
   }
-
-  @include respond(phone){
-    height: 75vh;
+  @include respond(300){
+    height: 70vh;
   }
-  
+  @include respond(1800){
+    height: 85vh;
+  }
 
   &__one{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40rem;
-    width: 65rem;
-
-    @include respond(tab-land){
+    flex: 1 0 35%;
+    @include flexCenter;
+    
+    @include respond(1200){
+      margin: 5rem;
+    }
+    @include respond(900){
       order: 99;
       flex: 1 0;
     }
-
-    @include respond(phone){
-      flex: 3 0;
+    @include respond(600){
+      margin: 9rem;
     }
+    @include respond(300){
+      flex: 1 0;
+      margin: 2rem .5rem;
+    }
+    
   }
 
   &__two{
-    display: flex;
+    @include flexCenter;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @include respond(tab-land){
-      order: 1;
-      align-self: stretch;
-      flex: 2 0;
-    }
-
-    @include respond(phone){
+    margin-bottom: 2rem;
+    
+    @include respond(900){
       flex: 1 0;
+    }
+    @include respond(600){
+      margin-bottom: 1rem;
+    }
+    @include respond(300){
+      margin-bottom: 0;
     }
 
     &__title{
-      color: $primary-color;
-      text-transform: capitalize;
-      text-align: center;
-      letter-spacing: .3rem;
-      font-size: 4rem;
-      font-weight: 400;
-      margin-bottom: 4rem;
+       @include maintTextPrimaryColor; 
     }
     
     &__text{
-      color: $secondary-color-dark;
-      text-align: center;
-      letter-spacing: .5rem;
-      font-size: 2rem;
-      font-weight: 300;
-      padding: 0 8rem;
+      @include secondaryTextSecondaryColor;
     }
   }
   

@@ -1,3 +1,45 @@
 body{
   font-family: "Roboto", sans-serif;
 }
+
+@mixin maintTextWhite{
+    color: $primary-text-color;
+    text-transform: capitalize;
+    letter-spacing: .5rem;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 400;
+}
+
+@mixin maintTextPrimaryColor{
+  color: $primary-color;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: .3rem;
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+@mixin secondaryTextWhite{
+    color: $primary-text-color;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+}
+
+@mixin secondaryTextSecondaryColor{
+  color: $secondary-color-dark;
+  text-align: center;
+  letter-spacing: .5rem;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 0 2rem;
+  
+  @include respond(300){
+    padding: 0;
+    letter-spacing: .2rem;
+  }
+}

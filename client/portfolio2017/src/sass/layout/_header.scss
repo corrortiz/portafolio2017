@@ -10,12 +10,12 @@
     &__progress{
       color: $primary-text-color !important;
     }
-
+    
     &__message{
       margin-right: 2rem !important;
     }
   }
-
+  
   &__toolbar{
   }
 
@@ -50,7 +50,9 @@
 .MuiTabs-flexContainer-90{
   justify-content: center;
 
-  @include respond(phone){
+
+  @include respond(600){
     justify-content: space-between;
   }
+
 }

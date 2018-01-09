@@ -34,7 +34,7 @@ const theme = createMuiTheme({
 const Layout = () => {
   return (
     <MuiThemeProvider theme={theme}>
-      <div className="container">
+      <div>
         <HeaderAppBar />
         <section className="section-main">
           <Routs />
