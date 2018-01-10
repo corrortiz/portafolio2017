@@ -1,9 +1,17 @@
 import React from 'react';
 
+import ImageContainer from '../../ImageContainer/ImageContainer';
+import TwoColumPresentation from '../../TwoColumPresentation/TwoColumPresentation';
+import TwoColumPresentationLeftToRight from '../../TwoColumPresentationLeftToRight/TwoColumPresentationLeftToRight';
+import TwoRowPresentationG from '../../TwoRowPresentation/TwoRowPresentationG';
+
 const HomeRoute = () => {
   return (
     <div>
-      <h1>Home Rout, Papa</h1>
+      <ImageContainer />
+      <TwoColumPresentation />
+      <TwoColumPresentationLeftToRight />
+      <TwoRowPresentationG />
     </div>
   );
 };

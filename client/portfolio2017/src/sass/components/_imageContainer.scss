@@ -1,0 +1,29 @@
+.ImageContainer{
+  height: 65vh;
+  background-image: 
+  linear-gradient(
+        to right bottom,
+        rgba($secondary-color-dark, 0.5),
+        rgba($secondary-color-light, 0.5)),
+  url(../images/mac-min.jpg);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  transform: all 1s;
+  @include flexCenter;
+  @include clip(70vh, 60vh);  
+
+  &__main-text{
+    @include maintTextWhite;    
+  }
+  
+  &__secondary-text{
+    @include secondaryTextWhite;    
+  }
+
+  &__btn{
+    letter-spacing: .5rem;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}            

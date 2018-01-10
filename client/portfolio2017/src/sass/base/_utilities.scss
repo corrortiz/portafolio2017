@@ -1,0 +1,20 @@
+
+.box {
+    padding: 0 10rem;
+
+    @include respond(1200){
+        padding: 0 20rem;
+    }
+    @include respond(900){
+        padding: 0 8rem;
+    }
+    @include respond(600){
+        padding: 0 1rem;
+    }
+    @include respond(300){
+        padding: 0 .5rem;
+    }
+    @include respond(1800){
+        padding: 0 10rem;
+    }
+}

@@ -5,7 +5,8 @@ import {
   showSnackBar,
   messageSnackBar,
   showLoading,
-  setLenguaje
+  setLenguaje,
+  setTabValue
 } from '../../Store/Actions/globals';
 
 /**
@@ -41,6 +42,7 @@ const GlobalsConnect = WrappedComponent => {
   const mapDispatchToProps = dispatch => ({
     showSnackBar: () => dispatch(showSnackBar()),
     setLenguaje: lenguaje => dispatch(setLenguaje(lenguaje)),
+    setTabValue: tabValue => dispatch(setTabValue(tabValue)),
     showLoading: () => dispatch(showLoading()),
     messageSnackBar: message => dispatch(messageSnackBar(message))
   });

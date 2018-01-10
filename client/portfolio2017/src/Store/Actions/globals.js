@@ -6,6 +6,12 @@ export const setLenguaje = lenguaje => ({
   lenguaje
 });
 
+export const SET_TAB_VALUE = 'SET_TAB_VALUE';
+export const setTabValue = tabValue => ({
+  type: SET_TAB_VALUE,
+  tabValue
+});
+
 export const SHOW_SNACKBAR = 'SHOW_SNACKBAR';
 export const showSnackBar = () => ({
   type: SHOW_SNACKBAR

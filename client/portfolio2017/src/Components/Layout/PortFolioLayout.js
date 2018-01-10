@@ -5,8 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import storeConfig from '../../Store/storeConfig';
 
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import purple from 'material-ui/colors/purple';
-import green from 'material-ui/colors/green';
+import blue from 'material-ui/colors/blue';
+import deepPurple from 'material-ui/colors/deepPurple';
+import Grid from 'material-ui/Grid';
 
 import HeaderAppBar from '../HeaderAppBar/HeaderAppBar';
 import FooterApp from '../FooterApp/FooterApp';
@@ -14,11 +15,14 @@ import Routs from '../Routs/Routs';
 
 const theme = createMuiTheme({
   palette: {
-    primary: purple,
-    secondary: green
-  },
-  status: {
-    danger: 'orange'
+    primary: {
+      ...blue,
+      500: '#1565c0'
+    },
+    secondary: {
+      ...deepPurple,
+      500: '#7e57c2'
+    }
   },
   typography: {
     htmlFontSize: 10
@@ -31,13 +35,19 @@ const theme = createMuiTheme({
 const Layout = () => {
   return (
     <MuiThemeProvider theme={theme}>
-      <div className="container">
-        <HeaderAppBar />
-        <section className="section-main">
-          <Routs />
-        </section>
-        <FooterApp />
-      </div>
+      <Grid>
+        <Grid item xm={12}>
+          <HeaderAppBar />
+        </Grid>
+        <Grid item xm={12}>
+          <section className="section-main">
+            <Routs />
+          </section>
+        </Grid>
+        <Grid item xm={12}>
+          <FooterApp />
+        </Grid>
+      </Grid>
     </MuiThemeProvider>
   );
 };

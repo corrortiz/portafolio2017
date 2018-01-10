@@ -1,6 +1,7 @@
 // @flow
 import {
   SET_LENGUAJE,
+  SET_TAB_VALUE,
   SHOW_SNACKBAR,
   MESSAGE_SNACKBAR,
   SHOW_LOADING
@@ -8,6 +9,7 @@ import {
 
 const GlobalsReducerDefaultState = {
   lenguaje: 'en',
+  tabValue: 0,
   openSnackBar: false,
   messageSnackBar: '',
   showLoading: false
@@ -19,6 +21,11 @@ export default (state = GlobalsReducerDefaultState, action) => {
       return {
         ...state,
         lenguaje: action.lenguaje
+      };
+    case SET_TAB_VALUE:
+      return {
+        ...state,
+        tabValue: action.tabValue
       };
     case SHOW_SNACKBAR:
       return {

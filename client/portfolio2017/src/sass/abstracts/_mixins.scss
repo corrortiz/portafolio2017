@@ -1,21 +1,54 @@
 /*
 $breakpoint argument choices:
-  -phone
-  -tab-port
-  -tab-land
-  -big-desk
+    0 - 300   -small-phone
+  300 - 600   -phone
+  600 - 900   -tab-port
+  900 - 1200  -tab-land
+ 1200 - 1800  -Normal
+ 1800 +       -big-desk
+
+ Font size of browser 16px
 */
 @mixin respond($breakpoint){
-  @if $breakpoint == phone {
+  @if $breakpoint == 300 {
+    @media only screen and (max-width: 18.75em) { @content };  //300px  
+  }
+  @if $breakpoint == 600 {
     @media only screen and (max-width: 37.5em) { @content };  //600px  
   }
-  @if $breakpoint == tab-port {
-    @media only screen and (max-width: 56.25em) { @content };  //900px
+  @if $breakpoint == 900 {
+    @media only screen and (max-width: 60em) { @content };  //960px
   }
-  @if $breakpoint == tab-land {
-    @media only screen and (max-width: 75em) { @content };  //1200px
+  @if $breakpoint == 1200 {
+    @media only screen and (max-width: 80em) { @content };  //1280px
   }
-  @if $breakpoint == big-desk {
-    @media only screen and (min-width: 112.5em) { @content };  //1800px
+  @if $breakpoint == 1800 {
+    @media only screen and (min-width: 120em) { @content };  //1920px
+  }
+}
+
+
+/**** Centers a flex container*/
+@mixin flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**** Min Size*/
+@mixin min-size($h-size, $v-size){
+  min-height: $h-size;
+  min-width: $v-size;
+}
+
+/**** Min Size*/
+@mixin clip($height, $clipHeight){
+  @supports (clip-path: polygon(0 0)) {
+    clip-path: polygon(0 0, 100% 0, 100% $clipHeight, 0 100%);
+    height: $height;
+    @media only screen and (max-height: 37.5em) { 
+      clip-path: polygon(0 0, 100% 0, 100% $clipHeight+45, 0 100%);
+      height: $height+45;
+    };
   }
 }
