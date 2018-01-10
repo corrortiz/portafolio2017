@@ -16,7 +16,7 @@ body{
   text-transform: capitalize;
   text-align: center;
   letter-spacing: .3rem;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   margin-bottom: 4rem;
 }
@@ -34,12 +34,12 @@ body{
   color: $secondary-color-dark;
   text-align: center;
   letter-spacing: .5rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   padding: 0 2rem;
   
   @include respond(300){
-    padding: 0;
+    padding: 0 1rem;
     letter-spacing: .2rem;
   }
 }

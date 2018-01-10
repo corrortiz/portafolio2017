@@ -13,7 +13,7 @@ import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 class HeaderAppBar extends Component {
   render() {
     return (
-      <AppBar position="fixed" className="header">
+      <AppBar className="header">
         <Toolbar className="header__toolbar">
           <div className="header__title">
             <Typography

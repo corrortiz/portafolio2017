@@ -4,29 +4,31 @@ import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 import { Meta, MetaText } from '../../Assets/diccionary';
 import { lenguajeSelector } from '../../Store/Actions/globals';
 
+import Grid from 'material-ui/Grid';
+
 import Logo from '../../images/SVG/Logo';
 
-class TwoRowPresentation extends Component {
+class TwoRowPresentationG extends Component {
   render() {
     const { lenguaje } = this.props.globals;
     return (
       <div>
-        <div className="TwoRowPresentation box">
-          <div className="TwoRowPresentation__one">
+        <Grid container spacing={8} className="TwoRowPresentationG">
+          <Grid item xs={12} className="TwoRowPresentationG__one">
             <Logo />
-          </div>
-          <div className="TwoRowPresentation__two">
-            <h1 className="TwoRowPresentation__two__title">
+          </Grid>
+          <Grid item xs={12} className="TwoRowPresentationG__two">
+            <h1 className="TwoRowPresentationG__two__title">
               {lenguajeSelector(lenguaje, Meta)}
             </h1>
-            <p className="TwoRowPresentation__two__text">
+            <p className="TwoRowPresentationG__two__text">
               {lenguajeSelector(lenguaje, MetaText)}
             </p>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </div>
     );
   }
 }
 
-export default GlobalsConnect(TwoRowPresentation);
+export default GlobalsConnect(TwoRowPresentationG);

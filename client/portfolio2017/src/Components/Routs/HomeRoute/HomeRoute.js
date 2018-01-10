@@ -3,7 +3,7 @@ import React from 'react';
 import ImageContainer from '../../ImageContainer/ImageContainer';
 import TwoColumPresentation from '../../TwoColumPresentation/TwoColumPresentation';
 import TwoColumPresentationLeftToRight from '../../TwoColumPresentationLeftToRight/TwoColumPresentationLeftToRight';
-import TwoRowPresentation from '../../TwoRowPresentation/TwoRowPresentation';
+import TwoRowPresentationG from '../../TwoRowPresentation/TwoRowPresentationG';
 
 const HomeRoute = () => {
   return (
@@ -11,7 +11,7 @@ const HomeRoute = () => {
       <ImageContainer />
       <TwoColumPresentation />
       <TwoColumPresentationLeftToRight />
-      <TwoRowPresentation />
+      <TwoRowPresentationG />
     </div>
   );
 };

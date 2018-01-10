@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Logo = props => (
-  <svg className="TwoRowPresentation__Logo" viewBox="0 0 400 250" {...props}>
+  <svg className="TwoRowPresentationG__Logo" viewBox="0 0 400 250" {...props}>
     <g fillRule="evenodd" className="TwoRowPresentation__Logo+">
       <path
         fill="#7e57c2 "

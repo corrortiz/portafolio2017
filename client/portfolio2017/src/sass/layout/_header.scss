@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 
   &__title{
-    flex: 0 0 70%;
+    flex: 0 0 50%;
     margin-right: auto !important;
     display: flex;
     align-items: center;
@@ -34,8 +34,9 @@
 
   &__translate-menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    margin-right: 5rem;
 
     &__icon{
       cursor: pointer;
@@ -47,11 +48,10 @@
   }
 }
 
-.MuiTabs-flexContainer-90{
+.MuiTabs-flexContainer-179{
   justify-content: center;
 
-
-  @include respond(600){
+  @include respond(1200){
     justify-content: space-between;
   }
 

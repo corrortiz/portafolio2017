@@ -9,7 +9,9 @@ $breakpoint argument choices:
 
  Font size of browser 16px
 */
-/****/
+/**** Centers a flex container*/
+/**** Min Size*/
+/**** Min Size*/
 *,
 *::after,
 *::before {
@@ -21,12 +23,12 @@ $breakpoint argument choices:
 html {
   font-size: 62.5%;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 80em) {
   html {
     font-size: 50%;
   }
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 60em) {
   html {
     font-size: 45%;
   }
@@ -41,9 +43,9 @@ html {
     font-size: 37.5%;
   }
 }
-@media only screen and (min-width: 112.5em) {
+@media only screen and (min-width: 120em) {
   html {
-    font-size: 75.5%;
+    font-size: 65.5%;
   }
 }
 
@@ -106,14 +108,14 @@ body {
 }
 
 .box {
-  padding: 0 25rem;
+  padding: 0 10rem;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 80em) {
   .box {
     padding: 0 20rem;
   }
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 60em) {
   .box {
     padding: 0 8rem;
   }
@@ -128,7 +130,7 @@ body {
     padding: 0 0.5rem;
   }
 }
-@media only screen and (min-width: 112.5em) {
+@media only screen and (min-width: 120em) {
   .box {
     padding: 0 10rem;
   }
@@ -222,7 +224,6 @@ body {
 
 .ImageContainer {
   height: 65vh;
-  margin-top: -10vh;
   background-image: linear-gradient(
       to right bottom,
       rgba(77, 44, 145, 0.5),
@@ -231,18 +232,22 @@ body {
     url(../images/mac-min.jpg);
   background-size: cover;
   background-position: center;
-  /*Revisa que soporte el arte de cortar si no pone en cuadrado
-  */
+  flex-direction: column;
+  transform: all 1s;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
-@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+@supports (clip-path: polygon(0 0)) {
   .ImageContainer {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
-    height: 75vh;
+    height: 70vh;
+  }
+  @media only screen and (max-height: 37.5em) {
+    .ImageContainer {
+      clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%);
+      height: 115vh;
+    }
   }
 }
 .ImageContainer__main-text {
@@ -268,32 +273,11 @@ body {
 }
 
 .TwoColumPresentation {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5rem 0;
-}
-@media only screen and (max-width: 75em) {
-  .TwoColumPresentation {
-    height: 55vh;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .TwoColumPresentation {
-    flex-direction: column;
-    height: 70vh;
-    margin-bottom: 0;
-  }
+  margin-bottom: 4rem !important;
 }
 @media only screen and (max-width: 37.5em) {
   .TwoColumPresentation {
-    height: 80vh;
-  }
-}
-@media only screen and (min-width: 112.5em) {
-  .TwoColumPresentation {
-    height: 85vh;
+    padding: 0 !important;
   }
 }
 .TwoColumPresentation__one {
@@ -301,29 +285,14 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 2rem;
-}
-@media only screen and (max-width: 56.25em) {
-  .TwoColumPresentation__one {
-    flex: 1 0;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .TwoColumPresentation__one {
-    margin-bottom: 1rem;
-  }
-}
-@media only screen and (max-width: 18.75em) {
-  .TwoColumPresentation__one {
-    margin-bottom: 0;
-  }
+  margin-bottom: 2rem !important;
 }
 .TwoColumPresentation__one__title {
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 0.3rem;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   margin-bottom: 4rem;
 }
@@ -331,80 +300,68 @@ body {
   color: #4d2c91;
   text-align: center;
   letter-spacing: 0.5rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   padding: 0 2rem;
 }
 @media only screen and (max-width: 18.75em) {
   .TwoColumPresentation__one__text {
-    padding: 0;
+    padding: 0 1rem;
     letter-spacing: 0.2rem;
   }
 }
 .TwoColumPresentation__two {
-  flex: 1 0 35%;
-  margin: 2rem;
-  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.TwoColumPresentation__two__image {
   background-image: url(../images/AddDev-min.jpg);
   background-size: cover;
   background-position: center;
+  transition: all 1s;
+  min-height: 50rem;
+  min-width: 50rem;
 }
-@media only screen and (max-width: 75em) {
-  .TwoColumPresentation__two {
-    margin: 5rem;
+@media only screen and (max-width: 80em) {
+  .TwoColumPresentation__two__image {
+    min-height: 45rem;
+    min-width: 45rem;
   }
 }
-@media only screen and (max-width: 56.25em) {
-  .TwoColumPresentation__two {
-    flex: 3 0;
-    margin: 2rem 15rem;
-    background-position: top;
+@media only screen and (max-width: 60em) {
+  .TwoColumPresentation__two__image {
+    min-height: 40rem;
+    min-width: 40rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .TwoColumPresentation__two {
-    margin: 9rem;
+  .TwoColumPresentation__two__image {
+    min-height: 35rem;
+    min-width: 35rem;
   }
 }
 @media only screen and (max-width: 18.75em) {
-  .TwoColumPresentation__two {
-    flex: 1 0;
-    margin: 2rem 0.5rem;
+  .TwoColumPresentation__two__image {
+    min-height: 30rem;
+    min-width: 30rem;
+    background-position: top;
   }
 }
-@media only screen and (min-width: 112.5em) {
-  .TwoColumPresentation__two {
-    margin: 9rem;
+@media only screen and (min-width: 120em) {
+  .TwoColumPresentation__two__image {
+    min-height: 60rem;
+    min-width: 60rem;
   }
 }
 
 .TwoColumPresentationLeftToRight {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5rem 0;
-}
-@media only screen and (max-width: 75em) {
-  .TwoColumPresentationLeftToRight {
-    height: 55vh;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .TwoColumPresentationLeftToRight {
-    flex-direction: column;
-    height: 75vh;
-    margin-bottom: 0;
-  }
+  margin-bottom: 4rem !important;
 }
 @media only screen and (max-width: 37.5em) {
   .TwoColumPresentationLeftToRight {
-    height: 80vh;
-  }
-}
-@media only screen and (min-width: 112.5em) {
-  .TwoColumPresentationLeftToRight {
-    height: 85vh;
+    padding: 0 !important;
   }
 }
 .TwoColumPresentationLeftToRight__one {
@@ -412,30 +369,14 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 2rem;
-}
-@media only screen and (max-width: 56.25em) {
-  .TwoColumPresentationLeftToRight__one {
-    order: 1;
-    flex: 1 0;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .TwoColumPresentationLeftToRight__one {
-    margin-bottom: 1rem;
-  }
-}
-@media only screen and (max-width: 18.75em) {
-  .TwoColumPresentationLeftToRight__one {
-    margin-bottom: 0;
-  }
+  margin-bottom: 2rem !important;
 }
 .TwoColumPresentationLeftToRight__one__title {
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 0.3rem;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   margin-bottom: 4rem;
 }
@@ -443,162 +384,121 @@ body {
   color: #4d2c91;
   text-align: center;
   letter-spacing: 0.5rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   padding: 0 2rem;
 }
 @media only screen and (max-width: 18.75em) {
   .TwoColumPresentationLeftToRight__one__text {
-    padding: 0;
+    padding: 0 1rem;
     letter-spacing: 0.2rem;
   }
 }
 .TwoColumPresentationLeftToRight__two {
-  flex: 1 0 35%;
-  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media only screen and (max-width: 80em) {
+  .TwoColumPresentationLeftToRight__two {
+    order: 99;
+  }
+}
+.TwoColumPresentationLeftToRight__two__image {
   background-image: url(../images/WebDev-min-min.jpg);
   background-size: cover;
   background-position: center;
+  transition: all 1s;
+  min-height: 50rem;
+  min-width: 50rem;
 }
-@media only screen and (max-width: 75em) {
-  .TwoColumPresentationLeftToRight__two {
-    margin: 5rem;
+@media only screen and (max-width: 80em) {
+  .TwoColumPresentationLeftToRight__two__image {
+    min-height: 45rem;
+    min-width: 45rem;
   }
 }
-@media only screen and (max-width: 56.25em) {
-  .TwoColumPresentationLeftToRight__two {
-    flex: 3 0;
-    order: 99;
-    margin: 2rem 15rem;
+@media only screen and (max-width: 60em) {
+  .TwoColumPresentationLeftToRight__two__image {
+    min-height: 40rem;
+    min-width: 40rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .TwoColumPresentationLeftToRight__two__image {
+    min-height: 35rem;
+    min-width: 35rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .TwoColumPresentationLeftToRight__two__image {
+    min-height: 30rem;
+    min-width: 30rem;
     background-position: top;
   }
 }
-@media only screen and (max-width: 37.5em) {
-  .TwoColumPresentationLeftToRight__two {
-    margin: 9rem;
-  }
-}
-@media only screen and (max-width: 18.75em) {
-  .TwoColumPresentationLeftToRight__two {
-    flex: 1 0;
-    margin: 2rem 0.5rem;
-  }
-}
-@media only screen and (min-width: 112.5em) {
-  .TwoColumPresentationLeftToRight__two {
-    margin: 9rem;
+@media only screen and (min-width: 120em) {
+  .TwoColumPresentationLeftToRight__two__image {
+    min-height: 60rem;
+    min-width: 60rem;
   }
 }
 
-.TwoRowPresentation {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5rem 0;
-  flex-direction: column;
-}
-@media only screen and (max-width: 75em) {
-  .TwoRowPresentation {
-    height: 70vh;
-    margin-bottom: 10rem;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .TwoRowPresentation {
-    height: 70vh;
-    margin-bottom: 5rem;
-  }
+.TwoRowPresentationG {
+  margin-bottom: 4rem !important;
+  transform: all 6s;
 }
 @media only screen and (max-width: 37.5em) {
-  .TwoRowPresentation {
-    height: 60vh;
+  .TwoRowPresentationG {
+    padding: 0 !important;
   }
 }
-@media only screen and (max-width: 18.75em) {
-  .TwoRowPresentation {
-    height: 70vh;
-  }
+.TwoRowPresentationG__one {
+  height: 50vh;
 }
-@media only screen and (min-width: 112.5em) {
-  .TwoRowPresentation {
-    height: 85vh;
-  }
-}
-.TwoRowPresentation__one {
-  flex: 1 0 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media only screen and (max-width: 75em) {
-  .TwoRowPresentation__one {
-    margin: 5rem;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .TwoRowPresentation__one {
+@media only screen and (max-width: 80em) {
+  .TwoRowPresentationG__one {
     order: 99;
-    flex: 1 0;
+    height: 30vh;
   }
 }
-@media only screen and (max-width: 37.5em) {
-  .TwoRowPresentation__one {
-    margin: 9rem;
-  }
-}
-@media only screen and (max-width: 18.75em) {
-  .TwoRowPresentation__one {
-    flex: 1 0;
-    margin: 2rem 0.5rem;
-  }
-}
-.TwoRowPresentation__two {
+.TwoRowPresentationG__two {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 2rem;
 }
-@media only screen and (max-width: 56.25em) {
-  .TwoRowPresentation__two {
-    flex: 1 0;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .TwoRowPresentation__two {
-    margin-bottom: 1rem;
-  }
-}
-@media only screen and (max-width: 18.75em) {
-  .TwoRowPresentation__two {
-    margin-bottom: 0;
-  }
-}
-.TwoRowPresentation__two__title {
+.TwoRowPresentationG__two__title {
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 0.3rem;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   margin-bottom: 4rem;
 }
-.TwoRowPresentation__two__text {
+.TwoRowPresentationG__two__text {
   color: #4d2c91;
   text-align: center;
   letter-spacing: 0.5rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   padding: 0 2rem;
+  padding: 0 20rem;
 }
 @media only screen and (max-width: 18.75em) {
-  .TwoRowPresentation__two__text {
-    padding: 0;
+  .TwoRowPresentationG__two__text {
+    padding: 0 1rem;
     letter-spacing: 0.2rem;
   }
 }
-.TwoRowPresentation__Logo {
+@media only screen and (max-width: 37.5em) {
+  .TwoRowPresentationG__two__text {
+    padding: 0 2rem;
+  }
+}
+.TwoRowPresentationG__Logo {
   height: 100%;
   width: 100%;
 }
@@ -626,7 +526,7 @@ body {
   flex-wrap: wrap;
 }
 .header__title {
-  flex: 0 0 70%;
+  flex: 0 0 50%;
   margin-right: auto !important;
   display: flex;
   align-items: center;
@@ -647,8 +547,9 @@ body {
 }
 .header__translate-menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin-right: 5rem;
 }
 .header__translate-menu__icon {
   cursor: pointer;
@@ -657,11 +558,11 @@ body {
   color: #ffffff;
 }
 
-.MuiTabs-flexContainer-90 {
+.MuiTabs-flexContainer-179 {
   justify-content: center;
 }
-@media only screen and (max-width: 37.5em) {
-  .MuiTabs-flexContainer-90 {
+@media only screen and (max-width: 80em) {
+  .MuiTabs-flexContainer-179 {
     justify-content: space-between;
   }
 }
@@ -669,12 +570,12 @@ body {
 .section-main {
   padding-top: 8rem;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 80em) {
   .section-main {
     padding-top: 7rem;
   }
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 60em) {
   .section-main {
     padding-top: 6rem;
   }
@@ -689,7 +590,7 @@ body {
     padding-top: 4rem;
   }
 }
-@media only screen and (min-width: 112.5em) {
+@media only screen and (min-width: 120em) {
   .section-main {
     padding-top: 10rem;
   }

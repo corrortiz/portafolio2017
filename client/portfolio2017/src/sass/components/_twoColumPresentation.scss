@@ -1,38 +1,13 @@
 .TwoColumPresentation{
-  height: 50vh;
-  @include flexCenter;
-  margin: 5rem 0;
-  
-  @include respond(1200){
-    height: 55vh;
-  }
-  @include respond(900){
-    flex-direction: column;
-    height: 70vh;
-    margin-bottom: 0;
-  }
+  margin-bottom: 4rem !important;
   @include respond(600){
-    height: 80vh;
+    padding: 0 !important;
   }
-  @include respond(1800){
-    height: 85vh;
-  }
-
 
   &__one{
     @include flexCenter;
     flex-direction: column;
-    margin-bottom: 2rem;
-    
-    @include respond(900){
-      flex: 1 0;
-    }
-    @include respond(600){
-      margin-bottom: 1rem;
-    }
-    @include respond(300){
-      margin-bottom: 0;
-    }
+    margin-bottom: 2rem !important;
 
     &__title{
        @include maintTextPrimaryColor; 
@@ -44,33 +19,34 @@
   }
 
   &__two{
-    flex: 1 0 35%;
-    margin: 2rem;
-    align-self: stretch;
-    background-image: url(../images/AddDev-min.jpg);
-    background-size: cover;
-    background-position: center;
-
-
-    @include respond(1200){
-      margin: 5rem;
-    }
-    @include respond(900){
-      flex: 3 0;
-      margin: 2rem 15rem;
-      background-position: top;
-    }
-    @include respond(600){
-      margin: 9rem;
-    }
-    @include respond(300){
-      flex: 1 0;
-      margin: 2rem .5rem;
-    }
-    @include respond(1800){
-      margin: 9rem;
-    }
+    @include flexCenter;
+    overflow: hidden;
     
+    &__image{
+      background-image: url(../images/AddDev-min.jpg);
+      background-size: cover;
+      background-position: center;
+      transition: all 1s;
+      @include min-size(50rem, 50rem)
+      
+      @include respond(1200){
+        @include min-size(45rem, 45rem)
+      }
+      @include respond(900){
+        @include min-size(40rem, 40rem)
+      }
+      @include respond(600){
+        @include min-size(35rem, 35rem)
+      }
+      @include respond(300){
+        @include min-size(30rem, 30rem)
+        background-position: top;
+      }
+      @include respond(1800){
+        @include min-size(60rem, 60rem)
+      }
+
+    }
   }
   
 }
