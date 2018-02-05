@@ -103,6 +103,32 @@ html {
   }
 }
 
+/*
+*******************
+**Cards Animation**
+*******************
+*/
+.fade-enter,
+.fade-exit {
+  transition: 400ms cubic-bezier(0, 0, 0.58, 1) all;
+  position: relative;
+  display: block;
+}
+
+.fade-enter.fade-enter-active,
+.fade-exit {
+  opacity: 1;
+  right: 0;
+  height: 15rem;
+}
+
+.fade-exit.fade-exit-active,
+.fade-enter {
+  opacity: 0;
+  right: -27rem;
+  height: 0px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -320,34 +346,8 @@ body {
   background-image: url(../images/AddDev-min.jpg);
   background-size: cover;
   background-position: center;
-  transition: all 1s;
   min-height: 50rem;
   min-width: 50rem;
-}
-@media only screen and (max-width: 80em) {
-  .TwoColumPresentation__two__image {
-    min-height: 45rem;
-    min-width: 45rem;
-  }
-}
-@media only screen and (max-width: 60em) {
-  .TwoColumPresentation__two__image {
-    min-height: 40rem;
-    min-width: 40rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .TwoColumPresentation__two__image {
-    min-height: 35rem;
-    min-width: 35rem;
-  }
-}
-@media only screen and (max-width: 18.75em) {
-  .TwoColumPresentation__two__image {
-    min-height: 30rem;
-    min-width: 30rem;
-    background-position: top;
-  }
 }
 @media only screen and (min-width: 120em) {
   .TwoColumPresentation__two__image {

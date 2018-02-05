@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import Button from 'material-ui/Button';
 import Snackbar from 'material-ui/Snackbar';

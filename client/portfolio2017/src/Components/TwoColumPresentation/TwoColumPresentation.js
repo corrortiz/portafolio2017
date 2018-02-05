@@ -1,12 +1,30 @@
 // @flow
 import React, { Component } from 'react';
-
+//HOC
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
+//Local Diccionary
 import { SofwareDevelop, SofwareDevelopText } from '../../Assets/diccionary';
 import { lenguajeSelector } from '../../Store/Actions/globals';
-
+//MUI Components
 import Grid from 'material-ui/Grid';
+//Internal Componetns
+import RImage from '../RImage/RImage';
+//Responsive Images
+import lg_1x_JPG from '../../images/Programing/Programing-lg_1x.jpg';
+import md_1x_JPG from '../../images/Programing/Programing-md_1x.jpg';
+import sm_1x_JPG from '../../images/Programing/Programing-sm_1x.jpg';
+//Only Chrome
+import lg_1x from '../../images/Programing/Programing-lg_1x.webp';
+import lg_2x from '../../images/Programing/Programing-lg_2x.webp';
+import md_1x from '../../images/Programing/Programing-md_1x.webp';
+import md_2x from '../../images/Programing/Programing-md_2x.webp';
+import sm_1x from '../../images/Programing/Programing-sm_1x.webp';
+import sm_2x from '../../images/Programing/Programing-sm_2x.webp';
 
+/**
+ * This class represents a common section of two columns
+ * one with information and the other with image
+ */
 class TwoColumPresentation extends Component {
   render() {
     const { lenguaje } = this.props.globals;
@@ -27,6 +45,7 @@ class TwoColumPresentation extends Component {
             {lenguajeSelector(lenguaje, SofwareDevelopText)}
           </p>
         </Grid>
+
         <Grid
           item
           xs={10}
@@ -35,7 +54,19 @@ class TwoColumPresentation extends Component {
           lg={6}
           className="TwoColumPresentation__two"
         >
-          <div className="TwoColumPresentation__two__image AnimationBorder" />
+          <div className="TwoColumPresentation__two__image">
+            <RImage
+              lg_1x={lg_1x}
+              lg_2x={lg_2x}
+              md_1x={md_1x}
+              md_2x={md_2x}
+              sm_1x={sm_1x}
+              sm_2x={sm_2x}
+              lg_1x_JPG={lg_1x_JPG}
+              md_1x_JPG={md_1x_JPG}
+              sm_1x_JPG={sm_1x_JPG}
+            />
+          </div>
         </Grid>
       </Grid>
     );
