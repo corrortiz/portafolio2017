@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 /**
  * Component to receive images and be responsive
  */
-class RImage extends Component {
+export class RImage extends Component {
   render() {
     const {
       lg_1x,
@@ -26,12 +26,15 @@ class RImage extends Component {
           srcSet={`${lg_1x} 1x, ${lg_2x} 2x`}
           type="image/webp"
         />
+
         <source
           media="(min-width: 601px)"
           srcSet={`${md_1x} 1x, ${md_2x} 2x`}
           type="image/webp"
         />
+
         <source srcSet={`${sm_1x} 1x, ${sm_2x} 2x`} type="image/webp" />
+
         <img
           srcSet={`${sm_1x_JPG} 600w,
             ${md_1x_JPG} 900w,

@@ -1,10 +1,12 @@
 // @flow
 import React from 'react';
-
+//Internals Component
 import AppSnackBar from '../AppSnackBar/AppSnackBar';
-
 import Github from '../../images/SVG/Github';
 
+/**
+ * Componet for the layout of the footer
+ */
 const FooterApp = () => {
   return (
     <footer className="footer">
@@ -16,8 +18,8 @@ const FooterApp = () => {
           className="footer__hyperlink"
         >
           <Github />
-          <AppSnackBar />
         </a>
+        <AppSnackBar />
       </div>
     </footer>
   );

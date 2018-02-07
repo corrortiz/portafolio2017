@@ -1,0 +1,37 @@
+.PresentationRightToLeft{
+  margin-bottom: 4rem !important;
+  @include respond(600){
+    padding: 0 !important;
+  }
+
+  &__one{
+    @include flexCenter;
+    flex-direction: column;
+    margin-bottom: 2rem !important;
+
+    &__title{
+       @include maintTextPrimaryColor; 
+    }
+    
+    &__text{
+      @include secondaryTextSecondaryColor;
+    }
+  }
+
+  &__two{
+    @include flexCenter;
+    overflow: hidden;
+    
+    &__image{
+      background-image: url(../images/AddDev-min.jpg);
+      background-size: cover;
+      background-position: center;
+      @include min-size(50rem, 50rem)
+      @include respond(1800){
+        @include min-size(60rem, 60rem)
+      }
+
+    }
+  }
+  
+}

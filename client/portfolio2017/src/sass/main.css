@@ -162,6 +162,10 @@ body {
   }
 }
 
+.hide {
+  display: none !important;
+}
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -298,22 +302,22 @@ body {
   font-weight: 600;
 }
 
-.TwoColumPresentation {
+.PresentationRightToLeft {
   margin-bottom: 4rem !important;
 }
 @media only screen and (max-width: 37.5em) {
-  .TwoColumPresentation {
+  .PresentationRightToLeft {
     padding: 0 !important;
   }
 }
-.TwoColumPresentation__one {
+.PresentationRightToLeft__one {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 2rem !important;
 }
-.TwoColumPresentation__one__title {
+.PresentationRightToLeft__one__title {
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
@@ -322,7 +326,7 @@ body {
   font-weight: 400;
   margin-bottom: 4rem;
 }
-.TwoColumPresentation__one__text {
+.PresentationRightToLeft__one__text {
   color: #4d2c91;
   text-align: center;
   letter-spacing: 0.5rem;
@@ -331,18 +335,18 @@ body {
   padding: 0 2rem;
 }
 @media only screen and (max-width: 18.75em) {
-  .TwoColumPresentation__one__text {
+  .PresentationRightToLeft__one__text {
     padding: 0 1rem;
     letter-spacing: 0.2rem;
   }
 }
-.TwoColumPresentation__two {
+.PresentationRightToLeft__two {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-.TwoColumPresentation__two__image {
+.PresentationRightToLeft__two__image {
   background-image: url(../images/AddDev-min.jpg);
   background-size: cover;
   background-position: center;
@@ -350,28 +354,28 @@ body {
   min-width: 50rem;
 }
 @media only screen and (min-width: 120em) {
-  .TwoColumPresentation__two__image {
+  .PresentationRightToLeft__two__image {
     min-height: 60rem;
     min-width: 60rem;
   }
 }
 
-.TwoColumPresentationLeftToRight {
+.PresentationLeftToRight {
   margin-bottom: 4rem !important;
 }
 @media only screen and (max-width: 37.5em) {
-  .TwoColumPresentationLeftToRight {
+  .PresentationLeftToRight {
     padding: 0 !important;
   }
 }
-.TwoColumPresentationLeftToRight__one {
+.PresentationLeftToRight__one {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 2rem !important;
 }
-.TwoColumPresentationLeftToRight__one__title {
+.PresentationLeftToRight__one__title {
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
@@ -380,7 +384,7 @@ body {
   font-weight: 400;
   margin-bottom: 4rem;
 }
-.TwoColumPresentationLeftToRight__one__text {
+.PresentationLeftToRight__one__text {
   color: #4d2c91;
   text-align: center;
   letter-spacing: 0.5rem;
@@ -389,23 +393,23 @@ body {
   padding: 0 2rem;
 }
 @media only screen and (max-width: 18.75em) {
-  .TwoColumPresentationLeftToRight__one__text {
+  .PresentationLeftToRight__one__text {
     padding: 0 1rem;
     letter-spacing: 0.2rem;
   }
 }
-.TwoColumPresentationLeftToRight__two {
+.PresentationLeftToRight__two {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 @media only screen and (max-width: 80em) {
-  .TwoColumPresentationLeftToRight__two {
+  .PresentationLeftToRight__two {
     order: 99;
   }
 }
-.TwoColumPresentationLeftToRight__two__image {
+.PresentationLeftToRight__two__image {
   background-image: url(../images/WebDev-min-min.jpg);
   background-size: cover;
   background-position: center;
@@ -414,62 +418,62 @@ body {
   min-width: 50rem;
 }
 @media only screen and (max-width: 80em) {
-  .TwoColumPresentationLeftToRight__two__image {
+  .PresentationLeftToRight__two__image {
     min-height: 45rem;
     min-width: 45rem;
   }
 }
 @media only screen and (max-width: 60em) {
-  .TwoColumPresentationLeftToRight__two__image {
+  .PresentationLeftToRight__two__image {
     min-height: 40rem;
     min-width: 40rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .TwoColumPresentationLeftToRight__two__image {
+  .PresentationLeftToRight__two__image {
     min-height: 35rem;
     min-width: 35rem;
   }
 }
 @media only screen and (max-width: 18.75em) {
-  .TwoColumPresentationLeftToRight__two__image {
+  .PresentationLeftToRight__two__image {
     min-height: 30rem;
     min-width: 30rem;
     background-position: top;
   }
 }
 @media only screen and (min-width: 120em) {
-  .TwoColumPresentationLeftToRight__two__image {
+  .PresentationLeftToRight__two__image {
     min-height: 60rem;
     min-width: 60rem;
   }
 }
 
-.TwoRowPresentationG {
+.PresentationBottomToTop {
   margin-bottom: 4rem !important;
   transform: all 6s;
 }
 @media only screen and (max-width: 37.5em) {
-  .TwoRowPresentationG {
+  .PresentationBottomToTop {
     padding: 0 !important;
   }
 }
-.TwoRowPresentationG__one {
+.PresentationBottomToTop__one {
   height: 50vh;
 }
 @media only screen and (max-width: 80em) {
-  .TwoRowPresentationG__one {
+  .PresentationBottomToTop__one {
     order: 99;
     height: 30vh;
   }
 }
-.TwoRowPresentationG__two {
+.PresentationBottomToTop__two {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.TwoRowPresentationG__two__title {
+.PresentationBottomToTop__two__title {
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
@@ -478,7 +482,7 @@ body {
   font-weight: 400;
   margin-bottom: 4rem;
 }
-.TwoRowPresentationG__two__text {
+.PresentationBottomToTop__two__text {
   color: #4d2c91;
   text-align: center;
   letter-spacing: 0.5rem;
@@ -488,17 +492,17 @@ body {
   padding: 0 20rem;
 }
 @media only screen and (max-width: 18.75em) {
-  .TwoRowPresentationG__two__text {
+  .PresentationBottomToTop__two__text {
     padding: 0 1rem;
     letter-spacing: 0.2rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .TwoRowPresentationG__two__text {
+  .PresentationBottomToTop__two__text {
     padding: 0 2rem;
   }
 }
-.TwoRowPresentationG__Logo {
+.PresentationBottomToTop__Logo {
   height: 100%;
   width: 100%;
 }
@@ -516,9 +520,6 @@ body {
   margin-top: 0.5rem;
   fill: #ffffff;
   cursor: pointer;
-}
-.footer__appSnackBar button {
-  display: none;
 }
 
 .header {
@@ -556,15 +557,6 @@ body {
 }
 .header__translate-menu button {
   color: #ffffff;
-}
-
-.MuiTabs-flexContainer-179 {
-  justify-content: center;
-}
-@media only screen and (max-width: 80em) {
-  .MuiTabs-flexContainer-179 {
-    justify-content: space-between;
-  }
 }
 
 .section-main {

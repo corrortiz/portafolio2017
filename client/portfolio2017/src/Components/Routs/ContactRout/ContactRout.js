@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Layout of the contact rout
+ */
 const ContactRout = () => {
   return (
     <div>

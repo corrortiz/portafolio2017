@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RImage />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <source
+          media="(min-width: 900px)"
+          srcSet="undefined 1x, undefined 2x"
+          type="image/webp"
+/>,
+        <source
+          media="(min-width: 601px)"
+          srcSet="undefined 1x, undefined 2x"
+          type="image/webp"
+/>,
+        <source
+          srcSet="undefined 1x, undefined 2x"
+          type="image/webp"
+/>,
+        <img
+          alt="image description"
+          src={undefined}
+          srcSet="undefined 600w,
+            undefined 900w,
+            undefined 1440w"
+          type="image/jpeg"
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "media": "(min-width: 900px)",
+          "srcSet": "undefined 1x, undefined 2x",
+          "type": "image/webp",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "source",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "media": "(min-width: 601px)",
+          "srcSet": "undefined 1x, undefined 2x",
+          "type": "image/webp",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "source",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "srcSet": "undefined 1x, undefined 2x",
+          "type": "image/webp",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "source",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "image description",
+          "src": undefined,
+          "srcSet": "undefined 600w,
+            undefined 900w,
+            undefined 1440w",
+          "type": "image/jpeg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
+    "type": "picture",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <source
+            media="(min-width: 900px)"
+            srcSet="undefined 1x, undefined 2x"
+            type="image/webp"
+/>,
+          <source
+            media="(min-width: 601px)"
+            srcSet="undefined 1x, undefined 2x"
+            type="image/webp"
+/>,
+          <source
+            srcSet="undefined 1x, undefined 2x"
+            type="image/webp"
+/>,
+          <img
+            alt="image description"
+            src={undefined}
+            srcSet="undefined 600w,
+            undefined 900w,
+            undefined 1440w"
+            type="image/jpeg"
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "media": "(min-width: 900px)",
+            "srcSet": "undefined 1x, undefined 2x",
+            "type": "image/webp",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "source",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "media": "(min-width: 601px)",
+            "srcSet": "undefined 1x, undefined 2x",
+            "type": "image/webp",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "source",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "srcSet": "undefined 1x, undefined 2x",
+            "type": "image/webp",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "source",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "image description",
+            "src": undefined,
+            "srcSet": "undefined 600w,
+            undefined 900w,
+            undefined 1440w",
+            "type": "image/jpeg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
+      "type": "picture",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

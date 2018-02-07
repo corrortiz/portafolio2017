@@ -1,12 +1,19 @@
 // @flow
 import React, { Component } from 'react';
-import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
-
+//MUI Componets
 import Button from 'material-ui/Button';
 import Menu, { MenuItem } from 'material-ui/Menu';
 import Translate from 'material-ui-icons/Translate';
+//HOC for globals states
+import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
+//local
+import { lenguajeSelector } from '../../Store/Actions/globals';
+import { LocaleChange } from '../../Assets/diccionary';
 
-class TranslateMenu extends Component {
+/**
+ * A choice box component for changing the local of the app
+ */
+export class TranslateMenu extends Component {
   state = {
     anchorEl: null,
     open: false,
@@ -19,18 +26,21 @@ class TranslateMenu extends Component {
   };
 
   handleClose = event => {
+    //Show Loading circle
     this.props.showLoading();
+    //Change the state for the new value in the choice box
     const lenguaje = event.currentTarget.id;
     this.setState(() => ({ open: false, lenguaje }));
-    this.kiri = setTimeout(() => {
-      //Action Redux Store
-      lenguaje === 'ESPAÑOL'
-        ? this.props.setLenguaje('es')
-        : this.props.setLenguaje('en');
-      this.props.messageSnackBar('The Language Of The Page Has Changed');
+    //Translate into locale short name
+    const newLocale = lenguaje === 'ESPAÑOL' ? 'es' : 'en';
+    //A small dealy for better UX
+    this.anyName = setTimeout(() => {
+      this.props.setLenguaje(newLocale);
+      //This change the snackbar message
+      this.props.messageSnackBar(lenguajeSelector(newLocale, LocaleChange));
       this.props.showSnackBar();
       this.props.showLoading();
-    }, 1000);
+    }, 550);
   };
 
   render() {

@@ -1,11 +1,12 @@
 import React from 'react';
 
-import TwoColumPresentation from '../../TwoColumPresentation/TwoColumPresentation';
-
+/**
+ * layout of the projects rout
+ */
 const ProjectsRoute = () => {
   return (
     <div>
-      <TwoColumPresentation />
+      <h1>Kiri</h1>
     </div>
   );
 };

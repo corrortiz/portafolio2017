@@ -1,17 +1,20 @@
 import React from 'react';
-
+//Internal Components
 import ImageContainer from '../../ImageContainer/ImageContainer';
-import TwoColumPresentation from '../../TwoColumPresentation/TwoColumPresentation';
-import TwoColumPresentationLeftToRight from '../../TwoColumPresentationLeftToRight/TwoColumPresentationLeftToRight';
-import TwoRowPresentationG from '../../TwoRowPresentation/TwoRowPresentationG';
+import PresentationRightToLeft from '../../PresentationRightToLeft/PresentationRightToLeft';
+import PresentationLeftToRight from '../../PresentationLeftToRight/PresentationLeftToRight';
+import PresentationBottomToTop from '../../PresentationBottomToTop/PresentationBottomToTop';
 
+/**
+ * layout of the home rout container
+ */
 const HomeRoute = () => {
   return (
     <div>
       <ImageContainer />
-      <TwoColumPresentation />
-      <TwoColumPresentationLeftToRight />
-      <TwoRowPresentationG />
+      <PresentationRightToLeft />
+      <PresentationLeftToRight />
+      <PresentationBottomToTop />
     </div>
   );
 };

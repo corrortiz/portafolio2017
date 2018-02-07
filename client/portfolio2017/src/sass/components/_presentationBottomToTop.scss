@@ -1,0 +1,41 @@
+.PresentationBottomToTop{
+  margin-bottom: 4rem !important;
+  transform: all 6s;
+  @include respond(600){
+   padding: 0 !important;
+  }
+
+
+  &__one{
+    height: 50vh;
+    
+    @include respond(1200){
+      order: 99;
+      height: 30vh;
+    }
+  }
+
+  &__two{
+    @include flexCenter;
+    flex-direction: column;
+  
+    &__title{
+       @include maintTextPrimaryColor; 
+    }
+    
+    &__text{
+      @include secondaryTextSecondaryColor;
+      padding: 0 20rem;
+
+      @include respond(600){
+        padding: 0 2rem;
+      }
+    }
+  }
+
+  &__Logo{
+    height: 100%;
+    width: 100%;
+  }
+
+}

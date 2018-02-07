@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * layout of the service roout
+ */
 const ServicesRoute = () => {
   return (
     <div>

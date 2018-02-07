@@ -63,3 +63,13 @@ export const MetaText = {
   en:
     'Is to create unique experiences for our clients, to achieve this we investigate, plan and imagine next to them and together we select the option that is most suitable for implement, always looking for innovation, working to overcome any obstacle that stand between us and the goal, after all we believe that with good music, effort and good communication the sky is the limit.'
 };
+
+export const Close = {
+  es: 'cerrar',
+  en: 'close'
+};
+
+export const LocaleChange = {
+  es: 'El lenguaje de la app ahora es Español',
+  en: 'The language of the app is now English'
+};

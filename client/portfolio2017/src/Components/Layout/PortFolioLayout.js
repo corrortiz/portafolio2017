@@ -1,14 +1,15 @@
 // @flow
 import React from 'react';
-import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+//Redux Store
+import { Provider } from 'react-redux';
 import storeConfig from '../../Store/storeConfig';
-
+//MUI Components and Config
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import blue from 'material-ui/colors/blue';
 import deepPurple from 'material-ui/colors/deepPurple';
 import Grid from 'material-ui/Grid';
-
+//Internal Components
 import HeaderAppBar from '../HeaderAppBar/HeaderAppBar';
 import FooterApp from '../FooterApp/FooterApp';
 import Routs from '../Routs/Routs';

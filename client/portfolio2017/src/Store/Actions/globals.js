@@ -1,13 +1,12 @@
 // @flow
-
 export const SET_LENGUAJE = 'SET_LENGUAJE';
-export const setLenguaje = lenguaje => ({
+export const setLenguaje = (lenguaje: string) => ({
   type: SET_LENGUAJE,
   lenguaje
 });
 
 export const SET_TAB_VALUE = 'SET_TAB_VALUE';
-export const setTabValue = tabValue => ({
+export const setTabValue = (tabValue: number) => ({
   type: SET_TAB_VALUE,
   tabValue
 });
@@ -23,11 +22,11 @@ export const showLoading = () => ({
 });
 
 export const MESSAGE_SNACKBAR = 'MESSAGE_SNACKBAR';
-export const messageSnackBar = message => ({
+export const messageSnackBar = (message: string) => ({
   type: MESSAGE_SNACKBAR,
   message
 });
 
-export function lenguajeSelector(lenguaje, text) {
+export function lenguajeSelector(lenguaje: string, text: Object) {
   return lenguaje === 'en' ? text.en : text.es;
 }

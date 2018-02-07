@@ -1,20 +1,33 @@
 // @flow
 import React, { Component } from 'react';
+//MUI Components
 import Button from 'material-ui/Button';
 import Snackbar from 'material-ui/Snackbar';
 import Slide from 'material-ui/transitions/Slide';
-import IconButton from 'material-ui/IconButton';
-import CloseIcon from 'material-ui-icons/Close';
-
+import { withStyles } from 'material-ui/styles';
+//HOC for connect to Redux
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
+//locale neds of global connect to work
+import { lenguajeSelector } from '../../Store/Actions/globals';
+import { Close } from '../../Assets/diccionary';
 
-function TransitionDown(props) {
-  return <Slide direction="down" {...props} />;
+//Func for deside te type of transiton to the sbackbar
+function TypeOfTransition(props) {
+  return <Slide direction="up" {...props} />;
 }
 
-class AppSnackBar extends Component {
+const styles = theme => ({
+  snackbar: {
+    margin: theme.spacing.unit
+  }
+});
+
+/**
+ * SnackBar component with auto hide and animation
+ */
+export class AppSnackBar extends Component {
   state = {
-    transition: TransitionDown
+    transition: TypeOfTransition
   };
 
   handleClick = transition => () => {
@@ -28,35 +41,44 @@ class AppSnackBar extends Component {
 
   render() {
     const { transition } = this.state;
-    const { openSnackBar, messageSnackBar } = this.props.globals;
+    const { openSnackBar, messageSnackBar, lenguaje } = this.props.globals;
+    const { classes } = this.props;
 
     return (
       <div className="footer__appSnackBar">
-        <Button onClick={this.handleClick(TransitionDown)}>Down</Button>
+        {/*This button is necesary for adding the custom transition and is hidden with css*/}
+        <Button className="hide" onClick={this.handleClick(TypeOfTransition)}>
+          Down
+        </Button>
+
         <Snackbar
           open={openSnackBar}
           onClose={this.handleClose}
           onRequestClose={this.handleClose}
-          autoHideDuration={1000}
+          autoHideDuration={3500}
           transition={transition}
+          className={classes.snackbar}
           SnackbarContentProps={{
             'aria-describedby': 'message-id'
           }}
           message={<span id="message-id">{messageSnackBar}</span>}
           action={[
-            <IconButton
+            <Button
               key="close"
               aria-label="Close"
-              color="inherit"
+              color="accent"
+              dense
               onClick={this.handleClose}
             >
-              <CloseIcon />
-            </IconButton>
+              {lenguajeSelector(lenguaje, Close)}
+            </Button>
           ]}
         />
       </div>
     );
   }
 }
+
+AppSnackBar = withStyles(styles)(AppSnackBar);
 
 export default GlobalsConnect(AppSnackBar);
