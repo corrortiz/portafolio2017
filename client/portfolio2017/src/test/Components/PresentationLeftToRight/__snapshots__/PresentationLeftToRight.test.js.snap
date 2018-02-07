@@ -1,18 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppSnackBar Component should compare a snapshot of AppSnackBar 1`] = `
+exports[`PresentationLeftToRight Component Should compare a snapshop of the component 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withStyles(AppSnackBar)
-    globals={
-        Object {
-            "lenguaje": "es",
-            "messageSnackBar": "AO HyS Rules",
-            "openSnackBar": true,
-          }
-    }
-/>,
+  Symbol(enzyme.__unrendered__): <withStyles(PresentationLeftToRight) />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -26,12 +18,7 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "classes": Object {
-        "snackbar": "AppSnackBar-snackbar-1",
-      },
-      "globals": Object {
-        "lenguaje": "es",
-        "messageSnackBar": "AO HyS Rules",
-        "openSnackBar": true,
+        "root": "PresentationLeftToRight-root-1",
       },
     },
     "ref": null,
@@ -45,12 +32,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "classes": Object {
-          "snackbar": "AppSnackBar-snackbar-1",
-        },
-        "globals": Object {
-          "lenguaje": "es",
-          "messageSnackBar": "AO HyS Rules",
-          "openSnackBar": true,
+          "root": "PresentationLeftToRight-root-1",
         },
       },
       "ref": null,

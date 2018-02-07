@@ -7,6 +7,7 @@ import { SofwareDevelop, SofwareDevelopText } from '../../Assets/diccionary';
 import { lenguajeSelector } from '../../Store/Actions/globals';
 //MUI Components
 import Grid from 'material-ui/Grid';
+import { withStyles } from 'material-ui/styles';
 //Internal Componetns
 import RImage from '../RImage/RImage';
 //Responsive Images
@@ -20,6 +21,10 @@ import md_1x from '../../images/Programing/Programing-md_1x.webp';
 import md_2x from '../../images/Programing/Programing-md_2x.webp';
 import sm_1x from '../../images/Programing/Programing-sm_1x.webp';
 import sm_2x from '../../images/Programing/Programing-sm_2x.webp';
+//CSS in JS Styles
+const styles = theme => ({
+  root: {}
+});
 
 /**
  * This class represents a common section of two columns
@@ -28,6 +33,8 @@ import sm_2x from '../../images/Programing/Programing-sm_2x.webp';
 export class PresentationRightToLeft extends Component {
   render() {
     const { lenguaje } = this.props.globals;
+    const { classes } = this.props;
+
     return (
       <Grid
         container
@@ -35,7 +42,7 @@ export class PresentationRightToLeft extends Component {
         alignItems={'center'}
         justify={'center'}
         alignContent={'center'}
-        className="PresentationRightToLeft box"
+        className={`PresentationRightToLeft box ${classes.root}`}
       >
         <Grid item xs={12} lg={6} className="PresentationRightToLeft__one">
           <h1 className="PresentationRightToLeft__one__title">
@@ -72,5 +79,7 @@ export class PresentationRightToLeft extends Component {
     );
   }
 }
+
+PresentationRightToLeft = withStyles(styles)(PresentationRightToLeft);
 
 export default GlobalsConnect(PresentationRightToLeft);

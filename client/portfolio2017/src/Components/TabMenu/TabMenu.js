@@ -7,11 +7,16 @@ import FavoriteIcon from 'material-ui-icons/Favorite';
 import PersonPinIcon from 'material-ui-icons/PersonPin';
 import HelpIcon from 'material-ui-icons/Help';
 import ThumbUp from 'material-ui-icons/ThumbUp';
+import { withStyles } from 'material-ui/styles';
 //HOC for global state
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 //locale
 import { lenguajeSelector } from '../../Store/Actions/globals';
 import { Home, Services, Projects, Contact } from '../../Assets/diccionary';
+//CSS in JS Styles
+const styles = theme => ({
+  root: {}
+});
 
 /**
  * A component that renders a tab menu with icons
@@ -23,9 +28,10 @@ export class TabMenu extends Component {
 
   render() {
     const { lenguaje, tabValue } = this.props.globals;
+    const { classes } = this.props;
 
     return (
-      <div className="header__bottonNavigation">
+      <div className={`header__bottonNavigation ${classes.root}`}>
         <Tabs
           value={tabValue}
           onChange={this.handleChange}
@@ -63,5 +69,7 @@ export class TabMenu extends Component {
     );
   }
 }
+
+TabMenu = withStyles(styles)(TabMenu);
 
 export default GlobalsConnect(TabMenu);

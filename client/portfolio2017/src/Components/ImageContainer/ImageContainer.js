@@ -1,11 +1,17 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+//MUI Components
+import { withStyles } from 'material-ui/styles';
 //HOC for global states
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 //locale
 import { lenguajeSelector } from '../../Store/Actions/globals';
 import { Contratanos, AoDesarrollo } from '../../Assets/diccionary';
+//CSS in JS Styles
+const styles = theme => ({
+  root: {}
+});
 
 /**
  * Component for a call to action with a Full Wide Image and A Message
@@ -17,9 +23,10 @@ export class ImageContainer extends Component {
 
   render() {
     const { lenguaje } = this.props.globals;
+    const { classes } = this.props;
 
     return (
-      <div className="ImageContainer">
+      <div className={`ImageContainer ${classes.root}`}>
         <h1 className="ImageContainer__main-text">
           {lenguajeSelector(lenguaje, AoDesarrollo)}
         </h1>
@@ -40,5 +47,7 @@ export class ImageContainer extends Component {
     );
   }
 }
+
+ImageContainer = withStyles(styles)(ImageContainer);
 
 export default GlobalsConnect(ImageContainer);

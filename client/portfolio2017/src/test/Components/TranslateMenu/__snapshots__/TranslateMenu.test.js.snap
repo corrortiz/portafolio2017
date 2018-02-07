@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TranslateMenu Component should compare a snapshot of TranslateMenu 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TranslateMenu />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <withStyles(Button)
+          aria-haspopup="true"
+          aria-owns={null}
+          onClick={[Function]}
+>
+          ENGLISH
+</withStyles(Button)>,
+        <pure(Translate)
+          className="header__translate-menu__icon"
+          onClick={[Function]}
+/>,
+        <withStyles(Menu)
+          anchorEl={null}
+          id="simple-menu"
+          onClose={[Function]}
+          open={false}
+>
+          <withStyles(MenuItem)
+                    id="ENGLISH"
+                    onClick={[Function]}
+          >
+                    English
+          </withStyles(MenuItem)>
+          <withStyles(MenuItem)
+                    id="ESPAÑOL"
+                    onClick={[Function]}
+          >
+                    Español
+          </withStyles(MenuItem)>
+</withStyles(Menu)>,
+      ],
+      "className": "header__translate-menu",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "aria-haspopup": "true",
+          "aria-owns": null,
+          "children": "ENGLISH",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "ENGLISH",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": "header__translate-menu__icon",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "anchorEl": null,
+          "children": Array [
+            <withStyles(MenuItem)
+              id="ENGLISH"
+              onClick={[Function]}
+>
+              English
+</withStyles(MenuItem)>,
+            <withStyles(MenuItem)
+              id="ESPAÑOL"
+              onClick={[Function]}
+>
+              Español
+</withStyles(MenuItem)>,
+          ],
+          "id": "simple-menu",
+          "onClose": [Function],
+          "open": false,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "English",
+              "id": "ENGLISH",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "English",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Español",
+              "id": "ESPAÑOL",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Español",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <withStyles(Button)
+            aria-haspopup="true"
+            aria-owns={null}
+            onClick={[Function]}
+>
+            ENGLISH
+</withStyles(Button)>,
+          <pure(Translate)
+            className="header__translate-menu__icon"
+            onClick={[Function]}
+/>,
+          <withStyles(Menu)
+            anchorEl={null}
+            id="simple-menu"
+            onClose={[Function]}
+            open={false}
+>
+            <withStyles(MenuItem)
+                        id="ENGLISH"
+                        onClick={[Function]}
+            >
+                        English
+            </withStyles(MenuItem)>
+            <withStyles(MenuItem)
+                        id="ESPAÑOL"
+                        onClick={[Function]}
+            >
+                        Español
+            </withStyles(MenuItem)>
+</withStyles(Menu)>,
+        ],
+        "className": "header__translate-menu",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "aria-haspopup": "true",
+            "aria-owns": null,
+            "children": "ENGLISH",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "ENGLISH",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "header__translate-menu__icon",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "anchorEl": null,
+            "children": Array [
+              <withStyles(MenuItem)
+                id="ENGLISH"
+                onClick={[Function]}
+>
+                English
+</withStyles(MenuItem)>,
+              <withStyles(MenuItem)
+                id="ESPAÑOL"
+                onClick={[Function]}
+>
+                Español
+</withStyles(MenuItem)>,
+            ],
+            "id": "simple-menu",
+            "onClose": [Function],
+            "open": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "English",
+                "id": "ENGLISH",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "English",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Español",
+                "id": "ESPAÑOL",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Español",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

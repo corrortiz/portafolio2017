@@ -7,6 +7,11 @@ import { lenguajeSelector } from '../../Store/Actions/globals';
 import { WebDev, WebDevText } from '../../Assets/diccionary';
 //MUI Controls
 import Grid from 'material-ui/Grid';
+import { withStyles } from 'material-ui/styles';
+//CSS in JS Styles
+const styles = theme => ({
+  root: {}
+});
 
 /**
  * This class represents a common section of two columns
@@ -15,6 +20,7 @@ import Grid from 'material-ui/Grid';
 export class PresentationLeftToRight extends Component {
   render() {
     const { lenguaje } = this.props.globals;
+    const { classes } = this.props;
 
     return (
       <Grid
@@ -23,7 +29,7 @@ export class PresentationLeftToRight extends Component {
         alignItems={'center'}
         justify={'center'}
         alignContent={'center'}
-        className="PresentationLeftToRight box"
+        className={`PresentationLeftToRight box ${classes.root}`}
       >
         {/*Image*/}
         <Grid
@@ -50,5 +56,7 @@ export class PresentationLeftToRight extends Component {
     );
   }
 }
+
+PresentationLeftToRight = withStyles(styles)(PresentationLeftToRight);
 
 export default GlobalsConnect(PresentationLeftToRight);

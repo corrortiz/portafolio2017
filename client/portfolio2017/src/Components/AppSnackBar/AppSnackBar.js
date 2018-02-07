@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 //MUI Components
 import Button from 'material-ui/Button';

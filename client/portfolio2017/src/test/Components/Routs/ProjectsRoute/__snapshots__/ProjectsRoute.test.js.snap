@@ -17,17 +17,21 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Connect(NameWrappedComponent) />,
+      "children": <h1>
+        Kiri
+</h1>,
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
-      "props": Object {},
+      "nodeType": "host",
+      "props": Object {
+        "children": "Kiri",
+      },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": "Kiri",
+      "type": "h1",
     },
     "type": "div",
   },
@@ -37,17 +41,21 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <Connect(NameWrappedComponent) />,
+        "children": <h1>
+          Kiri
+</h1>,
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "children": "Kiri",
+        },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "Kiri",
+        "type": "h1",
       },
       "type": "div",
     },
