@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 //Internals Component
 import AppSnackBar from '../AppSnackBar/AppSnackBar';

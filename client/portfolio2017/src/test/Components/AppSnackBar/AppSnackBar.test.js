@@ -9,13 +9,12 @@ const globals = {
 };
 
 describe('AppSnackBar Component', () => {
+  it('renders without crashing', () => {
+    shallow(<AppSnackBar globals={globals} />);
+  });
+
   it('should compare a snapshot of AppSnackBar', () => {
     const wrapper = shallow(<AppSnackBar globals={globals} />);
     expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should have a div tag', () => {
-    const wrapper = shallow(<AppSnackBar globals={globals} />);
-    expect(wrapper.find('Snackbar')).to.have.length(1);
   });
 });

@@ -1,6 +1,6 @@
-// @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 //MUI Components
 import { withStyles } from 'material-ui/styles';
 //HOC for global states
@@ -47,6 +47,12 @@ export class ImageContainer extends Component {
     );
   }
 }
+
+ImageContainer.propTypes = {
+  globals: PropTypes.shape({
+    lenguaje: PropTypes.string.isRequired
+  })
+};
 
 ImageContainer = withStyles(styles)(ImageContainer);
 

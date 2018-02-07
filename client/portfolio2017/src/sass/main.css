@@ -12,6 +12,7 @@ $breakpoint argument choices:
 /**** Centers a flex container*/
 /**** Min Size*/
 /**** Min Size*/
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&subset=latin-ext');
 *,
 *::after,
 *::before {
@@ -130,7 +131,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .box {
@@ -281,6 +282,7 @@ body {
   }
 }
 .ImageContainer__main-text {
+  font-family: 'Lato', sans-serif;
   color: #ffffff;
   text-transform: capitalize;
   letter-spacing: 0.5rem;
@@ -294,7 +296,6 @@ body {
   letter-spacing: 0.5rem;
   font-size: 3rem;
   font-weight: 300;
-  margin-bottom: 4rem;
 }
 .ImageContainer__btn {
   letter-spacing: 0.5rem;
@@ -318,6 +319,7 @@ body {
   margin-bottom: 2rem !important;
 }
 .PresentationRightToLeft__one__title {
+  font-family: 'Lato', sans-serif;
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
@@ -376,6 +378,7 @@ body {
   margin-bottom: 2rem !important;
 }
 .PresentationLeftToRight__one__title {
+  font-family: 'Lato', sans-serif;
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
@@ -474,6 +477,7 @@ body {
   flex-direction: column;
 }
 .PresentationBottomToTop__two__title {
+  font-family: 'Lato', sans-serif;
   color: #1565c0;
   text-transform: capitalize;
   text-align: center;
@@ -526,37 +530,52 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.header__toolbar {
+  margin: 0 40rem;
+}
 .header__title {
-  flex: 0 0 50%;
-  margin-right: auto !important;
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 .header__title__progress {
   color: #ffffff !important;
 }
 .header__title__message {
-  margin-right: 2rem !important;
-}
-.header__bottonNavigation {
-  flex: 0 0 100%;
-  background-color: #fafafa !important;
-  color: #000023;
-}
-.header__bottonNavigation__tabs {
-  flex: 0 0 100%;
+  margin-right: 1rem !important;
+  font-family: 'Lato', sans-serif !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0.5rem;
+  font-size: 4rem !important;
+  font-weight: 300 !important;
 }
 .header__translate-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 5rem;
 }
 .header__translate-menu__icon {
   cursor: pointer;
 }
 .header__translate-menu button {
   color: #ffffff;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.header__bottonNavigation {
+  background-color: #fafafa !important;
+}
+.header__bottonNavigation__tabs {
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .section-main {

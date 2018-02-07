@@ -1,8 +1,18 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&subset=latin-ext');
+
+// Font Variables
+$header-font: 'Lato', sans-serif;
+$body-font: 'Montserrat', sans-serif;
+
+
+
 body{
-  font-family: "Roboto", sans-serif;
+  font-family: $body-font;
 }
 
 @mixin maintTextWhite{
+    font-family: $header-font;
     color: $primary-text-color;
     text-transform: capitalize;
     letter-spacing: .5rem;
@@ -11,7 +21,25 @@ body{
     font-weight: 400;
 }
 
+@mixin secondaryTextWhite{
+  color: $primary-text-color;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+@mixin tercearyTextWhite{
+  color: $primary-text-color;
+  font-family: $header-font;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 @mixin maintTextPrimaryColor{
+  font-family: $header-font;
   color: $primary-color;
   text-transform: capitalize;
   text-align: center;
@@ -19,15 +47,6 @@ body{
   font-size: 4rem;
   font-weight: 400;
   margin-bottom: 4rem;
-}
-
-@mixin secondaryTextWhite{
-    color: $primary-text-color;
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    font-size: 3rem;
-    font-weight: 300;
-    margin-bottom: 4rem;
 }
 
 @mixin secondaryTextSecondaryColor{

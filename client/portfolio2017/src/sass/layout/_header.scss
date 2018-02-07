@@ -2,49 +2,56 @@
   display: flex;
   flex-wrap: wrap;
 
+  
+  &__toolbar{
+    margin: 0 40rem;
+  }
+
   &__title{
-    flex: 0 0 50%;
-    margin-right: auto !important;
     display: flex;
     align-items: center;
+    margin-right:auto;
+    
     &__progress{
       color: $primary-text-color !important;
     }
     
     &__message{
-      margin-right: 2rem !important;
+      margin-right: 1rem !important;
+      font-family: $header-font !important;
+      text-transform: capitalize !important;
+      letter-spacing: .5rem;
+      font-size: 4rem !important;
+      font-weight: 300 !important;
     }
   }
+
   
-  &__toolbar{
-  }
-
-  &__placeholder{
-  }
-
-  &__bottonNavigation{
-    flex: 0 0 100%;
-    background-color: $color-white !important;
-    color: $color-black;
-    
-    &__tabs{
-      flex: 0 0 100%;
-    }
-  }
-
   &__translate-menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 5rem;
-
+    
     &__icon{
       cursor: pointer;
     }
 
     button{
       color: $primary-text-color;
+      @include tercearyTextWhite;      
     }
   }
+  
+
+  &__placeholder{
+  }
+
+  &__bottonNavigation{
+    background-color: $color-white !important;
+    &__tabs{
+      @include tercearyTextWhite;  
+    }
+  }
+
 }
 

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PresentationBottomToTop Component should compare a snapshops of PresentationBottomToTop 1`] = `
+<PresentationBottomToTop
+  classes={
+    Object {
+      "root": "PresentationBottomToTop-root-1",
+    }
+  }
+/>
+`;

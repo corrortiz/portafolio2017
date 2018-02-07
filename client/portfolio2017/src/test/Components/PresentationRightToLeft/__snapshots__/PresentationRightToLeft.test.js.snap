@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PresentationRightToLeft Component should compare a snapshop of PresentationRightToLeft 1`] = `
+<PresentationRightToLeft
+  classes={
+    Object {
+      "root": "PresentationRightToLeft-root-1",
+    }
+  }
+/>
+`;

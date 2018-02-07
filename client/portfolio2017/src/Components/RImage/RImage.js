@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 /**
  * Component to receive images and be responsive
  */
@@ -46,5 +46,17 @@ export class RImage extends Component {
     );
   }
 }
+
+RImage.propTypes = {
+  lg_1x: PropTypes.string.isRequired,
+  lg_2x: PropTypes.string.isRequired,
+  md_1x: PropTypes.string.isRequired,
+  md_2x: PropTypes.string.isRequired,
+  sm_1x: PropTypes.string.isRequired,
+  sm_2x: PropTypes.string.isRequired,
+  lg_1x_JPG: PropTypes.string.isRequired,
+  md_1x_JPG: PropTypes.string.isRequired,
+  sm_1x_JPG: PropTypes.string.isRequired
+};
 
 export default RImage;

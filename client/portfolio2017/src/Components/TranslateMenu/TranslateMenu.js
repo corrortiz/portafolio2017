@@ -1,5 +1,5 @@
-// @flow
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 //MUI Componets
 import Button from 'material-ui/Button';
 import Menu, { MenuItem } from 'material-ui/Menu';
@@ -76,5 +76,13 @@ export class TranslateMenu extends Component {
     );
   }
 }
+
+TranslateMenu.propTypes = {
+  globals: PropTypes.shape({
+    showLoading: PropTypes.bool.isRequired,
+    messageSnackBar: PropTypes.string.isRequired,
+    lenguaje: PropTypes.string.isRequired
+  })
+};
 
 export default GlobalsConnect(TranslateMenu);

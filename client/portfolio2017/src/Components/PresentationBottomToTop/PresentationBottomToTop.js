@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 //HOC for global script
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 //Locale
@@ -42,6 +43,12 @@ export class PresentationBottomToTop extends Component {
     );
   }
 }
+
+PresentationBottomToTop.propTypes = {
+  globals: PropTypes.shape({
+    lenguaje: PropTypes.string.isRequired
+  })
+};
 
 PresentationBottomToTop = withStyles(styles)(PresentationBottomToTop);
 

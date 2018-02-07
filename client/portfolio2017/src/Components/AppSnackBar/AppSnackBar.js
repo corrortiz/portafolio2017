@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 //MUI Components
 import Button from 'material-ui/Button';
 import Snackbar from 'material-ui/Snackbar';
@@ -14,7 +15,7 @@ import { Close } from '../../Assets/diccionary';
 function TypeOfTransition(props) {
   return <Slide direction="up" {...props} />;
 }
-
+//CSS in JS style
 const styles = theme => ({
   snackbar: {
     margin: theme.spacing.unit
@@ -77,6 +78,14 @@ export class AppSnackBar extends Component {
     );
   }
 }
+
+AppSnackBar.propTypes = {
+  globals: PropTypes.shape({
+    openSnackBar: PropTypes.bool.isRequired,
+    messageSnackBar: PropTypes.string.isRequired,
+    lenguaje: PropTypes.string.isRequired
+  })
+};
 
 AppSnackBar = withStyles(styles)(AppSnackBar);
 

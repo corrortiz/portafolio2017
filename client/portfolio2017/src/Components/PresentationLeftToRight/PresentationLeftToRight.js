@@ -1,5 +1,5 @@
-// @flow
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 //HOC global store
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 //Locale selectors
@@ -56,6 +56,12 @@ export class PresentationLeftToRight extends Component {
     );
   }
 }
+
+PresentationLeftToRight.propTypes = {
+  globals: PropTypes.shape({
+    lenguaje: PropTypes.string.isRequired
+  })
+};
 
 PresentationLeftToRight = withStyles(styles)(PresentationLeftToRight);
 

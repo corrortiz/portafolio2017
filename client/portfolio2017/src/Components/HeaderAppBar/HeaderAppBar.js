@@ -1,5 +1,5 @@
-// @flow
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 //MUI Components
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
@@ -11,15 +11,10 @@ import TabMenu from '../TabMenu/TabMenu';
 import TranslateMenu from '../TranslateMenu/TranslateMenu';
 //HOC for global states
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
-
+//CSS in JS
 const styles = {
   root: {},
-  flex: {
-    letterSpacing: '.5rem',
-    fontSize: '2rem',
-    fontWeight: '400',
-    marginLeft: '5rem'
-  },
+  flex: {},
   menuButton: {}
 };
 
@@ -44,9 +39,9 @@ export class HeaderAppBar extends Component {
               </Typography>
               {this.props.globals.showLoading && (
                 <CircularProgress
-                  size={24}
+                  size={40}
                   className={`header__title__progress ${classes.menuButton}`}
-                  thickness={7}
+                  thickness={3}
                 />
               )}
             </div>
@@ -58,6 +53,12 @@ export class HeaderAppBar extends Component {
     );
   }
 }
+
+HeaderAppBar.propTypes = {
+  globals: PropTypes.shape({
+    showLoading: PropTypes.bool.isRequired
+  })
+};
 
 HeaderAppBar = GlobalsConnect(HeaderAppBar);
 

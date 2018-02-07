@@ -9,6 +9,7 @@
     "material-ui": "^1.0.0-beta.21",
     "material-ui-icons": "^1.0.0-beta.17",
     "npm-run-all": "^4.1.2",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-redux": "^5.0.6",
@@ -26,14 +27,16 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow"
   },
   "devDependencies": {
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.3.1",
     "husky": "^0.14.3",
+    "jest-enzyme": "^4.2.0",
     "lint-staged": "^5.0.0",
     "node-sass-chokidar": "^0.0.3",
     "prettier": "^1.8.2",
@@ -43,6 +46,11 @@
     "src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote jsx-bracket-same-line arrow-parens<always> --write",
       "git add"
+    ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json"
     ]
   }
 }
