@@ -44,7 +44,14 @@ export class PresentationRightToLeft extends Component {
         alignContent={'center'}
         className={`PresentationRightToLeft box ${classes.root}`}
       >
-        <Grid item xs={12} lg={6} className="PresentationRightToLeft__one">
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          className="PresentationRightToLeft__one"
+        >
           <h1 className="PresentationRightToLeft__one__title">
             {lenguajeSelector(lenguaje, SofwareDevelop)}
           </h1>
@@ -55,25 +62,24 @@ export class PresentationRightToLeft extends Component {
 
         <Grid
           item
-          xs={10}
-          sm={6}
-          md={6}
+          xs={12}
+          sm={12}
+          md={12}
           lg={6}
           className="PresentationRightToLeft__two"
         >
-          <div className="PresentationRightToLeft__two__image">
-            <RImage
-              lg_1x={lg_1x}
-              lg_2x={lg_2x}
-              md_1x={md_1x}
-              md_2x={md_2x}
-              sm_1x={sm_1x}
-              sm_2x={sm_2x}
-              lg_1x_JPG={lg_1x_JPG}
-              md_1x_JPG={md_1x_JPG}
-              sm_1x_JPG={sm_1x_JPG}
-            />
-          </div>
+          <RImage
+            lg_1x={lg_1x}
+            lg_2x={lg_2x}
+            md_1x={md_1x}
+            md_2x={md_2x}
+            sm_1x={sm_1x}
+            sm_2x={sm_2x}
+            lg_1x_JPG={lg_1x_JPG}
+            md_1x_JPG={md_1x_JPG}
+            sm_1x_JPG={sm_1x_JPG}
+            className="PresentationRightToLeft__two__image"
+          />
         </Grid>
       </Grid>
     );

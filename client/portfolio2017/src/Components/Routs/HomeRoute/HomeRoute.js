@@ -12,9 +12,11 @@ const HomeRoute = () => {
   return (
     <div>
       <ImageContainer />
-      <PresentationRightToLeft />
-      <PresentationLeftToRight />
-      <PresentationBottomToTop />
+      <div className="box">
+        <PresentationRightToLeft />
+        <PresentationLeftToRight />
+        <PresentationBottomToTop />
+      </div>
     </div>
   );
 };

@@ -1,11 +1,4 @@
 .PresentationRightToLeft{
-  border: 1px solid red;
-  padding: 10rem;
-
-  *{
-    border: 1px solid red;
-  }
-
   &__one{
     @include flexCenter;
     flex-direction: column;
@@ -21,10 +14,19 @@
   }
 
   &__two{
-    overflow: hidden;
+    height: auto;
+    @include flexCenter;
 
     &__image{
     }
   }
   
+}
+
+.kiri{
+  height: 60rem;
+  width: auto; 
+  transition: all 1s;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 18% 71%);
+  clip-path: polygon(10% 0%, 100% 0%, 75% 100%, 18% 71%);
 }

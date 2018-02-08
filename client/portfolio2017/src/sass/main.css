@@ -106,6 +106,74 @@ html {
 
 /*
 *******************
+**ClyPy Animation**
+*******************
+*/
+.Clypy {
+  animation: 6s 1s clyp ease infinite alternate;
+}
+
+@keyframes clyp {
+  0% {
+    -webkit-clip-path: polygon(
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      0% 100%,
+      25% 50%,
+      0% 0%
+    );
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  }
+  50% {
+    -webkit-clip-path: polygon(
+      0% 15%,
+      15% 15%,
+      15% 0%,
+      85% 0%,
+      85% 15%,
+      100% 15%,
+      100% 85%,
+      85% 85%,
+      85% 100%,
+      15% 100%,
+      15% 85%,
+      0% 85%
+    );
+    clip-path: polygon(
+      0% 15%,
+      15% 15%,
+      15% 0%,
+      85% 0%,
+      85% 15%,
+      100% 15%,
+      100% 85%,
+      85% 85%,
+      85% 100%,
+      15% 100%,
+      15% 85%,
+      0% 85%
+    );
+  }
+  75% {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  100% {
+    webkit-clip-path: polygon(
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      0% 100%,
+      25% 50%,
+      0% 0%
+    );
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  }
+}
+
+/*
+*******************
 **Cards Animation**
 *******************
 */
@@ -135,31 +203,31 @@ body {
 }
 
 .box {
-  padding: 0 10rem;
+  transition: all 1s;
 }
-@media only screen and (max-width: 80em) {
+@media (max-width: 599px) {
   .box {
-    padding: 0 20rem;
+    padding: 5rem 0 !important;
   }
 }
-@media only screen and (max-width: 60em) {
+@media (min-width: 600px) {
   .box {
-    padding: 0 8rem;
+    padding: 5rem 5rem !important;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media (min-width: 900px) {
   .box {
-    padding: 0 1rem;
+    padding: 5rem 15rem !important;
   }
 }
-@media only screen and (max-width: 18.75em) {
+@media (min-width: 1200px) {
   .box {
-    padding: 0 0.5rem;
+    padding: 5rem 25rem !important;
   }
 }
-@media only screen and (min-width: 120em) {
+@media (min-width: 1800px) {
   .box {
-    padding: 0 10rem;
+    padding: 5rem 10rem !important;
   }
 }
 
@@ -468,13 +536,6 @@ body {
   font-weight: 600;
 }
 
-.PresentationRightToLeft {
-  border: 1px solid red;
-  padding: 10rem;
-}
-.PresentationRightToLeft * {
-  border: 1px solid red;
-}
 .PresentationRightToLeft__one {
   display: flex;
   align-items: center;
@@ -506,8 +567,20 @@ body {
     letter-spacing: 0.2rem;
   }
 }
+
 .PresentationRightToLeft__two {
-  overflow: hidden;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kiri {
+  height: 60rem;
+  width: auto;
+  transition: all 1s;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 18% 71%);
+  clip-path: polygon(10% 0%, 100% 0%, 75% 100%, 18% 71%);
 }
 
 .PresentationLeftToRight {

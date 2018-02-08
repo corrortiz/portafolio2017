@@ -1,20 +1,23 @@
 .box {
-    padding: 0 10rem;
+    transition: all 1s;
+    @include for-phone-only {
+        padding: 5rem 0 !important;
+    }
+    
+    @include for-tablet-portrait-up {
+        padding: 5rem 5rem !important;
+    }
+    
+    @include for-tablet-landscape-up {
+        padding: 5rem 15rem !important;
+    }
+    
+    @include for-desktop-up {
+        padding: 5rem 25rem !important;
+    }
 
-    @include respond(1200){
-        padding: 0 20rem;
-    }
-    @include respond(900){
-        padding: 0 8rem;
-    }
-    @include respond(600){
-        padding: 0 1rem;
-    }
-    @include respond(300){
-        padding: 0 .5rem;
-    }
-    @include respond(1800){
-        padding: 0 10rem;
+    @include for-big-desktop-up {
+        padding: 5rem 10rem !important;
     }
 }
 
