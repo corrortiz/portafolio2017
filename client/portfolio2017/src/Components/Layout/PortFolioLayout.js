@@ -41,7 +41,7 @@ const Layout = () => {
           <HeaderAppBar />
         </Grid>
         <Grid item xm={12}>
-          <section className="section-main">
+          <section>
             <Routs />
           </section>
         </Grid>

@@ -1,7 +1,9 @@
 .PresentationRightToLeft{
-  margin-bottom: 4rem !important;
-  @include respond(600){
-    padding: 0 !important;
+  border: 1px solid red;
+  padding: 10rem;
+
+  *{
+    border: 1px solid red;
   }
 
   &__one{
@@ -19,18 +21,9 @@
   }
 
   &__two{
-    @include flexCenter;
     overflow: hidden;
-    
-    &__image{
-      background-image: url(../images/AddDev-min.jpg);
-      background-size: cover;
-      background-position: center;
-      @include min-size(50rem, 50rem)
-      @include respond(1800){
-        @include min-size(60rem, 60rem)
-      }
 
+    &__image{
     }
   }
   

@@ -1,24 +1,147 @@
 .ImageContainer{
-  height: 65vh;
-  background-image: 
-  linear-gradient(
-        to right bottom,
-        rgba($secondary-color-dark, 0.5),
-        rgba($secondary-color-light, 0.5)),
-  url(../images/mac-min.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
+  background-attachment: fixed;
+  overflow: hidden;
+
+  background-image: url(../images/Principal/Principal-lg_1x.jpg);
+
+  background-image: -webkit-image-set(
+      url(../images/Principal/Principal-lg_1x.webp) 1x,
+      url(../images/Principal/Principal-lg_2x.webp) 2x
+  );
+  
+  background-image: image-set(
+    url(../images/Principal/Principal-lg_1x.jpg) 1x,
+    url(../images/Principal/Principal-lg_2x.jpg) 2x
+  );
+
+  @media(max-width: 900px) {
+    background-image:url(../images/Principal/Principal-md_2x.jpg);
+    
+    background-image: -webkit-image-set(
+      url(../images/Principal/Principal-md_1x.webp) 1x,
+      url(../images/Principal/Principal-md_2x.webp) 2x
+    );
+    
+    background-image: image-set(
+      url(../images/Principal/Principal-md_1x.jpg) 1x,
+      url(../images/Principal/Principal-md_2x.jpg) 2x
+    );
+  }
+
+  @media (max-width: 600px) {
+    background-image: url(../images/Principal/Principal-sm_2x.jpg);
+    
+    background-image: -webkit-image-set(
+      url(../images/Principal/Principal-sm_1x.webp) 1x,
+      url(../images/Principal/Principal-sm_2x.webp) 2x
+    );
+    
+    background-image: image-set(
+      url(../images/Principal/Principal-md_1x.jpg) 1x,
+      url(../images/Principal/Principal-sm_2x.jpg) 2x
+    );
+  }
+ 
+  display: flex;
   flex-direction: column;
-  transform: all 1s;
-  @include flexCenter;
-  @include clip(70vh, 60vh);  
+  align-items: center;
+  justify-content:flex-start;
+  
+  transition: all 1s;
+
+  @include for-phone-only {
+    @include clip(65vh, 55vh); 
+    background-position: center;
+    justify-content:center;
+  }
+  
+  @include for-tablet-portrait-up {
+    @include clip(75vh, 70vh); 
+    background-position: center;
+    justify-content:center;
+  }
+  
+  @include for-tablet-landscape-up {
+    @include clip(55vh, 45vh); 
+    background-position: center;
+    justify-content:center;
+  }
+  
+  @include for-desktop-up {
+    @include clip(50vh, 40vh); 
+    background-position: bottom;
+    justify-content:center;
+  }
+
+  @include for-big-desktop-up {
+    @include clip(70vh, 55vh); 
+    background-position: bottom;
+    justify-content:center;
+  }
+
+
+  &__header {
+    width: 100%;
+    margin-top: 5rem;
+    padding: 5rem 1rem;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+
+    @include for-phone-only {
+      margin-top: 0;
+      padding: 2rem 1rem;
+    }
+
+    @include for-tablet-portrait-up {
+      margin-top: 0;
+      padding: 2rem 1rem;
+    }
+
+    @include for-tablet-landscape-up {
+      margin-top: 0;
+      padding: 4rem 1rem;
+    }
+
+    @include for-desktop-up {
+      margin-top: 0;
+      padding: 6rem 2rem;
+    }
+  
+    @include for-big-desktop-up {
+      margin-top: 0;
+      padding: 8rem 3rem;
+    }
+  }
+
+  &__header::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, .15);
+    background-attachment: fixed;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+  }
 
   &__main-text{
     @include maintTextWhite;    
+    position: relative;
+    margin-bottom: 1rem;    
+    z-index: 2;
   }
-  
+
   &__secondary-text{
-    @include secondaryTextWhite;    
+    @include secondaryTextWhite;
+    z-index: 2;
+    position: relative;
   }
 
   &__btn{

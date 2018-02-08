@@ -254,32 +254,192 @@ body {
 }
 
 .ImageContainer {
-  height: 65vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(77, 44, 145, 0.5),
-      rgba(176, 133, 245, 0.5)
-    ),
-    url(../images/mac-min.jpg);
   background-size: cover;
-  background-position: center;
-  flex-direction: column;
-  transform: all 1s;
+  background-position: bottom;
+  background-attachment: fixed;
+  overflow: hidden;
+  background-image: url(../images/Principal/Principal-lg_1x.jpg);
+  background-image: -webkit-image-set(
+    url(../images/Principal/Principal-lg_1x.webp) 1x,
+    url(../images/Principal/Principal-lg_2x.webp) 2x
+  );
+  background-image: image-set(
+    url(../images/Principal/Principal-lg_1x.jpg) 1x,
+    url(../images/Principal/Principal-lg_2x.jpg) 2x
+  );
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  transition: all 1s;
 }
-@supports (clip-path: polygon(0 0)) {
+@media (max-width: 900px) {
   .ImageContainer {
-    clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
-    height: 70vh;
+    background-image: url(../images/Principal/Principal-md_2x.jpg);
+    background-image: -webkit-image-set(
+      url(../images/Principal/Principal-md_1x.webp) 1x,
+      url(../images/Principal/Principal-md_2x.webp) 2x
+    );
+    background-image: image-set(
+      url(../images/Principal/Principal-md_1x.jpg) 1x,
+      url(../images/Principal/Principal-md_2x.jpg) 2x
+    );
   }
-  @media only screen and (max-height: 37.5em) {
+}
+@media (max-width: 600px) {
+  .ImageContainer {
+    background-image: url(../images/Principal/Principal-sm_2x.jpg);
+    background-image: -webkit-image-set(
+      url(../images/Principal/Principal-sm_1x.webp) 1x,
+      url(../images/Principal/Principal-sm_2x.webp) 2x
+    );
+    background-image: image-set(
+      url(../images/Principal/Principal-md_1x.jpg) 1x,
+      url(../images/Principal/Principal-sm_2x.jpg) 2x
+    );
+  }
+}
+@media (max-width: 599px) {
+  .ImageContainer {
+    background-position: center;
+    justify-content: center;
+  }
+  @supports (clip-path: polygon(0 0)) {
     .ImageContainer {
-      clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%);
-      height: 115vh;
+      clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+      height: 65vh;
+    }
+    @media only screen and (max-height: 37.5em) {
+      .ImageContainer {
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+        height: 80vh;
+      }
     }
   }
+}
+@media (min-width: 600px) {
+  .ImageContainer {
+    background-position: center;
+    justify-content: center;
+  }
+  @supports (clip-path: polygon(0 0)) {
+    .ImageContainer {
+      clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+      height: 75vh;
+    }
+    @media only screen and (max-height: 37.5em) {
+      .ImageContainer {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        height: 90vh;
+      }
+    }
+  }
+}
+@media (min-width: 900px) {
+  .ImageContainer {
+    background-position: center;
+    justify-content: center;
+  }
+  @supports (clip-path: polygon(0 0)) {
+    .ImageContainer {
+      clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
+      height: 55vh;
+    }
+    @media only screen and (max-height: 37.5em) {
+      .ImageContainer {
+        clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+        height: 70vh;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .ImageContainer {
+    background-position: bottom;
+    justify-content: center;
+  }
+  @supports (clip-path: polygon(0 0)) {
+    .ImageContainer {
+      clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
+      height: 50vh;
+    }
+    @media only screen and (max-height: 37.5em) {
+      .ImageContainer {
+        clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+        height: 65vh;
+      }
+    }
+  }
+}
+@media (min-width: 1800px) {
+  .ImageContainer {
+    background-position: bottom;
+    justify-content: center;
+  }
+  @supports (clip-path: polygon(0 0)) {
+    .ImageContainer {
+      clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+      height: 70vh;
+    }
+    @media only screen and (max-height: 37.5em) {
+      .ImageContainer {
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+        height: 85vh;
+      }
+    }
+  }
+}
+.ImageContainer__header {
+  width: 100%;
+  margin-top: 5rem;
+  padding: 5rem 1rem;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 599px) {
+  .ImageContainer__header {
+    margin-top: 0;
+    padding: 2rem 1rem;
+  }
+}
+@media (min-width: 600px) {
+  .ImageContainer__header {
+    margin-top: 0;
+    padding: 2rem 1rem;
+  }
+}
+@media (min-width: 900px) {
+  .ImageContainer__header {
+    margin-top: 0;
+    padding: 4rem 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .ImageContainer__header {
+    margin-top: 0;
+    padding: 6rem 2rem;
+  }
+}
+@media (min-width: 1800px) {
+  .ImageContainer__header {
+    margin-top: 0;
+    padding: 8rem 3rem;
+  }
+}
+.ImageContainer__header::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.15);
+  background-attachment: fixed;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
 }
 .ImageContainer__main-text {
   font-family: 'Lato', sans-serif;
@@ -289,6 +449,9 @@ body {
   text-align: center;
   font-size: 6rem;
   font-weight: 400;
+  position: relative;
+  margin-bottom: 1rem;
+  z-index: 2;
 }
 .ImageContainer__secondary-text {
   color: #ffffff;
@@ -296,6 +459,8 @@ body {
   letter-spacing: 0.5rem;
   font-size: 3rem;
   font-weight: 300;
+  z-index: 2;
+  position: relative;
 }
 .ImageContainer__btn {
   letter-spacing: 0.5rem;
@@ -304,12 +469,11 @@ body {
 }
 
 .PresentationRightToLeft {
-  margin-bottom: 4rem !important;
+  border: 1px solid red;
+  padding: 10rem;
 }
-@media only screen and (max-width: 37.5em) {
-  .PresentationRightToLeft {
-    padding: 0 !important;
-  }
+.PresentationRightToLeft * {
+  border: 1px solid red;
 }
 .PresentationRightToLeft__one {
   display: flex;
@@ -343,23 +507,7 @@ body {
   }
 }
 .PresentationRightToLeft__two {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-}
-.PresentationRightToLeft__two__image {
-  background-image: url(../images/AddDev-min.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 50rem;
-  min-width: 50rem;
-}
-@media only screen and (min-width: 120em) {
-  .PresentationRightToLeft__two__image {
-    min-height: 60rem;
-    min-width: 60rem;
-  }
 }
 
 .PresentationLeftToRight {
@@ -529,9 +677,27 @@ body {
 .header {
   display: flex;
   flex-wrap: wrap;
+  transition: all 3s;
 }
-.header__toolbar {
-  margin: 0 40rem;
+@media (max-width: 599px) {
+  .header__toolbar {
+    margin: 0 1rem;
+  }
+}
+@media (min-width: 900px) {
+  .header__toolbar {
+    margin: 0 10rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header__toolbar {
+    margin: 0 20rem;
+  }
+}
+@media (min-width: 1800px) {
+  .header__toolbar {
+    margin: 0 40rem;
+  }
 }
 .header__title {
   display: flex;

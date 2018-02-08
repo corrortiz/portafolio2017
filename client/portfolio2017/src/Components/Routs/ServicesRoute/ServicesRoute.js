@@ -1,4 +1,6 @@
 import React from 'react';
+import ImageContainer from '../../ImageContainer/ImageContainer';
+//Internal Components
 
 /**
  * layout of the service roout
@@ -6,7 +8,7 @@ import React from 'react';
 const ServicesRoute = () => {
   return (
     <div>
-      <h1>Service Rout, La minerva</h1>
+      <ImageContainer />
     </div>
   );
 };

@@ -1,3 +1,19 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
 /*
 $breakpoint argument choices:
     0 - 300   -small-phone
@@ -27,7 +43,6 @@ $breakpoint argument choices:
   }
 }
 
-
 /**** Centers a flex container*/
 @mixin flexCenter{
   display: flex;
@@ -43,12 +58,14 @@ $breakpoint argument choices:
 
 /**** Min Size*/
 @mixin clip($height, $clipHeight){
+
   @supports (clip-path: polygon(0 0)) {
     clip-path: polygon(0 0, 100% 0, 100% $clipHeight, 0 100%);
     height: $height;
+
     @media only screen and (max-height: 37.5em) { 
-      clip-path: polygon(0 0, 100% 0, 100% $clipHeight+45, 0 100%);
-      height: $height+45;
+      clip-path: polygon(0 0, 100% 0, 100% $clipHeight+15, 0 100%);
+      height: $height+15;
     };
   }
 }

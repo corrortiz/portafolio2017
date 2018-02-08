@@ -27,14 +27,15 @@ export class ImageContainer extends Component {
 
     return (
       <div className={`ImageContainer ${classes.root}`}>
-        <h1 className="ImageContainer__main-text">
-          {lenguajeSelector(lenguaje, AoDesarrollo)}
-        </h1>
+        <div className="ImageContainer__header">
+          <h1 className="ImageContainer__main-text">
+            {lenguajeSelector(lenguaje, AoDesarrollo)}
+          </h1>
 
-        <span className="ImageContainer__secondary-text">
-          The sky's the limit
-        </span>
-
+          <span className="ImageContainer__secondary-text">
+            The sky's the limit
+          </span>
+        </div>
         <Link to="/contact">
           <button
             className="btn btn--white btn--animated ImageContainer__btn"

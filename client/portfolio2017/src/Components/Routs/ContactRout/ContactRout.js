@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageContainer from '../../ImageContainer/ImageContainer';
 
 /**
  * Layout of the contact rout
@@ -6,7 +7,7 @@ import React from 'react';
 const ContactRout = () => {
   return (
     <div>
-      <h1>Contact Rout, Beacthhh</h1>
+      <ImageContainer />>
     </div>
   );
 };

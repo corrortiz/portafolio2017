@@ -1,4 +1,6 @@
 import React from 'react';
+import ImageContainer from '../../ImageContainer/ImageContainer';
+//Intenal Components
 
 /**
  * layout of the projects rout
@@ -6,7 +8,7 @@ import React from 'react';
 const ProjectsRoute = () => {
   return (
     <div>
-      <h1>Kiri</h1>
+      <ImageContainer />
     </div>
   );
 };
