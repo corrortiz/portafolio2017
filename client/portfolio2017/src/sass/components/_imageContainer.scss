@@ -140,8 +140,8 @@
 
   &__secondary-text{
     @include secondaryTextWhite;
-    z-index: 2;
     position: relative;
+    z-index: 2;
   }
 
   &__btn{

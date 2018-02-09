@@ -24,20 +24,20 @@ export class RImage extends Component {
           media="(min-width: 900px)"
           srcSet={`${lg_1x} 1x, ${lg_2x} 2x`}
           type="image/webp"
-          className="kiri"
+          className="kiri__image"
         />
 
         <source
           media="(min-width: 601px)"
           srcSet={`${md_1x} 1x, ${md_2x} 2x`}
           type="image/webp"
-          className="kiri"
+          className="kiri__image"
         />
 
         <source
           srcSet={`${sm_1x} 1x, ${sm_2x} 2x`}
           type="image/webp"
-          className="kiri"
+          className="kiri__image"
         />
 
         <img
@@ -47,8 +47,9 @@ export class RImage extends Component {
           src={lg_1x_JPG}
           type="image/jpeg"
           alt="image description"
-          className="kiri"
+          className="kiri__image"
         />
+        <div className="kiri__shadow" />
       </picture>
     );
   }

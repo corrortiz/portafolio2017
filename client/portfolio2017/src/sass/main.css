@@ -527,8 +527,8 @@ body {
   letter-spacing: 0.5rem;
   font-size: 3rem;
   font-weight: 300;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 .ImageContainer__btn {
   letter-spacing: 0.5rem;
@@ -574,13 +574,45 @@ body {
   align-items: center;
   justify-content: center;
 }
+.PresentationRightToLeft__two__image {
+  overflow: hidden;
+}
 
 .kiri {
-  height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 450px;
+}
+.kiri__image {
+  position: absolute;
+  height: 400px;
   width: auto;
-  transition: all 1s;
-  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 18% 71%);
-  clip-path: polygon(10% 0%, 100% 0%, 75% 100%, 18% 71%);
+  align-self: stretch;
+  top: 1;
+  right: 1;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-clip-path: polygon(
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    0% 100%,
+    25% 50%,
+    0% 0%
+  );
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+.kiri__shadow {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 400px;
+  width: 599px;
+  left: 1;
+  right: 1;
+  background: rgba(126, 87, 194, 0.45);
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
 .PresentationLeftToRight {
