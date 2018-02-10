@@ -9,7 +9,8 @@ import { Meta, MetaText } from '../../Assets/diccionary';
 import Grid from 'material-ui/Grid';
 import { withStyles } from 'material-ui/styles';
 //Internal Component
-import Logo from '../../images/SVG/Logo';
+//import Logo from '../../images/SVG/Logo';
+import AnimeExport from '../../images/Anime';
 //CSS in JS Styles
 const styles = theme => ({
   root: {}
@@ -28,7 +29,7 @@ export class PresentationBottomToTop extends Component {
       <div className={classes.root}>
         <Grid container spacing={8} className="PresentationBottomToTop">
           <Grid item xs={12} className="PresentationBottomToTop__one">
-            <Logo />
+            <AnimeExport />
           </Grid>
           <Grid item xs={12} className="PresentationBottomToTop__two">
             <h1 className="PresentationBottomToTop__two__title">

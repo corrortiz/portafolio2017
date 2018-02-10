@@ -67,6 +67,7 @@ export class PresentationRightToLeft extends Component {
           md={12}
           lg={6}
           className="PresentationRightToLeft__two"
+          data-aos="zoom-in-right"
         >
           <RImage
             lg_1x={lg_1x}
@@ -78,6 +79,7 @@ export class PresentationRightToLeft extends Component {
             lg_1x_JPG={lg_1x_JPG}
             md_1x_JPG={md_1x_JPG}
             sm_1x_JPG={sm_1x_JPG}
+            rightToLeft={true}
             className="PresentationRightToLeft__two__image"
           />
         </Grid>

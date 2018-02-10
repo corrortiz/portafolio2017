@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 
-import 'typeface-roboto';
+import 'aos/dist/aos.css';
 import './sass/main.css';
 
 import registerServiceWorker from './registerServiceWorker';

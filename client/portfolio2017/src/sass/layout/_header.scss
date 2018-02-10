@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   transition: all 3s;
   
-  
   &__toolbar{
     @include for-phone-only{
       margin: 0 1rem ;

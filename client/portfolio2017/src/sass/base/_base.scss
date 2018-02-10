@@ -24,5 +24,20 @@ html{
   @include respond(1800){
     font-size: 65.5%;
   }
+
+  @include for-phone-only {
+  }
+
+  @include for-tablet-portrait-up {
+  }
+
+  @include for-tablet-landscape-up {
+  }
+
+  @include for-desktop-up {
+  }
+
+  @include for-big-desktop-up {
+  }
 }
 
