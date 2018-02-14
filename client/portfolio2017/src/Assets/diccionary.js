@@ -73,3 +73,8 @@ export const LocaleChange = {
   es: 'El lenguaje de la app ahora es Español',
   en: 'The language of the app is now English'
 };
+
+export const Share = {
+  es: 'Comparte como AO H&S puede impulsar el cambio',
+  en: 'Share how AO H & S can Boost change'
+};

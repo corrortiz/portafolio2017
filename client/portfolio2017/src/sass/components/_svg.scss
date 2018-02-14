@@ -1,0 +1,18 @@
+.SVG{
+  @include flexCenter;
+
+  &__svg{
+    height: 3rem;
+    width: auto;
+  }
+  
+  &__logo{
+  }
+  
+  &__path{
+    &__one{
+      fill: $secondary-color;
+    }
+  }
+
+}

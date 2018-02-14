@@ -16,7 +16,7 @@ import Services from './ServicesRoute/ServicesRoute';
 const Routs = withRouter(({ location }) => (
   <div>
     <TransitionGroup>
-      <CSSTransition key={location.key} classNames="fade" timeout={450}>
+      <CSSTransition key={location.key} classNames="yoyo" timeout={450}>
         <Switch className="Routs" location={location}>
           <Route exact path="/" component={Home} />
           <Route exact path="/services" component={Services} />

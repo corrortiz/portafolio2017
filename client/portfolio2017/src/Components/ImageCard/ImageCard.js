@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+//MUI Components
 import { withStyles } from 'material-ui/styles';
 import classnames from 'classnames';
 import Card, {
@@ -8,18 +9,20 @@ import Card, {
   CardContent,
   CardActions
 } from 'material-ui/Card';
+import Tooltip from 'material-ui/Tooltip';
 import Collapse from 'material-ui/transitions/Collapse';
 import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
-import red from 'material-ui/colors/red';
-import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
-import MoreVertIcon from 'material-ui-icons/MoreVert';
-
-import ImageCardSrc from '../../images/SVG/Github';
-import ImageExample from '../../images/WebDev-min-min.jpg';
+//Internal Componetns
+import CodeAnimete from '../../images/SVG/CodeAnimate';
+//HOC for connect to Redux
+import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
+//locale neds of global connect to work
+import { lenguajeSelector } from '../../Store/Actions/globals';
+import { Share } from '../../Assets/diccionary';
 
 const styles = theme => ({
   root: {
@@ -27,6 +30,21 @@ const styles = theme => ({
   },
   card: {
     maxWidth: 400
+  },
+  title: {
+    fontFamily: "'Lato', sans-serif",
+    color: '#1565c0',
+    textTransform: 'uppercase',
+    letterSpacing: '.3rem'
+  },
+  subTitle: {
+    fontFamily: "'Montserrat', sans-serif",
+    textTransform: 'capitalize',
+    letterSpacing: '.2rem'
+  },
+  conTent: {
+    fontFamily: "'Montserrat', sans-serif",
+    letterSpacing: '.2rem'
   },
   media: {
     height: 194
@@ -45,11 +63,11 @@ const styles = theme => ({
     transform: 'rotate(180deg)'
   },
   avatar: {
-    backgroundColor: red[500]
+    backgroundColor: 'transparent'
   }
 });
 
-class ImageCard extends React.Component {
+export class ImageCard extends React.Component {
   state = { expanded: false };
 
   handleExpandClick = () => {
@@ -57,44 +75,61 @@ class ImageCard extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { lenguaje } = this.props.globals;
+    const {
+      classes,
+      titleOfTheCard,
+      subTitleOfTheCard,
+      ImageOfTheCard,
+      AltOfTheImage,
+      smallDescription,
+      contentOfTheCard
+    } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div className={`${classes.root} ImageCard`}>
         <Card className={classes.card}>
           <CardHeader
             avatar={
-              <Avatar aria-label="Recipe" className={classes.avatar}>
-                <ImageCardSrc />
+              <Avatar aria-label="Code" className={classes.avatar}>
+                <CodeAnimete />
               </Avatar>
             }
-            action={
-              <IconButton>
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
+            classes={{
+              title: classes.title,
+              subheader: classes.subTitle
+            }}
+            title={lenguajeSelector(lenguaje, titleOfTheCard)}
+            subheader={lenguajeSelector(lenguaje, subTitleOfTheCard)}
           />
           <CardMedia
             className={classes.media}
-            image={ImageExample}
-            title="Contemplative Reptile"
+            image={ImageOfTheCard}
+            title={AltOfTheImage}
           />
           <CardContent>
-            <Typography component="p">
-              This impressive paella is a perfect party dish and a fun meal to
-              cook together with your guests. Add 1 cup of frozen peas along
-              with the mussels, if you like.
+            <Typography component="p" className={classes.conTent}>
+              {lenguajeSelector(lenguaje, smallDescription)}
             </Typography>
           </CardContent>
           <CardActions className={classes.actions} disableActionSpacing>
-            <IconButton aria-label="Add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="Share">
-              <ShareIcon />
-            </IconButton>
+            <Tooltip
+              id="tooltip-icon"
+              title={lenguajeSelector(lenguaje, Share)}
+            >
+              <IconButton
+                aria-label="Share"
+                href={`https://twitter.com/intent/tweet?text=${lenguajeSelector(
+                  lenguaje,
+                  contentOfTheCard
+                )};hashtags=AOHyS,WebDeb;via=CorrOrtiz`}
+                target="blank"
+                color="primary"
+              >
+                <ShareIcon />
+              </IconButton>
+            </Tooltip>
+
             <IconButton
               className={classnames(classes.expand, {
                 [classes.expandOpen]: this.state.expanded
@@ -102,42 +137,18 @@ class ImageCard extends React.Component {
               onClick={this.handleExpandClick}
               aria-expanded={this.state.expanded}
               aria-label="Show more"
+              color="primary"
             >
               <ExpandMoreIcon />
             </IconButton>
           </CardActions>
           <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
             <CardContent>
-              <Typography paragraph variant="body2">
-                Method:
+              <Typography paragraph className={classes.title}>
+                {`${lenguajeSelector(lenguaje, subTitleOfTheCard)}:`}
               </Typography>
-              <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron
-                and set aside for 10 minutes.
-              </Typography>
-              <Typography paragraph>
-                Heat oil in a (14- to 16-inch) paella pan or a large, deep
-                skillet over medium-high heat. Add chicken, shrimp and chorizo,
-                and cook, stirring occasionally until lightly browned, 6 to 8
-                minutes. Transfer shrimp to a large plate and set aside, leaving
-                chicken and chorizo in the pan. Add pimentón, bay leaves,
-                garlic, tomatoes, onion, salt and pepper, and cook, stirring
-                often until thickened and fragrant, about 10 minutes. Add
-                saffron broth and remaining 4 1/2 cups chicken broth; bring to a
-                boil.
-              </Typography>
-              <Typography paragraph>
-                Add rice and stir very gently to distribute. Top with artichokes
-                and peppers, and cook without stirring, until most of the liquid
-                is absorbed, 15 to 18 minutes. Reduce heat to medium-low, add
-                reserved shrimp and mussels, tucking them down into the rice,
-                and cook again without stirring, until mussels have opened and
-                rice is just tender, 5 to 7 minutes more. (Discard any mussels
-                that don’t open.)
-              </Typography>
-              <Typography>
-                Set aside off of the heat to let rest for 10 minutes, and then
-                serve.
+              <Typography paragraph className={classes.conTent}>
+                {lenguajeSelector(lenguaje, contentOfTheCard)}
               </Typography>
             </CardContent>
           </Collapse>
@@ -148,7 +159,18 @@ class ImageCard extends React.Component {
 }
 
 ImageCard.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  titleOfTheCard: PropTypes.object.isRequired,
+  subTitleOfTheCard: PropTypes.object.isRequired,
+  ImageOfTheCard: PropTypes.string.isRequired,
+  AltOfTheImage: PropTypes.string.isRequired,
+  smallDescription: PropTypes.object.isRequired,
+  contentOfTheCard: PropTypes.object.isRequired,
+  globals: PropTypes.shape({
+    lenguaje: PropTypes.string.isRequired
+  })
 };
 
-export default withStyles(styles)(ImageCard);
+ImageCard = withStyles(styles)(ImageCard);
+
+export default GlobalsConnect(ImageCard);
