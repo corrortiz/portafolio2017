@@ -1,5 +1,7 @@
 .ListOfImageCard{
-  @include flexCenter;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
   flex-wrap: wrap;
 }
 

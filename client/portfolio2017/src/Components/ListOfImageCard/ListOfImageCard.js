@@ -3,15 +3,17 @@ import React, { Component } from 'react';
 import ImageCard from '../ImageCard/ImageCard';
 //Assests
 import { services } from '../../Assets/services';
-
 /**
  * A list of Image Cards in a grid sistem
  */
 class ListOfImageCard extends Component {
   renderFunc = () => {
-    return services.map(obj => (
-      <ImageCard key={obj.smallDescription} {...obj} />
-    ));
+    // eslint-disable-next-line
+    let item = null;
+
+    return (item = services.map((obj, index) => (
+      <ImageCard {...obj} hey={index} />
+    )));
   };
 
   render() {
