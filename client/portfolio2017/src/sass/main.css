@@ -50,6 +50,18 @@ html {
   }
 }
 
+.switchRule {
+  position: relative;
+}
+.switchRule > div {
+  position: absolute;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
 /*
 **************************
 **Change route animation**
@@ -1080,18 +1092,28 @@ body {
 }
 
 .footer {
-  padding: 2rem;
-  font-size: 1.9rem;
-  background-color: #000023;
-  text-align: center;
+  padding-top: 2rem;
+  background-color: transparent;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .footer__icon {
-  height: auto;
-  width: 4rem;
-  margin-top: 0.5rem;
-  fill: #ffffff;
+  height: 6rem;
+  width: auto;
+  padding: 1rem;
+  fill: #1565c0;
   cursor: pointer;
+}
+.footer__title {
+  font-family: 'Lato', sans-serif;
+  color: #7e57c2;
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 .header {

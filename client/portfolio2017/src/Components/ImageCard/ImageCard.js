@@ -26,7 +26,7 @@ import { Share } from '../../Assets/diccionary';
 
 const styles = theme => ({
   root: {
-    padding: '5rem'
+    padding: '1rem 4rem'
   },
   card: {
     maxWidth: 400

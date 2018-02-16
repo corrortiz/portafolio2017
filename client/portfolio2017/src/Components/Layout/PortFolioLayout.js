@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 //Redux Store
@@ -8,11 +7,10 @@ import storeConfig from '../../Store/storeConfig';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import blue from 'material-ui/colors/blue';
 import deepPurple from 'material-ui/colors/deepPurple';
-import Grid from 'material-ui/Grid';
 //Internal Components
 import HeaderAppBar from '../HeaderAppBar/HeaderAppBar';
-import FooterApp from '../FooterApp/FooterApp';
 import Routs from '../Routs/Routs';
+import AppSnackBar from '../AppSnackBar/AppSnackBar';
 
 const theme = createMuiTheme({
   palette: {
@@ -36,19 +34,13 @@ const theme = createMuiTheme({
 const Layout = () => {
   return (
     <MuiThemeProvider theme={theme}>
-      <Grid>
-        <Grid item xm={12}>
-          <HeaderAppBar />
-        </Grid>
-        <Grid item xm={12}>
-          <section>
-            <Routs />
-          </section>
-        </Grid>
-        <Grid item xm={12}>
-          <FooterApp />
-        </Grid>
-      </Grid>
+      <div className="layout">
+        <HeaderAppBar />
+        <section>
+          <Routs />
+        </section>
+        <AppSnackBar />
+      </div>
     </MuiThemeProvider>
   );
 };

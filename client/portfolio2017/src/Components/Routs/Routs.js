@@ -1,31 +1,58 @@
 // @flow
 import React from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 //Animate Routs
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { spring, AnimatedSwitch } from 'react-router-transition';
 //Internal Routs
 import Contact from './ContactRout/ContactRout';
 import Home from './HomeRoute/HomeRoute';
 import Projects from './ProjectsRoute/ProjectsRoute';
 import Services from './ServicesRoute/ServicesRoute';
 
+function glide(val) {
+  return spring(val, {
+    stiffness: 174,
+    damping: 24
+  });
+}
+
+const pageTransitions = {
+  atEnter: {
+    offset: 100
+  },
+  atLeave: {
+    offset: glide(-100)
+  },
+  atActive: {
+    offset: glide(0)
+  }
+};
+
+const Screen = ({ children }) => <div className="screen">{children}</div>;
+
 /**
  * Basic component for react-router where the routes and their components are declared
  * also the change animation is added by means of react-transition-group
  */
 const Routs = withRouter(({ location }) => (
-  <div>
-    <TransitionGroup>
-      <CSSTransition key={location.key} classNames="yoyo" timeout={450}>
-        <Switch className="Routs" location={location}>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/services" component={Services} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact={true} path="/contact" component={Contact} />
-        </Switch>
-      </CSSTransition>
-    </TransitionGroup>
-  </div>
+  <Screen>
+    <div className="rule">
+      <AnimatedSwitch
+        {...pageTransitions}
+        runOnMount={location.pathname === '/'}
+        mapStyles={styles => ({
+          transform: `translateX(${styles.offset}%)`
+        })}
+        className="switchRule"
+        location={location}
+      >
+        <Route exact path="/" component={Home} />
+        <Route exact path="/services" component={Services} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact={true} path="/contact" component={Contact} />
+      </AnimatedSwitch>
+    </div>
+  </Screen>
 ));
 
 export default Routs;

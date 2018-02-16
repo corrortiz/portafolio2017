@@ -24,20 +24,20 @@ html{
   @include respond(1800){
     font-size: 65.5%;
   }
+}
 
-  @include for-phone-only {
-  }
+.switchRule {
+position: relative;
 
-  @include for-tablet-portrait-up {
-  }
-
-  @include for-tablet-landscape-up {
-  }
-
-  @include for-desktop-up {
-  }
-
-  @include for-big-desktop-up {
+  & > div {
+    position: absolute;
   }
 }
 
+.screen{
+}
+
+.layout{
+  display: flex;
+  flex-direction: column;
+}
