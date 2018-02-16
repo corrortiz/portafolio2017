@@ -1,7 +1,7 @@
-import Java from '../images/Java.jpg';
-import WebDevI from '../images/WebDevI.jpg';
-import ItConsulting from '../images/itConsulting.jpg';
-import MVP from '../images/mvp.jpg';
+import Java from '../images/Java-sm_2x.jpg';
+import WebDevI from '../images/WebDevI-sm_2x.jpg';
+import ItConsulting from '../images/ItConsulting-sm_2x.jpg';
+import MVP from '../images/MVP-sm_2x.jpg';
 
 export const services = [
   {

@@ -83,7 +83,8 @@ export class ImageCard extends React.Component {
       ImageOfTheCard,
       AltOfTheImage,
       smallDescription,
-      contentOfTheCard
+      contentOfTheCard,
+      src
     } = this.props;
 
     return (
@@ -105,6 +106,7 @@ export class ImageCard extends React.Component {
           <CardMedia
             className={classes.media}
             image={ImageOfTheCard}
+            src={src}
             title={AltOfTheImage}
           />
           <CardContent>
