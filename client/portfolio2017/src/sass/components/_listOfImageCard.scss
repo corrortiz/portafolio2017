@@ -16,3 +16,11 @@
     font-weight: 400;
   }
 }
+
+.ListOfProjects{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 1s all;
+}

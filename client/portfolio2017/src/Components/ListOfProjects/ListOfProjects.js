@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //Internal Components
-import ImageCard from '../ImageCard/ImageCard';
+import ImageCardProject from '../ImageCardProject/ImageCardProject';
 //Assests
 import { Projects } from '../../Assets/projects';
 /**
@@ -12,12 +12,12 @@ class ListOfProjects extends Component {
     let item = null;
 
     return (item = Projects.map((obj, index) => (
-      <ImageCard {...obj} hey={index} />
+      <ImageCardProject {...obj} hey={index} />
     )));
   };
 
   render() {
-    return <div className="ListOfImageCard box">{this.renderFunc()}</div>;
+    return <div className="ListOfProjects box">{this.renderFunc()}</div>;
   }
 }
 
