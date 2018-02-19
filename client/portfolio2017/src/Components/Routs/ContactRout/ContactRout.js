@@ -1,13 +1,17 @@
 import React from 'react';
-import ImageContainer from '../../ImageContainer/ImageContainer';
-
+import FooterApp from '../../FooterApp/FooterApp';
+//Internal Component
+import ContacList from '../../ContacList/ContacList';
+//locale Assest
+import { Contact } from '../../../Assets/diccionary';
 /**
  * Layout of the contact rout
  */
 const ContactRout = () => {
   return (
     <div>
-      <ImageContainer />>
+      <FooterApp title={Contact} />
+      <ContacList />
     </div>
   );
 };
