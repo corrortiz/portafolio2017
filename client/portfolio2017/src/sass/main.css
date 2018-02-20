@@ -1222,3 +1222,14 @@ body {
     padding-top: 10rem;
   }
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+  flex-wrap: wrap;
+}
+
+.otro {
+  width: 98vw;
+}

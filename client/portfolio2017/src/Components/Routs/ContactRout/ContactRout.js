@@ -2,6 +2,7 @@ import React from 'react';
 import FooterApp from '../../FooterApp/FooterApp';
 //Internal Component
 import ContacList from '../../ContacList/ContacList';
+import ContactForm from '../../ContactForm/ContactForm';
 //locale Assest
 import { Contact } from '../../../Assets/diccionary';
 /**
@@ -9,9 +10,12 @@ import { Contact } from '../../../Assets/diccionary';
  */
 const ContactRout = () => {
   return (
-    <div>
+    <div className="otro">
       <FooterApp title={Contact} />
-      <ContacList />
+      <div className="contact box">
+        <ContacList />
+        <ContactForm />
+      </div>
     </div>
   );
 };
