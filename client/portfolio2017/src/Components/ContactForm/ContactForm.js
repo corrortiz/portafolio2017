@@ -7,6 +7,8 @@ import { CircularProgress } from 'material-ui/Progress';
 import Button from 'material-ui/Button';
 //Form Validation
 import { Field, reduxForm } from 'redux-form';
+//Asests
+import { sendMail } from '../../Store/Actions/globals';
 
 /**
  * Internal Form Component
@@ -135,7 +137,7 @@ const validate = values => {
 ContactForm = reduxForm({
   form: 'contacForm',
   validate,
-  onSubmit: values => console.log(values.name)
+  onSubmit: values => sendMail(values)
 })(ContactForm);
 
 export default withStyles(styles)(ContactForm);
