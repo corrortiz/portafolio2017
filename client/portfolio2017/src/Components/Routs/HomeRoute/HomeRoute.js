@@ -10,7 +10,7 @@ import PresentationBottomToTop from '../../PresentationBottomToTop/PresentationB
  */
 const HomeRoute = () => {
   return (
-    <div>
+    <div className="screen">
       <ImageContainer />
       <div className="box">
         <PresentationRightToLeft />

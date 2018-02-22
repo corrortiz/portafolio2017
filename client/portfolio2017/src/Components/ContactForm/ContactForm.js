@@ -64,6 +64,9 @@ const styles = theme => ({
     left: '50%',
     marginTop: -12,
     marginLeft: -12
+  },
+  label: {
+    color: '#7e57c2'
   }
 });
 
@@ -75,7 +78,7 @@ class ContactForm extends Component {
     const { classes, submitting, pristine } = this.props;
 
     return (
-      <div>
+      <div className="contactForm">
         <form onSubmit={this.props.handleSubmit}>
           <Grid
             container
@@ -99,6 +102,7 @@ class ContactForm extends Component {
                 label={lenguajeSelector(this.props.globals.lenguaje, Email)}
                 type="email"
                 fullWidth
+                className={classes.label}
               />
             </Grid>
             <Grid item xs={12}>

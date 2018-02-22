@@ -26,7 +26,7 @@ const styles = theme => ({
     padding: '2rem 4rem'
   },
   card: {
-    maxWidth: 500
+    maxWidth: 450
   },
   title: {
     fontFamily: "'Lato', sans-serif",

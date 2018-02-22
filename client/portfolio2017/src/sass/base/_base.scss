@@ -9,21 +9,22 @@
 html{
   font-size: 62.5%; // 62.5% === 1Rem === 10px/16px === 62.5%
   
-  @include respond(1200){
-    font-size: 50%; 
-  }
-  @include respond(900){
+  @include for-phone-only {
     font-size: 45%;
   }
-  @include respond(600){
-    font-size: 40%;
+  @include for-tablet-portrait-up {
+    font-size: 50%;
   }
-  @include respond(300){
-    font-size: 37.5%;
+  @include for-tablet-landscape-up {
+    font-size: 55%;
   }
-  @include respond(1800){
-    font-size: 65.5%;
+  @include for-desktop-up {
+    font-size: 62.5%
   }
+  @include for-big-desktop-up {
+    font-size: 70%
+  }
+
 }
 
 .switchRule {
@@ -33,11 +34,16 @@ position: relative;
     position: absolute;
   }
 }
-
 .screen{
+  width: 100vw;
 }
+
 
 .layout{
   display: flex;
   flex-direction: column;
+}
+
+.contactForm{
+  padding: 0 5rem;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 //MUI Components
 import { withStyles } from 'material-ui/styles';
@@ -10,6 +10,7 @@ import Email from 'material-ui-icons/Email';
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 //Locale
 import { lenguajeSelector } from '../../Store/Actions/globals';
+import * as diccionary from '../../Assets/diccionary';
 //Internal Components
 import Projects from '../../images/SVG/Projects';
 const Github = () => (
@@ -32,55 +33,65 @@ const styles = theme => ({
 
 /**
  * List of contact forms and social media
- * @param {} props
  */
-function ContactList(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
-      <List>
-        <ListItem component={'a'} href="tel:+522291437844" target="blank">
-          <Avatar className={classes.avatar}>
-            <Phone />
-          </Avatar>
-          <ListItemText primary="+52 229 9020825" secondary="Phone" />
-        </ListItem>
-        <ListItem
-          component={'a'}
-          href="mailto:a.ortizcrr@gmail.com"
-          target="blank"
-        >
-          <Avatar className={classes.avatar}>
-            <Email />
-          </Avatar>
-          <ListItemText
-            primary="a.ortizcrr@gmail.com"
-            secondary={lenguajeSelector(this.props.globals.lenguaje, Emails)}
-          />
-        </ListItem>
-        <ListItem
-          component={'a'}
-          href="https://github.com/corrortiz"
-          target="blank"
-        >
-          <Avatar className={classes.avatar}>
-            <Github />
-          </Avatar>
-          <ListItemText primary="GitHub" />
-        </ListItem>
-        <ListItem
-          component={'a'}
-          href="https://codepen.io/CorrOrtiz"
-          target="blank"
-        >
-          <Avatar className={classes.avatar}>
-            <Projects />
-          </Avatar>
-          <ListItemText primary="CodePen" />
-        </ListItem>
-      </List>
-    </div>
-  );
+class ContactList extends Component {
+  render() {
+    const { classes } = this.props;
+    return (
+      <div className={classes.root}>
+        <List>
+          <ListItem component={'a'} href="tel:+522291437844" target="blank">
+            <Avatar className={classes.avatar}>
+              <Phone />
+            </Avatar>
+            <ListItemText
+              primary="+52 229 9020825"
+              secondary={lenguajeSelector(
+                this.props.globals.lenguaje,
+                diccionary.Phone
+              )}
+            />
+          </ListItem>
+          <ListItem
+            component={'a'}
+            href="mailto:a.ortizcrr@gmail.com"
+            target="blank"
+          >
+            <Avatar className={classes.avatar}>
+              <Email />
+            </Avatar>
+            <ListItemText
+              primary="a.ortizcrr@gmail.com"
+              secondary={lenguajeSelector(
+                this.props.globals.lenguaje,
+                diccionary.Email
+              )}
+            />
+          </ListItem>
+          <ListItem
+            component={'a'}
+            href="https://github.com/corrortiz"
+            target="blank"
+          >
+            <Avatar className={classes.avatar}>
+              <Github />
+            </Avatar>
+            <ListItemText primary="GitHub" />
+          </ListItem>
+          <ListItem
+            component={'a'}
+            href="https://codepen.io/CorrOrtiz"
+            target="blank"
+          >
+            <Avatar className={classes.avatar}>
+              <Projects />
+            </Avatar>
+            <ListItemText primary="CodePen" />
+          </ListItem>
+        </List>
+      </div>
+    );
+  }
 }
 
 ContactList.propTypes = {

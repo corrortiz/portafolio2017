@@ -70,7 +70,7 @@
   }
   
   @include for-desktop-up {
-    @include clip(50vh, 40vh); 
+    @include clip(65vh, 55vh); 
     background-position: bottom;
     justify-content:center;
   }
@@ -97,7 +97,7 @@
 
     @include for-tablet-portrait-up {
       margin-top: 0;
-      padding: 2rem 1rem;
+      padding: 2rem 0;
     }
 
     @include for-tablet-landscape-up {

@@ -90,7 +90,7 @@ export const Email = {
 };
 
 export const Phone = {
-  es: 'Telefono',
+  es: 'Teléfono',
   en: 'Phone'
 };
 
