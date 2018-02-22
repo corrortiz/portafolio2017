@@ -78,3 +78,33 @@ export const Share = {
   es: 'Comparte como AO H&S puede impulsar el cambio',
   en: 'Share how AO H & S can Boost change'
 };
+
+export const Name = {
+  es: 'Nombre',
+  en: 'Name'
+};
+
+export const Email = {
+  es: 'Correo Electrónico',
+  en: 'Email'
+};
+
+export const Phone = {
+  es: 'Telefono',
+  en: 'Phone'
+};
+
+export const Message = {
+  en: 'Message',
+  es: 'Mensaje'
+};
+
+export const Send = {
+  es: 'Enviar',
+  en: 'Send'
+};
+
+export const Confirmacion = {
+  es: 'El mensaje fue enviado a AO HyS',
+  en: 'The message was sent to AO HyS'
+};

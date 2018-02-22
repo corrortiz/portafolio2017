@@ -6,6 +6,10 @@ import List, { ListItem, ListItemText } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import Phone from 'material-ui-icons/Phone';
 import Email from 'material-ui-icons/Email';
+//HOC for globals variables
+import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
+//Locale
+import { lenguajeSelector } from '../../Store/Actions/globals';
 //Internal Components
 import Projects from '../../images/SVG/Projects';
 const Github = () => (
@@ -49,7 +53,10 @@ function ContactList(props) {
           <Avatar className={classes.avatar}>
             <Email />
           </Avatar>
-          <ListItemText primary="a.ortizcrr@gmail.com" secondary="Email" />
+          <ListItemText
+            primary="a.ortizcrr@gmail.com"
+            secondary={lenguajeSelector(this.props.globals.lenguaje, Emails)}
+          />
         </ListItem>
         <ListItem
           component={'a'}
@@ -79,5 +86,7 @@ function ContactList(props) {
 ContactList.propTypes = {
   classes: PropTypes.object.isRequired
 };
+
+ContactList = GlobalsConnect(ContactList);
 
 export default withStyles(styles)(ContactList);

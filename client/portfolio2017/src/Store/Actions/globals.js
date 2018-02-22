@@ -1,7 +1,3 @@
-import axios from 'axios';
-//CONF of Axios
-const SENDGRID_URL = 'https://api.sendgrid.com/v3/mail/send';
-
 export const SET_LENGUAJE = 'SET_LENGUAJE';
 export const setLenguaje = (lenguaje: string) => ({
   type: SET_LENGUAJE,
@@ -36,37 +32,17 @@ export function lenguajeSelector(lenguaje: string, text: Object) {
 
 export async function sendMail(values: Object) {
   try {
-    const correo = await axios.post(
-      `${SENDGRID_URL}`,
-      {
-        personalizations: [
-          {
-            to: [
-              {
-                email: 'a.ortizcrr@gmail.com'
-              }
-            ],
-            subject: `Contacto desde AO HyS de ${values.name}`
-          }
-        ],
-        from: {
-          email: values.email
-        },
-        content: [
-          {
-            type: 'text/plain',
-            value: values.content
-          }
-        ]
+    // eslint-disable-next-line
+    const correo = await emailjs.send('default_service', '210682', values).then(
+      function(response) {
+        console.log(
+          'SUCCESS. status=%d, text=%s',
+          response.status,
+          response.text
+        );
       },
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_SENDGRID_APY_KEY}`,
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-          'Access-Control-Allow-Headers': 'X-Requested-With'
-        }
+      function(err) {
+        console.log('FAILED. error=', err);
       }
     );
     console.log(correo);

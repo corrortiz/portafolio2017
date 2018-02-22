@@ -54,7 +54,6 @@ export class AppSnackBar extends Component {
         <Snackbar
           open={openSnackBar}
           onClose={this.handleClose}
-          onRequestClose={this.handleClose}
           autoHideDuration={3500}
           transition={transition}
           className={classes.snackbar}
@@ -66,8 +65,7 @@ export class AppSnackBar extends Component {
             <Button
               key="close"
               aria-label="Close"
-              color="accent"
-              dense
+              color="secondary"
               onClick={this.handleClose}
             >
               {lenguajeSelector(lenguaje, Close)}

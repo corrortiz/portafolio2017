@@ -5,10 +5,26 @@ import TextField from 'material-ui/TextField';
 import { withStyles } from 'material-ui/styles';
 import { CircularProgress } from 'material-ui/Progress';
 import Button from 'material-ui/Button';
+//HOC of globlals states;
+import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 //Form Validation
 import { Field, reduxForm } from 'redux-form';
 //Asests
 import { sendMail } from '../../Store/Actions/globals';
+import {
+  showSnackBar,
+  messageSnackBar,
+  showLoading,
+  lenguajeSelector
+} from '../../Store/Actions/globals';
+//Locale
+import {
+  Name,
+  Email,
+  Message,
+  Send,
+  Confirmacion
+} from '../../Assets/diccionary';
 
 /**
  * Internal Form Component
@@ -71,7 +87,7 @@ class ContactForm extends Component {
               <Field
                 name="name"
                 component={FormField}
-                label="Name"
+                label={lenguajeSelector(this.props.globals.lenguaje, Name)}
                 type="text"
                 fullWidth
               />
@@ -80,7 +96,7 @@ class ContactForm extends Component {
               <Field
                 name="email"
                 component={FormField}
-                label="Email"
+                label={lenguajeSelector(this.props.globals.lenguaje, Email)}
                 type="email"
                 fullWidth
               />
@@ -89,7 +105,7 @@ class ContactForm extends Component {
               <Field
                 name="content"
                 component={FormField}
-                label="Content"
+                label={lenguajeSelector(this.props.globals.lenguaje, Message)}
                 type="text"
                 fullWidth
                 multiline
@@ -105,7 +121,7 @@ class ContactForm extends Component {
                     disabled={pristine || submitting}
                     fullWidth={true}
                   >
-                    Send
+                    {lenguajeSelector(this.props.globals.lenguaje, Send)}
                   </Button>
                   {submitting && (
                     <CircularProgress
@@ -134,10 +150,23 @@ const validate = values => {
   return errors;
 };
 
+const handelSummit = async (values, dispatch, props) => {
+  await dispatch(showLoading());
+  await sendMail(values);
+  await dispatch(
+    messageSnackBar(lenguajeSelector(props.globals.lenguaje, Confirmacion))
+  );
+  await dispatch(showSnackBar());
+  await dispatch(showLoading());
+};
+
 ContactForm = reduxForm({
   form: 'contacForm',
   validate,
-  onSubmit: values => sendMail(values)
+  onSubmit: (values, dispatch, props) => handelSummit(values, dispatch, props),
+  onSubmitSuccess: (result, dispatch, props) => props.reset()
 })(ContactForm);
+
+ContactForm = GlobalsConnect(ContactForm);
 
 export default withStyles(styles)(ContactForm);
