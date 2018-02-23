@@ -70,6 +70,17 @@ html {
   padding: 0 5rem;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.header__root {
+  transition: 1s all;
+}
+
 /*
 **************************
 **Change route animation**

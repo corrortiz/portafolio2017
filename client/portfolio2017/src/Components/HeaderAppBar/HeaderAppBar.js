@@ -13,7 +13,9 @@ import TranslateMenu from '../TranslateMenu/TranslateMenu';
 import GlobalsConnect from '../../HOC/GlobalsConnect/GlobalsConnect';
 //CSS in JS
 const styles = {
-  root: {},
+  root: {
+    position: 'sticky'
+  },
   flex: {},
   menuButton: {}
 };
@@ -22,12 +24,31 @@ const styles = {
  * Layout component for the header of the app
  */
 export class HeaderAppBar extends Component {
+  handleScroll = () => {
+    if (window.pageYOffset >= 1) {
+      this.TabMenuRef.classList.add('sticky');
+    } else {
+      this.TabMenuRef.classList.remove('sticky');
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   render() {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
-        <AppBar className="header" position="static">
+      <div
+        ref={element => (this.TabMenuRef = element)}
+        className="header__root"
+      >
+        <AppBar className={`sticky ${classes.root}`} position={'sticky'}>
           <Toolbar className="header__toolbar">
             <div className="header__title">
               <Typography
