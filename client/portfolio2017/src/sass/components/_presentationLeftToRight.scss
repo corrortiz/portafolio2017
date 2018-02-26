@@ -7,11 +7,20 @@
     margin-bottom: 2rem !important;
    
     &__title{
-       @include maintTextPrimaryColor; 
+      @include maintTextPrimaryColor; 
+      
+      @include for-desktop-up {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
     }
     
     &__text{
       @include secondaryTextSecondaryColor;
+    
+      @include for-desktop-up {
+        font-size: 2rem;
+      }
     }
   }
 

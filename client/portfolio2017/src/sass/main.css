@@ -366,7 +366,7 @@ body {
 }
 @media (min-width: 1200px) {
   .box {
-    padding: 5rem 10rem !important;
+    padding: 5rem 7rem !important;
   }
 }
 @media (min-width: 1800px) {
@@ -697,6 +697,12 @@ body {
   font-weight: 400;
   margin-bottom: 4rem;
 }
+@media (min-width: 1200px) {
+  .PresentationRightToLeft__one__title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 .PresentationRightToLeft__one__text {
   color: #4d2c91;
   text-align: center;
@@ -709,6 +715,11 @@ body {
   .PresentationRightToLeft__one__text {
     padding: 0 1rem;
     letter-spacing: 0.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .PresentationRightToLeft__one__text {
+    font-size: 2rem;
   }
 }
 
@@ -741,6 +752,12 @@ body {
   font-weight: 400;
   margin-bottom: 4rem;
 }
+@media (min-width: 1200px) {
+  .PresentationLeftToRight__one__title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 .PresentationLeftToRight__one__text {
   color: #4d2c91;
   text-align: center;
@@ -753,6 +770,11 @@ body {
   .PresentationLeftToRight__one__text {
     padding: 0 1rem;
     letter-spacing: 0.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .PresentationLeftToRight__one__text {
+    font-size: 2rem;
   }
 }
 
@@ -847,6 +869,12 @@ body {
 }
 @media (min-width: 1200px) {
   .rImageRight {
+    height: 45rem;
+    width: 55rem;
+  }
+}
+@media (min-width: 1800px) {
+  .rImageRight {
     height: 40rem;
     width: 60rem;
   }
@@ -881,6 +909,13 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .rImageRight__image {
+    height: 300px;
+    width: 450px;
+    margin-top: -18rem;
+  }
+}
+@media (min-width: 1800px) {
   .rImageRight__image {
     height: 400px;
     width: 600px;
@@ -922,6 +957,13 @@ body {
 }
 @media (min-width: 1200px) {
   .rImageRight__shadow {
+    height: 300px;
+    width: 450px;
+    margin-top: -17rem;
+  }
+}
+@media (min-width: 1800px) {
+  .rImageRight__shadow {
     height: 400px;
     width: 600px;
     margin-top: -19rem;
@@ -943,6 +985,12 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .rImageLeft {
+    height: 45rem;
+    width: 55rem;
+  }
+}
+@media (min-width: 1800px) {
   .rImageLeft {
     height: 40rem;
     width: 60rem;
@@ -978,6 +1026,13 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .rImageLeft__image {
+    height: 300px;
+    width: 450px;
+    margin-top: -18rem;
+  }
+}
+@media (min-width: 1800px) {
   .rImageLeft__image {
     height: 400px;
     width: 600px;
@@ -1018,6 +1073,13 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .rImageLeft__shadow {
+    height: 300px;
+    width: 450px;
+    margin-top: -17rem;
+  }
+}
+@media (min-width: 1800px) {
   .rImageLeft__shadow {
     height: 400px;
     width: 600px;
@@ -1211,4 +1273,42 @@ body {
 
 .otro {
   width: 98vw;
+}
+
+.FourOFour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 98vw;
+  padding: 2rem 0;
+}
+.FourOFour__Message {
+  color: #4d2c91;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 0 2rem;
+  margin: 2rem;
+}
+@media only screen and (max-width: 18.75em) {
+  .FourOFour__Message {
+    padding: 0 1rem;
+    letter-spacing: 0.2rem;
+  }
+}
+.FourOFour__Logo {
+  height: 40vh;
+}
+.FourOFour__404 {
+  font-family: 'Lato', sans-serif;
+  color: #1565c0;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
 }

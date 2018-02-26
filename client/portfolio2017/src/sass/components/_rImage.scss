@@ -8,6 +8,10 @@
     width: 50rem;
   }
   @include for-desktop-up {
+    height: 45rem;
+    width: 55rem;
+  }
+  @include for-big-desktop-up {
     height: 40rem;
     width: 60rem;
   }
@@ -31,6 +35,11 @@
       margin-top: -15rem;
     }
     @include for-desktop-up {
+      height: 300px;
+      width: 450px;
+      margin-top: -18rem;
+    }
+    @include for-big-desktop-up {
       height: 400px;
       width: 600px;
       margin-top: -20rem;
@@ -61,6 +70,11 @@
       margin-top: -14rem;
     }
     @include for-desktop-up {
+      height: 300px;
+      width: 450px;
+      margin-top: -17rem; 
+    }
+    @include for-big-desktop-up {
       height: 400px;
       width: 600px;
       margin-top: -19rem; 
@@ -78,6 +92,10 @@
     width: 50rem;
   }
   @include for-desktop-up {
+    height: 45rem;
+    width: 55rem;
+  }
+  @include for-big-desktop-up {
     height: 40rem;
     width: 60rem;
   }
@@ -101,6 +119,11 @@
       margin-top: -15rem;
     }
     @include for-desktop-up {
+      height: 300px;
+      width: 450px;
+      margin-top: -18rem;
+    }
+    @include for-big-desktop-up {
       height: 400px;
       width: 600px;
       margin-top: -20rem;
@@ -131,6 +154,11 @@
       margin-top: -14rem;
     }
     @include for-desktop-up {
+      height: 300px;
+      width: 450px;
+      margin-top: -17rem; 
+    }
+    @include for-big-desktop-up {
       height: 400px;
       width: 600px;
       margin-top: -19rem; 

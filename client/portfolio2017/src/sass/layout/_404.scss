@@ -1,0 +1,20 @@
+.FourOFour{
+  @include flexCenter;
+  flex-direction: column;
+  height: auto;
+  width: 98vw;
+  padding: 2rem 0;
+
+  &__Message{
+    @include secondaryTextSecondaryColor;
+    margin: 2rem;
+  }
+  
+  &__Logo{
+    height: 40vh;
+  }
+  
+  &__404{
+    @include maintTextPrimaryColor;
+  }
+}

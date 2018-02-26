@@ -8,6 +8,7 @@ import Contact from './ContactRout/ContactRout';
 import Home from './HomeRoute/HomeRoute';
 import Projects from './ProjectsRoute/ProjectsRoute';
 import Services from './ServicesRoute/ServicesRoute';
+import FourOFour from './404/404';
 
 function glide(val) {
   return spring(val, {
@@ -50,6 +51,7 @@ const Routs = withRouter(({ location }) => (
         <Route exact path="/services" component={Services} />
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="*" component={FourOFour} />
       </AnimatedSwitch>
     </div>
   </Screen>
